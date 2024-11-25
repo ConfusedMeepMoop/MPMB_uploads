@@ -1169,7 +1169,7 @@ AddSubClass("cleric", "shrine warden domain", {
 		},
 		"subclassfeature8" : {
 			name : "Divine Strike",
-			source : [["T", 35]],
+			source : [["RGttYR", 35]],
 			minlevel : 8,
 			description : "\n  Once per turn, when I hit a creature with a weapon attack, I can do extra damage",
 			additional : levels.map(function (n) {

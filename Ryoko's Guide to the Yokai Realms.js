@@ -648,6 +648,903 @@ RaceList["karasu tengu"] = {
 };
 
 /*
+ * Bender Class
+ */
+
+// Bender Class
+ClassList["bender"] = {
+	regExpSearch: /^(?=.*bender).*$/i,
+	name: "Bender",
+	source: [["RGttYR", 157]],
+	primaryAbility: "Intelligence, Wisdom, or Charisma",
+	abilitySave: 4,
+	prereqs: "Intelligence, Wisdom, or Charisma 13",
+	improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
+	die: 8,
+	saves: ["Str", "Con"],
+	skillstxt: {
+		primary: "Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth"
+	},
+	armorProfs : {
+		primary : [true, true, false, false],
+		secondary : [false, false, false, false]
+	},
+	weaponProfs : {
+		primary : [true, false, ["chakrams", "nunchaku", "shortswords", "shuriken"]],
+		secondary : [true, false]
+	},
+	equipment : "Bender starting equipment:" +
+		"\n \u2022 A quarterstaff, -or- chakram, -or- any simple weapon;" +
+		"\n \u2022 A dungeoneer’s pack -or- an explorer's pack;" +
+		"\n \u2022 Leather armour and 10 shuriken;" +
+		"\n\nAlternatively, choose 5d4 \xD7 10 gp worth of starting equipment instead of both the class' and the background's starting equipment.",
+	subclasses : ["Bender Disciplines", []],
+	attacks : [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+	spellcastingFactor: 2,
+	spellcastingTable: [
+		[0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[2, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 1
+		[2, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 2
+		[3, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 3
+		[3, 0, 0, 0, 0, 0, 0, 0, 0], //lvl 4
+		[4, 2, 0, 0, 0, 0, 0, 0, 0], //lvl 5
+		[4, 2, 0, 0, 0, 0, 0, 0, 0], //lvl 6
+		[4, 3, 0, 0, 0, 0, 0, 0, 0], //lvl 7
+		[4, 3, 0, 0, 0, 0, 0, 0, 0], //lvl 8
+		[4, 3, 2, 0, 0, 0, 0, 0, 0], //lvl 9
+		[4, 3, 2, 0, 0, 0, 0, 0, 0], //lvl10
+		[4, 3, 3, 0, 0, 0, 0, 0, 0], //lvl11
+		[4, 3, 3, 0, 0, 0, 0, 0, 0], //lvl12
+		[4, 3, 3, 1, 0, 0, 0, 0, 0], //lvl13
+		[4, 3, 3, 1, 0, 0, 0, 0, 0], //lvl14
+		[4, 3, 3, 2, 0, 0, 0, 0, 0], //lvl15
+		[4, 3, 3, 2, 0, 0, 0, 0, 0], //lvl16
+		[4, 3, 3, 3, 1, 0, 0, 0, 0], //lvl17
+		[4, 3, 3, 3, 1, 0, 0, 0, 0], //lvl18
+		[4, 3, 3, 3, 2, 0, 0, 0, 0], //lvl19
+		[4, 3, 3, 3, 2, 0, 0, 0, 0], //lvl20
+	],
+	spellcastingKnown: {
+		cantrips: [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4],
+		spells: "list",
+		prepared : true
+	},
+	features : {
+		"spellcasting" : {
+			name : "Spellcasting",
+			source : [["RGttYR", 157]],
+			minlevel : 1,
+			description : desc([
+				"I can cast prepared bender cantrips/spells, using Intelligence, Wisdom, or Charisma as my spellcasting ability",
+				"I can use my free hand as a spellcasting focus for my bender spells. This free hand can be used for both the somatic and material components for a spell, provided the material component has no cost and isn’t consumed by the casting."
+			]),
+		},
+		"elemental affinity" : {
+			name: "Elemental Affinity",
+			source : [["RGttYR", 157]],
+			minlevel : 1,
+			description : desc('Choose an Elemental Affinity for the bender using the "Choose Feature" button above'),
+			additional : levels.map(function (n) {
+				return n < 1 ? "" : (n < 6 ? 1 : n < 10 ? 2 : n < 14 ? 3 : 4) + " elemental affinities";
+			}),
+			extraname : "Elemental Affinity",
+			extrachoices : ["Air", "Air 1", "Air 2", "Air 3", "Air 4", "Earth", "Earth 1", "Earth 2", "Earth 3", "Earth 4", "Fire", "Fire 1", "Fire 2", "Fire 3", "Fire 4", "Water", "Water 1", "Water 2", "Water 3", "Water 4"],
+			extraTimes : levels.map(function (n) {
+				return n < 6 ? 1 : n < 10 ? 2 : n < 14 ? 3 : 4;
+			}),
+			"air" : {
+				submenu : "[Choice at level 1]",
+				description : desc([
+					"The spells associated with the Air element are added to my bender spell list."
+				]),
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"concussion", "dash strike", "smokescreen", "soften descent",
+								// 1st level
+								"color spray", "expeditious retreat", "feather fall", "fog cloud", "jump", "longstrider", "repulsing palm", "tasha's hideous laughter", "thunderwave", "unseen servant", "wind drake",
+								// 2nd level
+								"blur", "calm air", "enhance ability", "gust of wind", "levitate", "mirror image", "misty step", "redirect lightning", "shatter", "silence", "wind strike",
+								// 3rd level
+								"call lightning", "depth charge", "flashbang","fly", "gaseous form", "haste", "switcheroo", "wind wall",
+								// 4th level
+								"cloud stride", "conjure minor elementals", "dimension door", "freedom of movement", "hallucinatory terrain", "tempestuous transformation",
+								// 5th level
+								"conjure elemental", "cyclone", "iminada’s umigiri", "mislead", "planar binding", "raiko’s rending rage"]);
+							},
+						"I gain spells associated with the Air element."
+					],
+				},
+			},
+			"earth" : {
+				submenu : "[Choice at level 1]",
+				description : desc([
+					"The spells associated with the Earth element are added to my bender spell list."
+				]),
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",
+								// 1st level
+								"earthen uppercut", "entangle", "false life", "goodberry", "grease", "shield", "tenser's floating disk", 
+								// 2nd level
+								"barkskin", "calm earth", "earthskin", "enhance ability", "melf's acid arrow", "protection", "protection from poison", "shielding word", "snakebite", "spike growth",
+								// 3rd level
+								"acid rain", "meld into stone", "mireball",
+								// 4th level
+								"conjure minor elementals", "rock tomb", "steelskin", "slatestorm", "stone shape", "stoneskin",
+								// 5th level
+								"conjure elemental", "eruption", "nomi’s adamantine carapace", "passwall", "planar binding", "wall of stone"]);
+							},
+						"I gain spells associated with the Earth element."
+					],
+				},
+			},			
+			"fire" : {
+				submenu : "[Choice at level 1]",
+				description : desc([
+					"The spells associated with the Fire element are added to my bender spell list."
+				]),
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark",
+								// 1st level
+								"burning hands", "color spray", "faerie fire", "flash", "hellish rebuke", "heroism", "inner flame",  "silent image",
+								// 2nd level
+								"calm flames", "continual flame", "enhance ability", "flame blade", "flaming sphere", "heat metal", "invisibility", "redirect lightning", "scorching ray", "wanyudo’s fury",
+								// 3rd level
+								"daylight", "fireball", "flaming tiger leap", "haste", "lightning bolt", "major image",
+								// 4th level
+								"conjure minor elementals", "fire shield", "greater invisibility", "lion’s roar", "wall of fire",
+								// 5th level
+								"conjure elemental", "flame strike", "feverskin", "magatsuchi’s lantern", "planar binding", "raiko’s rending rage"]);
+							},
+						"I gain spells associated with the Fire element."
+					],
+				},
+			},
+			"water" : {
+				submenu : "[Choice at level 1]",
+				description : desc([
+					"The spells associated with the Water element are added to my bender spell list."
+				]),
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"guidance", "pins & needles", "ray of frost", "spare the dying", "water whip",
+								// 1st level
+								"charm person", "command", "create or destroy water", "detect poison and disease", "ice moon", "purify food & drink",
+								// 2nd level
+								"aid", "bloodweave", "calm emotions", "calm waters", "endoleech", "enhance ability", "hold person", "lesser restoration", "mirror of reflection", "riptide", "suggestion",
+								// 3rd level
+								"acid rain", "clairvoyance", "extract shirikodama", "hypnotic pattern", "ryoko’s revelation", "sleet storm", "slow", "the bends", "water breathing", "water walk", "water wyrm",
+								// 4th level
+								"cage of frozen tears", "cloud stride", "compulsion", "conjure minor elementals", "control water", "divination", "ice storm",
+								// 5th level
+								"bakuryo's blessed blizzard", "cone of cold", "conjure elemental", "dominate person", "hold monster", "iminada’s umigiri", "planar binding", "scrying", "white water wall"]);
+							},
+						"I gain spells associated with the Water element."
+					],
+				},
+			},
+			"air 1" : {
+				submenu : "[New Elemental Affinity]",
+				description : desc("I learn one cantrip of my choice from the Air element’s list and add its spells to my bender spell list."),
+				spellcastingBonus : [{ 
+					spells : ["concussion", "dash strike", "smokescreen", "soften descent"],
+				}],
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"concussion", "dash strike", "smokescreen", "soften descent",
+								// 1st level
+								"color spray", "expeditious retreat", "feather fall", "fog cloud", "jump", "longstrider", "repulsing palm", "tasha's hideous laughter", "thunderwave", "unseen servant", "wind drake",
+								// 2nd level
+								"blur", "calm air", "enhance ability", "gust of wind", "levitate", "mirror image", "misty step", "redirect lightning", "shatter", "silence", "wind strike",
+								// 3rd level
+								"call lightning", "depth charge", "flashbang","fly", "gaseous form", "haste", "switcheroo", "wind wall",
+								// 4th level
+								"cloud stride", "conjure minor elementals", "dimension door", "freedom of movement", "hallucinatory terrain", "tempestuous transformation",
+								// 5th level
+								"conjure elemental", "cyclone", "iminada’s umigiri", "mislead", "planar binding", "raiko’s rending rage"]);
+							},
+						"I learn one cantrip of my choice from the Air element’s list and add its spells to my bender spell list."
+					],
+				},
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air") == -1;},
+			},
+			"air 2" : { 
+				submenu : "[improves Air Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air") !== -1 || GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air 1") !== -1;},
+			},
+			"air 3" : { 
+				submenu : "[improves Air Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 10 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air 2") !== -1;},
+			},
+			"air 4" : { 
+				submenu : "[improves Air Elemental Affinity]",
+				prereqeval : function() {return classes.known.bender.level >= 14 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air 3") !== -1;},
+				description : desc([
+					"Spells that I cast fromthe Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+			},
+			"earth 1" : {
+				submenu : "[New Elemental Affinity]",
+				description : desc("I learn one cantrip of my choice from the Earth element’s list and add its spells to my bender spell list."),
+				spellcastingBonus : [{ 
+					spells : ["acid splash", "earthen fist", "reinforce", "resistance", "shillelagh"],
+				}],
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",
+								// 1st level
+								"earthen uppercut", "entangle", "false life", "goodberry", "grease", "shield", "tenser's floating disk", 
+								// 2nd level
+								"barkskin", "calm earth", "earthskin", "enhance ability", "melf's acid arrow", "protection", "protection from poison", "shielding word", "snakebite", "spike growth",
+								// 3rd level
+								"acid rain", "meld into stone", "mireball",
+								// 4th level
+								"conjure minor elementals", "rock tomb", "steelskin", "slatestorm", "stone shape", "stoneskin",
+								// 5th level
+								"conjure elemental", "eruption", "nomi’s adamantine carapace", "passwall", "planar binding", "wall of stone"]);
+							},
+						"I learn one cantrip of my choice from the Earth element’s list and add its spells to my bender spell list."
+					],
+				},
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("earth") == -1;},
+			},	
+			"earth 2" : { 
+				submenu : "[improves Earth Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("earth") !== -1 || GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("earth 1") !== -1;},
+			},	
+			"earth 3" : { 
+				submenu : "[improves Earth Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 10 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("earth 2") !== -1;},
+			},
+			"earth 4" : { 
+				submenu : "[improves Earth Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 14 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("earth 3") !== -1;},
+			},
+			"fire 1" : {
+				submenu : "[New Elemental Affinity]",
+				description : desc("I learn one cantrip of my choice from the Fire element’s list and add its spells to my bender spell list."),
+				spellcastingBonus : [{ 
+					spells : ["dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark"],
+				}],
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark",
+								// 1st level
+								"burning hands", "color spray", "faerie fire", "flash", "hellish rebuke", "heroism", "inner flame",  "silent image",
+								// 2nd level
+								"calm flames", "continual flame", "enhance ability", "flame blade", "flaming sphere", "heat metal", "invisibility", "redirect lightning", "scorching ray", "wanyudo’s fury",
+								// 3rd level
+								"daylight", "fireball", "flaming tiger leap", "haste", "lightning bolt", "major image",
+								// 4th level
+								"conjure minor elementals", "fire shield", "greater invisibility", "lion’s roar", "wall of fire",
+								// 5th level
+								"conjure elemental", "flame strike", "feverskin", "magatsuchi’s lantern", "planar binding", "raiko’s rending rage"]);
+							},
+						"I learn one cantrip of my choice from the Fire element’s list and add its spells to my bender spell list."
+					],
+				},
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("fire") == -1;},
+			},
+			"fire 2" : { 
+				submenu : "[improves Fire Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("fire") !== -1 || GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("fire 1") !== -1;},
+			},
+			"fire 3" : { 
+				submenu : "[improves Fire Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 10 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("fire 2") !== -1;},
+			},
+			"fire 4" : { 
+				submenu : "[improves Fire Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 14 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("fire 3") !== -1;},
+			},
+			"water 1" : {
+				submenu : "[New Elemental Affinity]",
+				description : desc("I learn one cantrip of my choice from the Water element’s list and add its spells to my bender spell list."),
+				spellcastingBonus : [{ 
+					spells : ["guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+				}],
+				calcChanges : {
+					spellList : [
+						function(spList, spName, spType) {
+							// don't add if this is not a class or a list of spells is already given
+							if (!ClassList[spName] || spList.spells) return;
+							// if this is an 'extra spell', also test if it uses the class' spell list or not
+							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							spList.extraspells = spList.extraspells.concat([
+								// Cantrips (0 Level)
+								"guidance", "pins & needles", "ray of frost", "spare the dying", "water whip",
+								// 1st level
+								"charm person", "command", "create or destroy water", "detect poison and disease", "ice moon", "purify food & drink",
+								// 2nd level
+								"aid", "bloodweave", "calm emotions", "calm waters", "endoleech", "enhance ability", "hold person", "lesser restoration", "mirror of reflection", "riptide", "suggestion",
+								// 3rd level
+								"acid rain", "clairvoyance", "extract shirikodama", "hypnotic pattern", "ryoko’s revelation", "sleet storm", "slow", "the bends", "water breathing", "water walk", "water wyrm",
+								// 4th level
+								"cage of frozen tears", "cloud stride", "compulsion", "conjure minor elementals", "control water", "divination", "ice storm",
+								// 5th level
+								"bakuryo's blessed blizzard", "cone of cold", "conjure elemental", "dominate person", "hold monster", "iminada’s umigiri", "planar binding", "scrying", "white water wall"]);
+							},
+						"I learn one cantrip of my choice from the Water element’s list and add its spells to my bender spell list."
+					],
+				},
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("water") == -1;},
+			},
+			"water 2" : { 
+				submenu : "[improves Water Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 6 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("water") !== -1 || GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("water 1") !== -1;},
+			},
+			"water 3" : { 
+				submenu : "[improves Water Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 10 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("water 2") !== -1;},
+			},
+			"water 4" : { 
+				submenu : "[improves Water Elemental Affinity]",
+				description : desc([
+					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
+				]),
+				prereqeval : function() {return classes.known.bender.level >= 14 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("water 3") !== -1;},
+			},
+		},
+		"elemental strikes" : {
+			name : "Elemental Strikes",
+			source : [["RGttYR", 160]],
+			minlevel : 1,
+			description : desc([
+				"When I take the Attack action, I can make melee or ranged spell attacks called elemental strikes as one or more of my attacks. The strike deals damage of a type with which I have affinity (my choice when I make the attack).",
+				"This damage does not increase with level. However, any magic items that confer a bonus to the attack and damage rolls of my unarmed strikes confer the same bonus to my elemental strikes.",
+				"The superior strikes for these attacks are Flurry (for melee attacks) and Battery Strike (for ranged attacks), both unlocked by the tier 2 Pugilist advanced technique."
+			]),
+			weaponOptions : [{
+				baseWeapon : "unarmed strike",
+				regExpSearch : /^(?=.*melee)(?=.*elemental)(?=.*strikes).*$/i,
+				name : "Elemental Strikes (Melee)",
+				source : [["RGttYR", 160]],
+				ability : 4,
+				abilitytodamage : true,
+				damage : [1, 6, ""],
+				description : "Damage type based off elemental affinity (my choice)",
+				selectNow : true
+			},{
+				name : "Elemental Strikes (Ranged)",
+				regExpSearch : /^(?=.*ranged)(?=.*elemental)(?=.*strikes).*$/i,
+				source : [["RGttYR", 160]],
+				type : "Natural",
+				ability : 4,
+				abilitytodamage : true,
+				damage : [1, 4, ""],
+				range : "60 ft",
+				description : "Damage type based off elemental affinity (my choice)",
+				selectNow : true,
+			}],		
+		},
+		"elemental combo" : {
+			name : "Elemental Combo",
+			source : [["RGttYR", 161]],
+			minlevel : 2,
+			description : desc([
+				"On my turn, after I make a weapon attack or elemental strike, or after I cast a levelled spell from my bender spell list, I can release a jet of elemental energy as a bonus action. Make a spell attack against a creature within 60 feet of me. On a hit, it deals 1d4 damage of a type with which I have affinity. If the target of this attack is within 10 feet of me, I can add your spellcasting ability modifier to the damage."
+			]),	
+			weaponOptions : [{
+				name : "Elemental Combo",
+				regExpSearch : /^(?=.*elemental)(?=.*combo).*$/i,
+				source : [["RGttYR", 161]],
+				type : "Natural",
+				ability : 4,
+				abilitytodamage : true,
+				damage : [1, 4, ""],
+				range : "60 ft",
+				description : "Damage type based off elemental affinity (my choice), if target within 10 ft, add spellcasting mod to dmg",
+				selectNow : true,
+			}],	
+			calcChanges: {
+				atkAdd: [
+					function (fields, v) {
+						if ((/^(?=.*elemental)(?=.*combo).*$/i).test(v.WeaponTextName) && classes.known.bender && classes.known.bender.level) {
+						fields.Damage_Die = (classes.known.bender.level < 6 ? 1 : classes.known.bender.level < 10 ? 2 : classes.known.bender.level < 14 ? 3 : 4) + "d4";
+						};
+					},
+					5
+				],
+			},
+		},
+		"subclassfeature3" : {
+			name : "Bender Discipline",
+			source : [["RGttYR", 161]],
+			minlevel : 3,
+			description : desc('Choose a Bender Discipline you manifest and put it in the "Class" field ')
+		},
+		"primordial form" : {
+			name : "Primordial Form",
+			source : [["RGttYR", 162]],
+			minlevel : 11,
+			description : desc([
+				"As a bonus action, I embody aspects of a chosen element. I choose one of the elements with which I have affinity. For 1 minute, or until I fall unconscious, I can cast 1st-level spells associated with that element even if I do not have them prepared and without expending a spell slot. Note: as spells cast using this feature don’t expend spell slots, they are not automatically upcast to higher levels if I have repeated elemental affinities. In addition, I gain a benefit based on that element."
+			]),	
+			action : ["bonus action", "Primordial Form"],
+			extraLimitedFeatures: [{
+				name : "Primordial Form",
+				source : [["RGttYR", 162]],
+ 				usages: "1",
+  				recovery: "long rest",
+ 			}],		
+			toNotesPage: [{
+				name : "Primordial Form",
+				source : [["RGttYR", 162]],
+				note: desc([
+					"As a bonus action, I embody aspects of a chosen element. I choose one of the elements with which I have affinity. For 1 minute, or until I fall unconscious, I can cast 1st-level spells associated with that element even if I do not have them prepared and without expending a spell slot. Note: as spells cast using this feature don’t expend spell slots, they are not automatically upcast to higher levels if I have repeated elemental affinities. In addition, I gain a benefit based on that element.",
+					" \u2022 Air: Untouchable. I have resistance to bludgeoning, slashing, and piercing damage.",
+					" \u2022 Fire: Alight. At the end of each of my turns for the duration, creatures of my choice within 10 feet of me take fire damage equal to my bender spellcasting ability modifier (minimum 1).",
+					" \u2022 Earth: Solid. I gain a +2 bonus to AC.",
+					" \u2022 Water: Fluid. I gain a pool of vitality equal to five times my bender level. At the end of each of my turns for the duration, I can cause up to three creatures of my choice within 10 feet of me to regain 5 hit points (no action required), expending an equal amount of vitality from my pool to do so.",
+					"After I use this feature, I can’t do so again until I finish a long rest.",
+					"Starting at 17th level, while in my primordial form, I can cast spells of 2nd level or lower without expending a spell slot."
+				]),
+			}],
+		},
+		"primordial avatar" : {
+			name : "Primordial Avatar",
+			source : [["RGttYR", 163]],
+			minlevel : 18,
+			description : desc([
+				"As an action, I become a primordial incarnation of my mortal form. I gain 50 temporary hit points as well as benefits based on my Elemental Affinities, which last for 10 minutes, or until I fall unconscious. After I enter this state using this feature, I can’t do so again until I finish a long rest. I gain one benefit for each elemental affinity I have (new or repeated)."
+			]),	
+			action : ["bonus action", "Primordial Avatar"],
+			extraLimitedFeatures: [{
+				name : "Primordial Avatar",
+				source : [["RGttYR", 163]],
+	 			usages: "1",
+	  			recovery: "long rest",
+	 		}],		
+			toNotesPage: [{
+				name : "Primordial Avatar",
+				source : [["RGttYR", 163]],
+				note: desc([
+					"As an action, I become a primordial incarnation of my mortal form. I gain 50 temporary hit points as well as benefits based on my Elemental Affinities, which last for 10 minutes, or until I fall unconscious. After I enter this state using this feature, I can’t do so again until I finish a long rest. I gain one benefit for each elemental affinity I have (new or repeated).",
+					"Air Affinities	Benefits",
+					"1	My walking speed increases by 15 feet. I gain a flying speed of 60 feet.",
+					"2	I am immune to thunder damage and the grappled and restrained conditions.",
+					"3	Once on each of my turns, I can cast the misty step spell without expending a spell slot (no action required). I can’t do so while incapacitated.",
+					"4	My walking and flying speed increases by 15 feet (30 feet total walking speed increase, and flying speed of 75 feet). I am under the effects of the freedom of movement spell.",
+					"Earth Affinities	Benefits",
+					"1	I gain a new way to calculate my AC: 14 + my bender spellcasting ability modifier.",
+					"2	I am immune to acid damage and automatically succeed on saving throws made to avoid being moved against my will or knocked prone.",
+					"3	I gain 3d6 temporary hit points at the start of each of my turns.",
+					"4	I can cast the shield or shielding word spell without expending a spell slot or using my reaction. I can’t do so while incapacitated. After I cast either spell in this way, I can’t do so again until the start of my next turn.",
+					"Fire Affinities	Benefits",
+					"1	The first time I hit a target with an attack on each of my turns, I deal an extra 2d6 fire or lightning damage to it (my choice when I gain this benefit).",
+					"2	I am immune to fire damage.",
+					"3	I can cast the hellish rebuke spell at 2nd-level without expending a spell slot or using my reaction. I can’t do so while incapacitated. After I cast the spell in this way, I can’t do so again until the start of my next turn.",
+					"4	I am under the effects of the fire shield spell (warm shield only).",
+					"Water Affinities	Benefits",
+					"1	I gain a swimming speed of 60 feet. Once on each of my turns, I can take the Help action targeting any creature I can see within 30 feet of me (no action required).",
+					"2	I am immune to cold damage.",
+					"3	When a creature I can see within 30 feet of me succeeds on a saving throw or an attack roll, I can force the creature to reroll the d20 and use the lower roll (no action required). After I do so, I can’t do so again until the start of my next turn.",
+					"4	I am under the effects of the true seeing spell.",							
+				]),
+			}],
+		},
+	},
+};
+
+// Bender Subclasses
+AddSubClass("bender", "disciple of ferocity", {
+	regExpSearch : /^(?=.*disciple)(?=.*ferocity).*$/i,
+	subname : "Disciple of Ferocity",
+	source : [["RGttYR", 166]],
+	spellcastingExtra : ["magic missile", "magic weapon", "blink", "guardian of faith", "arcane hand"],
+	features : {
+		"subclassfeature3.1" : {
+			name : "Bonus Ferocity Spells",
+			source : [["RGttYR", 167]],
+			minlevel : 3,
+			description : desc([
+				"Spells are added to my bender spell list. They always take the form of an element associated with my Elemental Affinity. The damage type is one for which I have affinity instead of what is specified for magic missile (I choose when I cast the spell). For blink, I move to a Border-Elemental Plane associated with my Elemental Affinity."
+			]),
+			calcChanges : {
+				spellAdd : [
+					function (spellKey, spellObj, spName) {
+						if (spellKey == "magic missile") {
+							spellObj.description = spellObj.description.replace("Force", "(Elemental Affinity)");
+							return true;
+						};
+					},
+					"The damage type is one for which I have affinity instead of what is specified (I choose when I cast the spell)."
+				]
+			}
+		},
+		"subclassfeature3.2" : {
+			name: "Martial Proficiencies",
+      			source: [["RGttYR", 167]],
+      			minlevel: 3,
+      			description: desc(["I gain proficiency with martial weapons and can use any weapon I am proficient with as a spellcasting focus for my bender spells."]),
+      			weapons: [false, true],
+    		},
+		"subclassfeature3.3" : {
+			name: "Elemental Conduit",
+      			source: [["RGttYR", 167]],
+      			minlevel: 3,
+      			description: desc(["I can use my bender spellcasting ability instead of Strength or Dexterity for weapon attack and damage rolls."]),
+    		},	
+		"subclassfeature7" : {
+			name: "Destructive Nature",
+      			source: [["RGttYR", 167]],
+      			minlevel: 7,
+      			description: desc(["When I hit a creature with an attack, I can expend a spell slot to deal extra damage of a type associated with my Elemental Affinity. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 6d8."]),
+    		},	
+		"subclassfeature15" : {
+			name: "Elemental Ferocity",
+      			source: [["RGttYR", 167]],
+      			minlevel: 15,
+      			description: desc(["The damage of my Elemental Combo feature increases to 5d4."]),
+			calcChanges: {
+				atkAdd: [
+					function (fields, v) {
+						if ((/^(?=.*elemental)(?=.*combo).*$/i).test(v.WeaponTextName) && classes.known.bender && classes.known.bender.level) {
+						fields.Damage_Die = "5" + "d4";
+						};
+					},
+					5
+				],
+			},
+    		},
+		"subclassfeature20" : {
+			name: "Primordial Battery",
+      			source: [["RGttYR", 167]],
+      			minlevel: 20,
+      			description: desc(["I can attack three times whenever I take the Attack action on my turn."]),
+			action : ["action", "Attack (3 attacks per action)"],
+  		},					
+}});
+
+AddSubClass("bender", "disciple of fortification", {
+	regExpSearch : /^(?=.*disciple)(?=.*fortification).*$/i,
+	subname : "Disciple of Fortification",
+	source : [["RGttYR", 167]],
+	spellcastingExtra : ["shield", "shielding word", "protection from energy", "resilient sphere", "endure"],
+	features : {
+		"subclassfeature3.1" : {
+			name : "Bonus Fortification Spells",
+			source : [["RGttYR", 168]],
+			minlevel : 3,
+			description : desc([
+				"Spells are added to my bender spell list. They always take the form of an element associated with my Elemental Affinity. For protection from energy, the damage type must be one for which I have affinity."
+			]),
+		},
+		"subclassfeature3.2" : {
+			name: "Defensive Proficiencies",
+      			source: [["RGttYR", 168]],
+      			minlevel: 3,
+      			description: desc(["I gain proficiency with heavy armour and shields. In addition, I can use a shield as a spellcasting focus for my bender spells."]),
+      			armorProfs : [false, false, true, true],
+    		},
+		"subclassfeature3.3" : {
+			name: "Primordial Shield",
+      			source: [["RGttYR", 168]],
+      			minlevel: 3,
+      			description: desc(["As a bonus action on my turn, I can create this shield, granting me or a willing creature within 30 feet of me 1d6 temporary hit points. These temporary hit points last until I use this feature again or the target finishes a long rest. The number of temporary hit points increases to 1d10 at 6th level, 2d6 at 10th level, and 2d10 at 14th level."]),
+			action : ["bonus action", "Primordial Shield"],
+    		},	
+		"subclassfeature7" : {
+			name: "Redirect Elements",
+      			source: [["RGttYR", 168]],
+      			minlevel: 7,
+      			description: desc(["When a creature I can see within 30 feet of me (including myself) would take damage of a type associated with my Elemental Affinity, I can use my reaction to reduce that damage. The damage is reduced by 2d6 for each time I have chosen affinity with that element. If this reduces the damage to 0, I can make a ranged spell attack, redirecting the energy at a target within 30 feet of the original target. The attack deals damage equal to the amount by which I reduced the triggering damage. The size of these dice increase to d8s at 11th level, d10s at 15th level, and d12s at 20th level."]),		
+			action : ["reaction", "Redirect Elements"],
+    		},	
+		"subclassfeature15" : {
+			name: "Elemental Reinforcement",
+      			source: [["RGttYR", 169]],
+      			minlevel: 15,
+      			description: desc(["When I cast a bender spell of 1st level or higher, I can choose one creature I can see within 30 feet of me (including myself) to gain a bonus to AC equal to the base level of the spell until the start of my next turn."]),
+    		},
+		"subclassfeature20" : {
+			name: "Primordial Bulwark",
+      			source: [["RGttYR", 169]],
+      			minlevel: 20,
+      			description: desc([
+				"When I roll initiative and am not surprised, I can use my reaction to cast a spell associated with my Elemental Affinity, as shown in the table below, without expending a spell slot. Once I use this feature, I can’t do so again until I finish a long rest.",
+				"Elemental Affinity	Spell",
+				"Air		Wind Wall",
+				"Earth		Wall of Stone",
+				"Fire		Wall of Fire",
+				"Water		White water Wall"
+			]),
+			action : ["reaction", "Primordial Bulwark"],
+			extraLimitedFeatures: [{
+				name : "Primordial Bulwark",
+				source : [["RGttYR", 169]],
+	 			usages: "1",
+	  			recovery: "long rest",
+	 		}],	
+    		},
+}});	
+
+AddSubClass("bender", "disciple of fusion", {
+	regExpSearch : /^(?=.*disciple)(?=.*fusion).*$/i,
+	subname : "Disciple of Fusion",
+	source : [["RGttYR", 170]],
+	features : {
+		"subclassfeature3.1" : {
+			name : "Bonus Cantrips",
+			source : [["RGttYR", 170]],
+			minlevel : 3,
+			description : desc([
+				"I learn two additional bender cantrips of my choice, which can be from any element’s list, and don’t count towards the number of cantrips I know."
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion Cantrips",
+				level : [0, 0],
+				spells : ["concussion", "dash strike", "smokescreen", "soften descent", "acid splash", "earthen fist", "reinforce", "resistance", "shillelagh", "dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark", "guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+				times : 2,
+				firstCol : 'atwill'
+			}],
+		},
+		"subclassfeature3.2" : {
+			name : "Bonus Spells",
+			source : [["RGttYR", 170]],
+			minlevel : 3,
+			description : desc([
+				"I learn one 1st-level bender spell from any element’s list; I always have that spell prepared, and it doesn’t count against the number of spells I can prepare each day. When I reach 5th, 9th, 13th, and 17th level in this class, I learn one 2nd-, 3rd-, 4th-, and 5th-level bender spell in this way, respectively. If I don’t have affinity with the element from which a spell is chosen, the spell is cast as if I had 1 affinity with that element. "
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion 1st Lvl",
+				level : [1, 1],
+				spells : ["color spray", "expeditious retreat", "feather fall", "fog cloud", "jump", "longstrider", "repulsing palm", "tasha's hideous laughter", "thunderwave", "unseen servant", "wind drake", "earthen uppercut", "entangle", "false life", "goodberry", "grease", "shield", "tenser's floating disk", "burning hands", "color spray", "faerie fire", "flash", "hellish rebuke", "heroism", "inner flame",  "silent image", "charm person", "command", "create or destroy water", "detect poison and disease", "ice moon", "purify food & drink"],
+				prepared : true,
+			}],
+		},
+		"subclassfeature3.3" : {
+			name : "Fusionist Spellcasting",
+			source : [["RGttYR", 170]],
+			minlevel : 3,
+			description : desc([
+				"When I expend a spell slot of 1st level or higher to cast a spell from my bender spell repertoire, I can augment it with another element, creating an additional effect in a sphere centred on the target of my spell or, if the spell affects an area, the centre of the affected area. I choose the size of the sphere, which can have a maximum radius in feet equal to five times the level of the spell slot expended. The effect depends on the element list from which the spell was drawn, and the element with which I choose to combine it. Any saving throws are against my bender spell save DC.",
+				"I can use this feature a number of times equal to my bender spellcasting ability modifier (minimum of once), and regain all expended uses when I finish a short or long rest."
+			]),
+			toNotesPage: [{
+				name : "Fusionist Spellcasting",
+				source : [["RGttYR", 170]],
+				note: desc([
+					"When I expend a spell slot of 1st level or higher to cast a spell from my bender spell repertoire, I can augment it with another element, creating an additional effect in a sphere centred on the target of my spell or, if the spell affects an area, the centre of the affected area. I choose the size of the sphere, which can have a maximum radius in feet equal to five times the level of the spell slot expended. The effect depends on the element list from which the spell was drawn, and the element with which I choose to combine it. Any saving throws are against my bender spell save DC.",
+					"I can use this feature a number of times equal to my bender spellcasting ability modifier (minimum of once), and regain all expended uses when I finish a short or long rest.",
+					"Air & Earth: Dust. Dust explodes in the sphere. Each creature in the area must succeed on a Constitution saving throw or be blinded until the end of my next turn.",					
+					"Air & Fire: Smoke. Cloying smoke fills the sphere until the end of my next turn. For the duration, the area is heavily obscured, creatures in the area can speak only falteringly, and any creature in the area that tries to cast a spell with a verbal component must succeed on a Constitution saving throw or fail to cast the spell, wasting the spellcasting action (but not the spell slot).",
+					"Air & Water: Ice. All surfaces in the sphere become covered with a layer of slick ice, turning the area into difficult terrain until the end of my next turn. When the ice appears, each creature standing in the area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.",
+					"Earth & Fire: Lava. Speckles of molten rock explode in the sphere. Each creature in the area must succeed on a Dexterity saving throw or take 1d6 fire damage per level of spell slot expended.",
+					"Earth & Water: Mud. A torrent of sticky mud erupts in the sphere. The area becomes difficult terrain until cleaned, and each creature in the sphere has its speed reduced by 15 feet. A creature can use its action to clean the mud off of itself or another affected creature, removing the speed reduction. A creature can clear a 5-foot-square area of difficult terrain as an action.",
+					"Fire & Water: Steam. Steam blooms in the sphere until the end of my next turn. For the duration, the area is heavily obscured, and a creature that ends its turn in the sphere takes 1d4 fire damage per level of the spell slot expended."	
+				]),
+			}],
+		},
+		"subclassfeature5" : {
+			name : "Bonus Spells",
+			source : [["RGttYR", 170]],
+			minlevel : 5,
+			description : desc([
+				"I learn one 2nd-level bender spell from any element’s list; I always have that spell prepared, and it doesn’t count against the number of spells I can prepare each day.8 If I don’t have affinity with the element from which a spell is chosen, the spell is cast as if I had 1 affinity with that element. "
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion 2nd Lvl",
+				level : [2, 2],
+				spells : ["blur", "calm air", "enhance ability", "gust of wind", "levitate", "mirror image", "misty step", "redirect lightning", "shatter", "silence", "wind strike", "barkskin", "calm earth", "earthskin", "melf's acid arrow", "protection", "protection from poison", "shielding word", "snakebite", "spike growth", "calm flames", "continual flame", "flame blade", "flaming sphere", "heat metal", "invisibility", "redirect lightning", "scorching ray", "wanyudo’s fury", "aid", "bloodweave", "calm emotions", "calm waters", "endoleech", "hold person", "lesser restoration", "mirror of reflection", "riptide", "suggestion"],
+				prepared : true,
+			}],
+		},
+		"subclassfeature7" : {
+			name : "Interelemental Casting",
+			source : [["RGttYR", 171]],
+			minlevel : 7,
+			description : desc([
+				"When I cast a spell which deals damage of a type associated with an Elemental Affinity, I can change the damage type to one associated with one of my Elemental Affinities. In addition, when a creature I can see casts a spell that deals damage of a type associated with any Elemental Affinity, I can use my reaction to make a spellcasting ability check. The DC for the check equals 10 plus the spell’s level (cantrips are DC 10). On a success, I change the damage type to one associated with one of my Elemental Affinities."
+			]),
+		},
+		"subclassfeature9" : {
+			name : "Bonus Spells",
+			source : [["RGttYR", 170]],
+			minlevel : 9,
+			description : desc([
+				"I learn one 3rd-level bender spell from any element’s list; I always have that spell prepared, and it doesn’t count against the number of spells I can prepare each day.8 If I don’t have affinity with the element from which a spell is chosen, the spell is cast as if I had 1 affinity with that element. "
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion 3rd Lvl",
+				level : [3, 3],
+				spells : ["call lightning", "depth charge", "flashbang","fly", "gaseous form", "haste", "switcheroo", "wind wall", "acid rain", "meld into stone", "mireball", "daylight", "fireball", "flaming tiger leap", "haste", "lightning bolt", "major image", "acid rain", "clairvoyance", "extract shirikodama", "hypnotic pattern", "ryoko’s revelation", "sleet storm", "slow", "the bends", "water breathing", "water walk", "water wyrm"],
+				prepared : true,
+			}],
+		},
+		"subclassfeature13" : {
+			name : "Bonus Spells",
+			source : [["RGttYR", 170]],
+			minlevel : 13,
+			description : desc([
+				"I learn one 4th-level bender spell from any element’s list; I always have that spell prepared, and it doesn’t count against the number of spells I can prepare each day.8 If I don’t have affinity with the element from which a spell is chosen, the spell is cast as if I had 1 affinity with that element. "
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion 4th Lvl",
+				level : [4, 4],
+				spells : ["cloud stride", "conjure minor elementals", "dimension door", "freedom of movement", "hallucinatory terrain", "tempestuous transformation", "rock tomb", "steelskin", "slatestorm", "stone shape", "stoneskin", "fire shield", "greater invisibility", "lion’s roar", "wall of fire", "cage of frozen tears", "cloud stride", "compulsion", "control water", "divination", "ice storm"],
+				prepared : true,
+			}],
+		},
+		"subclassfeature15" : {
+			name : "Unleashed Elements",
+			source : [["RGttYR", 171]],
+			minlevel : 15,
+			description : desc([
+				"On my turn, when I use my action to cast a bender sspell of 1st level or higher, I can cast a bender cantrip with a casting time of one action as a bonus action that turn. I can use this feature a number of times equal to my spell bender casting ability modifier (minimum of once) and regain all expended uses when I finish a long rest."
+			]),
+		},
+		"subclassfeature17" : {
+			name : "Bonus Spells",
+			source : [["RGttYR", 170]],
+			minlevel : 17,
+			description : desc([
+				"I learn one 5th-level bender spell from any element’s list; I always have that spell prepared, and it doesn’t count against the number of spells I can prepare each day.8 If I don’t have affinity with the element from which a spell is chosen, the spell is cast as if I had 1 affinity with that element. "
+			]),
+			spellcastingBonus : [{
+				name : "Disciple of Fusion 5th Lvl",
+				level : [5, 5],
+				spells : ["conjure elemental", "cyclone", "iminada’s umigiri", "mislead", "planar binding", "raiko’s rending rage", "eruption", "nomi’s adamantine carapace", "passwall", "wall of stone", "flame strike", "feverskin", "magatsuchi’s lantern", "bakuryo's blessed blizzard", "cone of cold", "dominate person", "hold monster", "scrying", "white water wall"],
+				prepared : true,
+			}],
+		},
+		"subclassfeature20" : {
+			name : "Avatar of Elements",
+			source : [["RGttYR", 171]],
+			minlevel : 20,
+			description : desc([
+				"I gain two additional Elemental Affinities of my choice, for a total of six affinities. I can have no more than four affinities for any one element."
+			]),
+			bonusClassExtrachoices : [{
+				"class" : "bender",
+				feature : "elemental affinity",
+				bonus : 2
+			}],
+		},
+}});
+
+AddSubClass("bender", "disciple of invigoration", {
+	regExpSearch : /^(?=.*disciple)(?=.*invigoration).*$/i,
+	subname : "Disciple of Invigoration",
+	source : [["RGttYR", 172]],
+	spellcastingExtra : ["bless", "enhance ability", "haste", "freedom of movement", "greater restoration"],
+	features : {
+		"subclassfeature3.1" : {
+			name : "Inner Vigor",
+			source : [["RGttYR", 173]],
+			minlevel : 3,
+			description : desc([
+				"My hit point maximum increases by 3 and increases by 1 again whenever I gain a level in this class. In addition, I can add my bender spellcasting ability modifier to checks I make to maintain my concentration."
+			]),
+			calcChanges : {
+				hp : function (totalHD) {
+					return [classes.known.bender.level, "Inner Vigor (Bender)"];
+				},
+			},
+			savetxt: "Add spellcasting mod to Concentration saves",
+		},	
+		"subclassfeature3.2" : {
+			name : "Primordial Pulse",
+			source : [["RGttYR", 173]],
+			minlevel : 3,
+			description : desc([
+				"With shrewd timing, I imbue an ally with invigorating energy. When a willing creature I can see within 30 feet of me fails a saving throw or misses an attack roll, I can use my reaction to give it a rejuvenating boost. It immediately rerolls the saving throw or attack roll, with an additional bonus equal to my bender spellcasting ability modifier, and it must use the new result, potentially turning a failed save into a success or a missed attack into a hit. If this rerolled attack hits, it deals extra damage of a type associated with one of my Elemental Affinities (my choice when you take the reaction) equal to my bender spellcasting ability modifier. I can use this feature a number of times equal to my bender spellcasting ability modifier (minimum of once). I regain all expended uses when I finish a long rest."
+			]),
+			action : ["reaction", "Primordial Pulse"],
+		},
+		"subclassfeature7" : {
+			name : "Distracting Onslaught",
+			source : [["RGttYR", 173]],
+			minlevel : 7,
+			description : desc([
+				"Once on my turn, when I deal damage to a creature using a damage type associated with my Elemental Affinity, I can cause the elements to manifest in a distracting array: fire may burst into dazzling lights, water may foam into obscuring spray, and wind or earth may whip up into a cloud. The next time the target makes an attack roll or saving throw before the end of its next turn, it must roll a d8 and subtract that from the result. I can use this feature a number of times equal to my bender spellcasting ability modifier (minimum of once). I regain all expended uses when I finish a long rest."
+			]),
+		},		
+		"subclassfeature15" : {
+			name : "Elemental Enhancement",
+			source : [["RGttYR", 173]],
+			minlevel : 15,
+			description : desc([
+				"Once per turn when I cast a bender spell of 1st level or higher that targets an ally, I can enhance that spell (no action required). Choose one of the following options:",
+				" \u2022 I end one of the following conditions on the creature (my choice): blinded, charmed, deafened, frightened, poisoned, or stunned.",
+				" \u2022 The creature can add a d6 to the next attack roll or saving throw it makes before the end of its next turn.",
+				" \u2022 The creature can use its reaction to make one weapon attack.",
+				" \u2022 The creature can use its reaction to move up to half its speed without provoking opportunity attacks.",
+				"If the spell targets more than one ally, I choose which ally gains the benefit. I can use this feature a number of times equal to my bender spellcasting ability modifier (minimum of once) and regain all expended uses when I finish a long rest."
+			]),
+		},		
+		"subclassfeature20" : {
+			name : "Primordial Invigoration",
+			source : [["RGttYR", 173]],
+			minlevel : 20,
+			description : desc([
+				"When you enter my Primordial Avatar state, I can grant up to five willing creatures within 30 feet of me one level 1 benefit listed in an appropriate Primordial Avatar Benefits table for an element with which I have affinity. I choose a single effect to grant to all the creatures, which lasts until my Primordial Avatar state ends."
+			]),
+		},
+}});
+
+
+/*
  * Optional Class Features
  */
 
@@ -710,126 +1607,18 @@ AddFeatureChoice(ClassList.ranger.features.spellcasting, true, "Improved Extra A
 	prereqeval : function (v) { return classes.known.ranger.level >= 5 ? true : "skip"; },
 }, "Optional 5th-level ranger features");
 
+AddFeatureChoice(ClassList.bender.features["elemental combo"], true, "Improved Extra Attack", {
+	name : "Improved Extra Attack",
+	extraname : "Optional Bender 5",
+	source : [["RGttYR", 148]],
+	description : desc([
+		"This feature replaces the Extra Attack feature and works with features that interact with Extra Attack.",
+		"I can attack twice, instead of once, whenever I take the Attack action on my turn.",
+		"When I reach 7th level in this class, my movements allow me to imbue magic in the elements I bend. When I take the Attack action, I can cast one cantrip in the bender spell list that I know in place of one of my attacks. This cantrip must have a casting time of one action, and it is cast at its lowest level.",
+	]),
+	prereqeval : function (v) { return classes.known.bender.level >= 5 ? true : "skip"; },
+}, "Optional 5th-level bender features");
 
-/*
- * Bender Class
- */
-
-//Bender Spell Lists
-var ElementalAffinity = {
-	air : {
-		name : "Air Elemental Affinity",
-		description : desc("I gain spells associated with the chosen element"),
-		calcChanges : {
-			spellList : [
-				function(spList, spName, spType) {
-					// don't add if this is not a class or a list of spells is already given
-					if (!ClassList[spName] || spList.spells || spList.psionic) return;
-					// if this is an 'extra spell', also test if it uses the class' spell list or not
-					if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-					spList.extraspells = spList.extraspells.concat([
-						// Cantrips (0 Level)
-						"concussion", "dash strike", "smokescreen", "soften descent",
-						// 1st level
-						"color spray", "expeditious retreat", "feather fall", "fog cloud", "hideous laughter", "jump", "longstrider", "repulsing palm", "thunderwave", "unseen servant", "wind drake",
-						// 2nd level
-						"blur", "calm air", "enhance ability", "gust of wind", "levitate", "mirror image", "misty step", "redirect lightning", "shatter", "silence", "wind strike",
-						// 3rd level
-						"call lightning", "depth charge", "flashbang","fly", "gaseous form", "haste", "switcheroo", "wind wall",
-						// 4th level
-						"cloud stride", "conjure minor elementals", "dimension door", "freedom of movement", "hallucinatory terrain", "tempestuous transformation",
-						// 5th level
-						"conjure elemental", "cyclone", "iminada’s umigiri", "mislead", "planar binding", "raiko’s rending rage"]);
-				},
-				"I gain spells associated with the chosen element"
-			]
-		},
-	},
-	earth : {
-		name : "Earth Elemental Affinity",
-		description : desc("I gain spells associated with the chosen element"),
-		calcChanges : {
-			spellList : [
-				function(spList, spName, spType) {
-					// don't add if this is not a class or a list of spells is already given
-					if (!ClassList[spName] || spList.spells || spList.psionic) return;
-					// if this is an 'extra spell', also test if it uses the class' spell list or not
-					if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-					spList.extraspells = spList.extraspells.concat([
-						// Cantrips (0 Level)
-						"acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",
-						// 1st level
-						"earthen uppercut", "entangle", "false life", "floating disk", "goodberry", "grease", "shield",
-						// 2nd level
-						"acid arrow", "barkskin", "calm earth", "earthskin", "enhance ability", "protection", "protection from poison", "shielding word", "snakebite", "spike growth",
-						// 3rd level
-						"acid rain", "meld into stone", "mireball",
-						// 4th level
-						"conjure minor elementals", "rock tomb", "steelskin", "slatestorm", "stone shape", "stoneskin",
-						// 5th level
-						"conjure elemental", "eruption", "nomi’s adamantine carapace", "passwall", "planar binding", "wall of stone"]);
-				},
-				"I gain spells associated with the chosen element"
-			]
-		},
-	},
-	fire : {
-		name : "Fire Elemental Affinity",
-		description : desc("I gain spells associated with the chosen element"),
-		calcChanges : {
-			spellList : [
-				function(spList, spName, spType) {
-					// don't add if this is not a class or a list of spells is already given
-					if (!ClassList[spName] || spList.spells || spList.psionic) return;
-					// if this is an 'extra spell', also test if it uses the class' spell list or not
-					if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-					spList.extraspells = spList.extraspells.concat([
-						// Cantrips (0 Level)
-						"dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark",
-						// 1st level
-						"burning hands", "color spray", "faerie fire", "flash", "hellish rebuke", "heroism", "inner flame",  "silent image",
-						// 2nd level
-						"calm flames", "continual flame", "enhance ability", "flame blade", "flaming sphere", "heat metal", "invisibility", "redirect lightning", "scorching ray", "wanyudo’s fury",
-						// 3rd level
-						"daylight", "fireball", "flaming tiger leap", "haste", "lightning bolt", "major image",
-						// 4th level
-						"conjure minor elementals", "fire shield", "greater invisibility", "lion’s roar", "wall of fire",
-						// 5th level
-						"conjure elemental", "flame strike", "feverskin", "magatsuchi’s lantern", "planar binding", "raiko’s rending rage"]);
-				},
-				"I gain spells associated with the chosen element"
-			]
-		},
-	},
-	water : {
-		name : "Water Elemental Affinity",
-		description : desc("I gain spells associated with the chosen element"),
-		calcChanges : {
-			spellList : [
-				function(spList, spName, spType) {
-					// don't add if this is not a class or a list of spells is already given
-					if (!ClassList[spName] || spList.spells || spList.psionic) return;
-					// if this is an 'extra spell', also test if it uses the class' spell list or not
-					if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-					spList.extraspells = spList.extraspells.concat([
-						// Cantrips (0 Level)
-						"guidance", "pins & needles", "ray of frost", "spare the dying", "water whip",
-						// 1st level
-						"charm person", "command", "create or destroy water", "detect poison and disease", "ice moon", "purify food & drink",
-						// 2nd level
-						"aid", "bloodweave", "calm emotions", "calm waters", "endoleech", "enhance ability", "hold person", "lesser restoration", "mirror of reflection", "riptide", "suggestion",
-						// 3rd level
-						"acid rain", "clairvoyance", "extract shirikodama", "hypnotic pattern", "ryoko’s revelation", "sleet storm", "slow", "the bends", "water breathing", "water walk", "water wyrm",
-						// 4th level
-						"cage of frozen tears", "cloud stride", "compulsion", "conjure minor elementals", "control water", "divination", "ice storm",
-						// 5th level
-						"bakuryo's blessed blizzard", "cone of cold", "conjure elemental", "dominate person", "hold monster", "iminada’s umigiri", "planar binding", "scrying", "white water wall"]);
-				},
-				"I gain spells associated with the chosen element"
-			]
-		},
-	},
-}; 
 
 /*
  * Subclasses
@@ -1169,7 +1958,7 @@ AddSubClass("cleric", "shrine warden domain", {
 		},
 		"subclassfeature8" : {
 			name : "Divine Strike",
-			source : [["RGttYR", 35]],
+			source : [["T", 35]],
 			minlevel : 8,
 			description : "\n  Once per turn, when I hit a creature with a weapon attack, I can do extra damage",
 			additional : levels.map(function (n) {
@@ -1280,17 +2069,17 @@ AddSubClass("fighter", "skeletal blade", {
 		  //Adding in the Skeletal Blade under weapons
 			weaponsAdd: ["Skeletal Form"],
 			weaponOptions: [{
-			name: "Skeletal Form",
-			source: [["RGttYR", 178]],
-			regExpSearch : /^(?=.*skeletal)(?=.*form).*$/i,
-			type : "Martial",
-			ability : 1,
-			abilitytodamage : true,
-			damage: [1, 8, "slashing/piercing"],
-			range : "Melee",
-			description : "Simple, Finesse, Skewer superior strike, Can't be disarmed of this",
-			isMagicWeapon : true,
-			isAlwaysProf: true,
+				name: "Skeletal Form",
+				source: [["RGttYR", 178]],
+				regExpSearch : /^(?=.*skeletal)(?=.*form).*$/i,
+				type : "Martial",
+				ability : 1,
+				abilitytodamage : true,
+				damage: [1, 8, "slashing/piercing"],
+				range : "Melee",
+				description : "Simple, Finesse, Skewer superior strike, Can't be disarmed of this",
+				isMagicWeapon : true,
+				isAlwaysProf: true,
 			}],
 			calcChanges: {
 			   atkAdd: [
@@ -1461,13 +2250,12 @@ AddSubClass("monk", "way of the eight gates", {
 			description : desc([
 				"I can cast the Telepathic Bond spell, requiring no componetns, recovers on a short or long rest"
 			]),
-			   extraLimitedFeatures: [
-    				{
+			extraLimitedFeatures: [{
 				name : "Telepathic Bond",
 				source : [["RGttYR", 180]],
  				usages: "1",
   				recovery: "short rest",
- 				}],
+ 			}],
 		},
 		"subclassfeature17" : {
 			name : "Gate of Infinity",
@@ -7318,6 +8106,60 @@ FeatsList["elemental initiate"] = {
 		" \u2022 I learn one cantrip and one 1st-level spell from the chosen element’s spell list. I can cast the 1st-level spell without a spell slot, and I must finish a long rest before I can cast it in this way again. I can also cast the spell using any spell slots I have. My spellcasting ability for this feat’s spells is Intelligence, Wisdom, or Charisma (choose when I select this feat)." +
 		" \u2022 When I take this feat, choose one damage type associated with the element I chose. When I take damage of that type, I can use a reaction to gain resistance to that damage type, including the triggering damage, until the start of my next turn." +
 		"I can select this feat multiple times.",
+	action : ["reaction", "Elemental Initiate"],
+	choices : ["Air", "Earth", "Fire", "Water"],
+	"air" : {
+		spellcastingBonus : [{
+			name : "Elemental Initiate (Air)",
+			level : [0, 0],
+			spells : ["concussion", "dash strike", "smokescreen", "soften descent"],
+			firstCol : 'atwill'
+		},{
+			name : "Elemental Initiate (Air)",
+			level : [1, 1],
+			spells : ["color spray", "expeditious retreat", "feather fall", "fog cloud", "jump", "longstrider", "repulsing palm", "tasha's hideous laughter", "thunderwave", "unseen servant", "wind drake"],
+			firstCol : 'oncelr'
+		}],
+	},
+	"earth" : {
+		spellcastingBonus : [{
+			name : "Elemental Initiate (Earth)",
+			level : [0, 0],
+			spells : ["acid splash", "earthen fist", "reinforce", "resistance", "shillelagh"],
+			firstCol : 'atwill'
+		},{
+			name : "Elemental Initiate (Earth)",
+			level : [1, 1],
+			spells : ["earthen uppercut", "entangle", "false life", "goodberry", "grease", "shield", "tenser's floating disk"],
+			firstCol : 'oncelr'
+		}],
+	},	
+	"fire" : {
+		spellcastingBonus : [{
+			name : "Elemental Initiate (Fire)",
+			level : [0, 0],
+			spells : ["dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark"],
+			firstCol : 'atwill'
+		},{
+			name : "Elemental Initiate (Fire)",
+			level : [1, 1],
+			spells : ["burning hands", "color spray", "faerie fire", "flash", "hellish rebuke", "heroism", "inner flame",  "silent image"],
+			firstCol : 'oncelr'
+		}],
+	},
+	"water" : {
+		spellcastingBonus : [{
+			name : "Elemental Initiate (Water)",
+			level : [0, 0],
+			spells : ["guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+			firstCol : 'atwill'
+		},{
+			name : "Elemental Initiate (Water)",
+			level : [1, 1],
+			spells : ["charm person", "command", "create or destroy water", "detect poison and disease", "ice moon", "purify food & drink"],
+			firstCol : 'oncelr'
+		}],
+	},		
 };
 
 FeatsList["extra attack tactician"] = {

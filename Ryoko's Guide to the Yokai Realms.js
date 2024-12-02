@@ -709,6 +709,9 @@ ClassList["bender"] = {
 		spells: "list",
 		prepared : true
 	},
+	spellcastingList : {
+		"class" : "bender",
+	},
 	features : {
 		"spellcasting" : {
 			name : "Spellcasting",
@@ -734,16 +737,14 @@ ClassList["bender"] = {
 			}),
 			"air" : {
 				submenu : "[Choice at level 1]",
+				name : "Air",
 				description : desc([
 					"The spells associated with the Air element are added to my bender spell list."
 				]),
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"concussion", "dash strike", "smokescreen", "soften descent",
@@ -764,16 +765,14 @@ ClassList["bender"] = {
 			},
 			"earth" : {
 				submenu : "[Choice at level 1]",
+				name : "Earth",
 				description : desc([
 					"The spells associated with the Earth element are added to my bender spell list."
 				]),
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",
@@ -794,16 +793,14 @@ ClassList["bender"] = {
 			},			
 			"fire" : {
 				submenu : "[Choice at level 1]",
+				name : "Fire",
 				description : desc([
 					"The spells associated with the Fire element are added to my bender spell list."
 				]),
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark",
@@ -824,16 +821,14 @@ ClassList["bender"] = {
 			},
 			"water" : {
 				submenu : "[Choice at level 1]",
+				name : "Water",
 				description : desc([
 					"The spells associated with the Water element are added to my bender spell list."
 				]),
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"guidance", "pins & needles", "ray of frost", "spare the dying", "water whip",
@@ -854,17 +849,18 @@ ClassList["bender"] = {
 			},
 			"air 1" : {
 				submenu : "[New Elemental Affinity]",
+				name : "Air 1",
 				description : desc("I learn one cantrip of my choice from the Air element’s list and add its spells to my bender spell list."),
 				spellcastingBonus : [{ 
 					spells : ["concussion", "dash strike", "smokescreen", "soften descent"],
-				}],
+					notspells : ["acid splash", "earthen fist", "reinforce", "resistance", "shillelagh", "dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark", "guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+					name : "Air Elemental Affinity Cantrip",
+					level : [0, 0],
+				}],	
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"concussion", "dash strike", "smokescreen", "soften descent",
@@ -886,6 +882,7 @@ ClassList["bender"] = {
 			},
 			"air 2" : { 
 				submenu : "[improves Air Elemental Affinity]",
+				name : "Air 2",
 				description : desc([
 					"Spells that I cast from the Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -893,6 +890,7 @@ ClassList["bender"] = {
 			},
 			"air 3" : { 
 				submenu : "[improves Air Elemental Affinity]",
+				name : "Air 3",
 				description : desc([
 					"Spells that I cast from the Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -900,6 +898,7 @@ ClassList["bender"] = {
 			},
 			"air 4" : { 
 				submenu : "[improves Air Elemental Affinity]",
+				name : "Air 4",
 				prereqeval : function() {return classes.known.bender.level >= 14 && GetFeatureChoice("class", "bender", "elemental affinity", true).indexOf("air 3") !== -1;},
 				description : desc([
 					"Spells that I cast fromthe Air Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
@@ -907,17 +906,18 @@ ClassList["bender"] = {
 			},
 			"earth 1" : {
 				submenu : "[New Elemental Affinity]",
+				name : "Earth 1",
 				description : desc("I learn one cantrip of my choice from the Earth element’s list and add its spells to my bender spell list."),
 				spellcastingBonus : [{ 
-					spells : ["acid splash", "earthen fist", "reinforce", "resistance", "shillelagh"],
-				}],
+					spells : ["acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",],
+					notspells : ["concussion", "dash strike", "smokescreen", "soften descent", "dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark", "guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+					name : "Earth Elemental Affinity Cantrip",
+					level : [0, 0],
+				}],	
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"acid splash", "earthen fist", "reinforce", "resistance", "shillelagh",
@@ -939,6 +939,7 @@ ClassList["bender"] = {
 			},	
 			"earth 2" : { 
 				submenu : "[improves Earth Elemental Affinity]",
+				name : "Earth 2",
 				description : desc([
 					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -946,6 +947,7 @@ ClassList["bender"] = {
 			},	
 			"earth 3" : { 
 				submenu : "[improves Earth Elemental Affinity]",
+				name : "Earth 3",
 				description : desc([
 					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -953,6 +955,7 @@ ClassList["bender"] = {
 			},
 			"earth 4" : { 
 				submenu : "[improves Earth Elemental Affinity]",
+				name : "Earth 4",
 				description : desc([
 					"Spells that I cast from the Earth Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -960,17 +963,18 @@ ClassList["bender"] = {
 			},
 			"fire 1" : {
 				submenu : "[New Elemental Affinity]",
+				name : "Fire 1",
 				description : desc("I learn one cantrip of my choice from the Fire element’s list and add its spells to my bender spell list."),
 				spellcastingBonus : [{ 
 					spells : ["dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark"],
-				}],
+					notspells : ["concussion", "dash strike", "smokescreen", "soften descent", "acid splash", "earthen fist", "reinforce", "resistance", "shillelagh", "guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
+					name : "Fire Elemental Affinity Cantrip",
+					level : [0, 0],
+				}],				
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark",
@@ -992,6 +996,7 @@ ClassList["bender"] = {
 			},
 			"fire 2" : { 
 				submenu : "[improves Fire Elemental Affinity]",
+				name : "Fire 2",
 				description : desc([
 					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -999,6 +1004,7 @@ ClassList["bender"] = {
 			},
 			"fire 3" : { 
 				submenu : "[improves Fire Elemental Affinity]",
+				name : "Fire 3",
 				description : desc([
 					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -1006,6 +1012,7 @@ ClassList["bender"] = {
 			},
 			"fire 4" : { 
 				submenu : "[improves Fire Elemental Affinity]",
+				name : "Fire 4",
 				description : desc([
 					"Spells that I cast from the Fire Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -1013,17 +1020,18 @@ ClassList["bender"] = {
 			},
 			"water 1" : {
 				submenu : "[New Elemental Affinity]",
+				name : "Water 1",
 				description : desc("I learn one cantrip of my choice from the Water element’s list and add its spells to my bender spell list."),
 				spellcastingBonus : [{ 
 					spells : ["guidance", "pins & needles", "ray of frost", "spare the dying", "water whip"],
-				}],
+					notspells : ["concussion", "dash strike", "smokescreen", "soften descent", "acid splash", "earthen fist", "reinforce", "resistance", "shillelagh", "dancing lights", "fire bolt", "incendiary strike", "light", "minor illusion", "shocking grasp", "spark"],
+					name : "Water Elemental Affinity Cantrip",
+					level : [0, 0],
+				}],	
 				calcChanges : {
 					spellList : [
 						function(spList, spName, spType) {
-							// don't add if this is not a class or a list of spells is already given
-							if (!ClassList[spName] || spList.spells) return;
-							// if this is an 'extra spell', also test if it uses the class' spell list or not
-							if (spType.indexOf("bonus") !== -1 && (!spList["bender"] || (spList["bender"].indexOf(bender) === -1 && spName !== "bender"))) return;
+							if(spName !== "bender") return;
 							spList.extraspells = spList.extraspells.concat([
 								// Cantrips (0 Level)
 								"guidance", "pins & needles", "ray of frost", "spare the dying", "water whip",
@@ -1045,6 +1053,7 @@ ClassList["bender"] = {
 			},
 			"water 2" : { 
 				submenu : "[improves Water Elemental Affinity]",
+				name : "Water 2",
 				description : desc([
 					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -1052,6 +1061,7 @@ ClassList["bender"] = {
 			},
 			"water 3" : { 
 				submenu : "[improves Water Elemental Affinity]",
+				name : "Water 3",
 				description : desc([
 					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),
@@ -1059,6 +1069,7 @@ ClassList["bender"] = {
 			},
 			"water 4" : { 
 				submenu : "[improves Water Elemental Affinity]",
+				name : "Water 4",
 				description : desc([
 					"Spells that I cast from the Water Elemental Affinity spell list are cast one level higher than the level of spell slot I expend."
 				]),

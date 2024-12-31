@@ -40,7 +40,7 @@ RaceList["hulking enkoh"] = {
 			recovery : "long rest",
 			action : [["bonus action", ""]]
 		}
-	},
+	},	
 	toolProfs : [["carpenter’s tools, glassblower’s tools, jeweller’s tools, mason’s tools, potter’s tools, or smith’s tools.", 1]],
 	trait : "Hulking Enkoh"+
 		(typePF ? "\n" : "") + " \u2022 Powerful Build: I count as one size larger for my carrying capacity."+
@@ -50,7 +50,7 @@ RaceList["hulking enkoh"] = {
 };
 
 RaceList["springtail enkoh"] = { 
-	regExpSearch: /^(?=.*enkoh).*$/i,
+	regExpSearch: /^(?=.*enkoh)(?=.*springtail).*$/i,
 	name: "Springtail Enkoh",
 	sortname: "Enkoh, Springtail",
 	source: [["RGttYR", 119]],
@@ -116,12 +116,12 @@ RaceList["hanamori"] = {
 	},
 	skillstxt : "Choose two from Deception, Insight, Intimidation, Performance, and Persuasion",
 	armorOptions : [{
-				regExpSearch : /^(?=.*rugged).*$/i,
-				name : "Rugged (Con)",
-				source : [["RGttYR", 124]],
-				ac : "12 + Con",
-				selectNow : true
-				}],
+		regExpSearch : /^(?=.*rugged).*$/i,
+		name : "Rugged (Con)",
+		source : [["RGttYR", 124]],
+		ac : "12 + Con",
+		selectNow : true
+	}],
 	trait : "Hanamori"+
 		"\n \u2022 Plant. My creature type is plant, rather than humanoid." +
 		"\n \u2022 Fiery Countenance. I have advantage on saving throws to avoid or end the frightened or stunned condition on myself." +
@@ -200,12 +200,12 @@ RaceList["isetsu"] = {
 		selectNow : true
 	}],
 	armorOptions : [{
-				regExpSearch : /^(?=.*natural)(?=.*armor)(?=.*isetsu).*$/i,
-				name : "Natural Armor (Isetsu)",
-				source : [["RGttYR", 128]],
-				ac : "12 + Con",
-				selectNow : true
-				}],
+		regExpSearch : /^(?=.*natural)(?=.*armor)(?=.*isetsu).*$/i,
+		name : "Natural Armor (Isetsu)",
+		source : [["RGttYR", 128]],
+		ac : "12 + Con",
+		selectNow : true
+	}],
 	features: [{
 		name : "Fortune Favoured",
 		source : [["RGttYR", 128]],

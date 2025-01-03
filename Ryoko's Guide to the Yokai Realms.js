@@ -2393,7 +2393,7 @@ AddSubClass("ranger", "ronin", {
 		"subclassfeature15" : {
 			name : "Relentless Onslaught",
 			source : [["RGttYR", 185]],
-			minlevel : 11,
+			minlevel : 15,
 			description : desc([
 				"The speed and ferocity of my onslaught is legendary. When I take the Attack action, each time I score a critical hit or reduce a creature to 0 hit points as part of that action, I can make one additional weapon attack. I can make up to three additional attacks with this feature per turn.",
 			]),

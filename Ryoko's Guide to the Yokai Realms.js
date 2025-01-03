@@ -1678,7 +1678,7 @@ AddSubClass("barbarian", "path of the kaiju", {
 				description : desc(["I can use my Constitution modifier in place of my Strength modifier for Strength checks, as well as for the attack and damage rolls of my unarmed strikes and weapon attacks. These checks and attacks are still considered Strength-based for the purposes of my other features. In addition, I gain tremorsense out to 10 feet."
 				]),
 				addMod : { type : "skill", field : "Athl", mod : "Con-Str", text : "I can use my Con mod in place of my Str mod." },
-				senses : "Tremorsense 10 ft",
+				vision : [["Tremorsense", 10]],
 			},
 			"armoured kabuto" : {
 				name : "Armoured Kabuto",

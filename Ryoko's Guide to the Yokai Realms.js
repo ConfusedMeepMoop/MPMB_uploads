@@ -7653,7 +7653,7 @@ BackgroundList["elementalist"] = {
 	source : [["RGttYR", 209]],
 	skills : ["Acrobatics", "Nature"],
 	gold : 15,
-	scorestxt: ["+2 and +1 -or- +1 to each from Strength, Constitution, Wisdom"],
+	scorestxt: ["(Optional) +2 and +1 -or- +1 to each from Strength, Constitution, Wisdom"],
 	languageProfs : ["Primordial (Optional)"],
 	toolProfs : [["Choose one Artisan’s Tools"]],
 	equipleft : [
@@ -7739,7 +7739,7 @@ BackgroundList["hanabi engineer"] = {
 	source : [["RGttYR", 210]],
 	skills : ["Investigation", "Sleight of Hand"],
 	gold : 5,
-	scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, Intelligence"],
+	scorestxt: ["(Optional) +2 and +1 -or- +1 to each from Dexterity, Constitution, Intelligence"],
 	languageProfs : ["Common sign language (Optional)"],
 	toolProfs : [["Choose one Artisan’s Tools"]],
 	equipleft : [
@@ -7825,7 +7825,7 @@ BackgroundList["kaiju tracker"] = {
 	source : [["RGttYR", 212]],
 	skills : ["Athletics", "Survival"],
 	gold : 5,
-	scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, Wisdom"],
+	scorestxt: ["(Optional) +2 and +1 -or- +1 to each from Dexterity, Constitution, Wisdom"],
 	languageProfs : ["Draconic, Giant, or Primordial (Optional)"],
 	toolProfs : [["Herbalism Kit"]],
 	equipleft : [
@@ -7897,7 +7897,7 @@ BackgroundList["raised by yokai"] = {
 	source : [["RGttYR", 213]],
 	skills : ["Animal Handling", "Perception"],
 	gold : 0,
-	scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, Wisdom"],
+	scorestxt: ["(Optional) +2 and +1 -or- +1 to each from Dexterity, Constitution, Wisdom"],
 	languageProfs : ["Abyssal, Sylvan, or Infernal (Optional)"],
 	toolProfs : [["Poisoner's kit"]],
 	equipleft : [
@@ -7966,7 +7966,7 @@ BackgroundFeatureList["natural envoy"] = {
 
 
 /*
- * Feat
+ * Feats
  */
 
 FeatsList["boon of ashura"] = {
@@ -8098,12 +8098,12 @@ FeatsList["elemental fighting"] = {
 	description : "When I make an unarmed strike, I can choose to deal dmg equal 1d8 + STR mod equal to damage type among acid, cold, fire, lightning, and thunder.",
 	descriptionFull : "I have studied the meticulous movements and magical arts of element bending to the extent that I can channel crude but potent blasts of elemental energy through my body. When I select this feat, choose one damage type from among acid, cold, fire, lightning, and thunder. When I make an unarmed strike, I can choose for the strike to deal damage of that type equal to 1d8 + my Strength modifier, instead of the bludgeoning damage normal for an unarmed strike. Damage I deal in this way ignores resistance.",
 	calcChanges : {
-	atkAdd : [
-		function (fields, v) {
-		if (v.baseWeaponName == "unarmed strike" && fields.Damage_Die == 1) {
-					fields.Damage_Die = '1d8',
-					fields.Description += (fields.Description ? '; ' : '') + 'Choose acid, cold, fire, lightning, or thunder damage';
-		};
+		atkAdd : [
+			function (fields, v) {
+				if (v.baseWeaponName == "unarmed strike" && fields.Damage_Die == 1) {
+						fields.Damage_Die = '1d8',
+						fields.Description += (fields.Description ? '; ' : '') + 'Choose acid, cold, fire, lightning, or thunder damage';
+			};
 	}]},   
 };
 
@@ -8489,15 +8489,15 @@ FeatsList["spirit bonded"] = {
 		firstCol: "oncelr",
 	},
 	spellChanges: {
-	"find familiar": {
-		components: "",
-		compMaterial: "",
-		allowUpCasting: false,
-	description:
-		"summon familiar, could be yokai or as normal",
-	changes:
-		"With the Spirit Bonded feat, I can cast Find Familiar without components or a spell slot.",
-	},
+		"find familiar": {
+			components: "",
+			compMaterial: "",
+			allowUpCasting: false,
+		description:
+			"summon familiar, could be yokai or as normal",
+		changes:
+			"With the Spirit Bonded feat, I can cast Find Familiar without components or a spell slot.",
+		},
 	},
 };
 

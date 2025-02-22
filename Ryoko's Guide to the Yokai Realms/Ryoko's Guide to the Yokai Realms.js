@@ -535,12 +535,12 @@ RaceList["nishikin tatsumi"] = {
 		"\n \u2022 Draconic Metamorphosis. When I reach 7th level, or when I undergo a significant moment of personal achievement or loss (at the GM’s discretion), I can choose to metamorphose into a ryūjin. My level, class, and other game statistics remain the same, aside from my subrace. I replace my subracial traits from this race with those of the ryūjin, and my ryūjin colour is the same as my nishikin primary colouration. This transformation is one-way and can’t be reversed by any means short of a wish spell. ",
 };
 
-RaceList["ryujin tatsumi"] = {
-	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin).*$/i,
-	name: "Ryujin Tatsumi",
-	sortname: "Tatsumi, Ryujin",
+RaceList["red ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*red).*$/i,
+	name: "Red Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, Red",
 	source: [["RGttYR", 139]],
-	plural: "Ryujin Tatsumi",
+	plural: "Red Ryujin Tatsumi",
 	languageProfs: ["Common", 1],
 	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
 	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
@@ -563,14 +563,242 @@ RaceList["ryujin tatsumi"] = {
 		usagescalc: "event.value = How('Proficiency Bonus');",
 	  	recovery: "long rest",
 	}],
-	trait : "Ryujin Tatsumi"+
+	spellcastingAbility: 1,
+	spellcastingBonus: [{
+		name: "Red Ryujin Innate Magic",
+		"class": "sorcerer",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
 		"\n \u2022 Amphibious. I can breathe in both air and water." +
 		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
 		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
-		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration. My spellcasting ability for this cantrip is the ability associated with my primary colouration." +
-		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep." +
-		"\n \u2022 Draconic Metamorphosis. When I reach 7th level, or when I undergo a significant moment of personal achievement or loss (at the GM’s discretion), I can choose to metamorphose into a ryūjin. My level, class, and other game statistics remain the same, aside from my subrace. I replace my subracial traits from this race with those of the ryūjin, and my ryūjin colour is the same as my nishikin primary colouration. This transformation is one-way and can’t be reversed by any means short of a wish spell. ",
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (Red-Sorcerer). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Strength)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
 };
+
+RaceList["gold ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*gold).*$/i,
+	name: "Gold Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, Gold",
+	source: [["RGttYR", 139]],
+	plural: "Gold Ryujin Tatsumi",
+	languageProfs: ["Common", 1],
+	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
+	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
+	speed : {
+		walk : { spd : 30, enc : 20 }, swim : {spd : 30, enc : 20 }
+	},
+	size : 3,
+	height: " are about 5-7 feet tall",
+	savetxt: {text: "Gains Advs. whilst in sunlight to end frightened, paralysed, stunned, sleep"},
+	action : [["bonus action", "Cloudstep"], ["action", "Heartening Breath"]],
+	features: [{
+		name : "Cloudstep",
+		source : [["RGttYR", 141]],
+	 	usages: "1",
+	  	recovery: "long rest",	
+	},{
+		name : "Heartening Breath",
+		source : [["RGttYR", 141]],
+	 	usages: "Prof Bonus per ",
+		usagescalc: "event.value = How('Proficiency Bonus');",
+	  	recovery: "long rest",
+	}],
+	spellcastingAbility: 2,
+	spellcastingBonus: [{
+		name: "Gold Ryujin Innate Magic",
+		"class": "druid",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
+		"\n \u2022 Amphibious. I can breathe in both air and water." +
+		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
+		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (Gold-Druid). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Dexterity)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
+};
+
+RaceList["black ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*black).*$/i,
+	name: "Black Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, Black",
+	source: [["RGttYR", 139]],
+	plural: "Black Ryujin Tatsumi",
+	languageProfs: ["Common", 1],
+	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
+	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
+	speed : {
+		walk : { spd : 30, enc : 20 }, swim : {spd : 30, enc : 20 }
+	},
+	size : 3,
+	height: " are about 5-7 feet tall",
+	savetxt: {text: "Gains Advs. whilst in sunlight to end frightened, paralysed, stunned, sleep"},
+	action : [["bonus action", "Cloudstep"], ["action", "Heartening Breath"]],
+	features: [{
+		name : "Cloudstep",
+		source : [["RGttYR", 141]],
+	 	usages: "1",
+	  	recovery: "long rest",	
+	},{
+		name : "Heartening Breath",
+		source : [["RGttYR", 141]],
+	 	usages: "Prof Bonus per ",
+		usagescalc: "event.value = How('Proficiency Bonus');",
+	  	recovery: "long rest",
+	}],
+	spellcastingAbility: 3,
+	spellcastingBonus: [{
+		name: "Black Ryujin Innate Magic",
+		"class": "warlock",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
+		"\n \u2022 Amphibious. I can breathe in both air and water." +
+		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
+		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (Black-Warlock). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Constitution)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
+};
+
+RaceList["silver ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*silver).*$/i,
+	name: "Silver Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, Silver",
+	source: [["RGttYR", 139]],
+	plural: "Silver Ryujin Tatsumi",
+	languageProfs: ["Common", 1],
+	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
+	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
+	speed : {
+		walk : { spd : 30, enc : 20 }, swim : {spd : 30, enc : 20 }
+	},
+	size : 3,
+	height: " are about 5-7 feet tall",
+	savetxt: {text: "Gains Advs. whilst in sunlight to end frightened, paralysed, stunned, sleep"},
+	action : [["bonus action", "Cloudstep"], ["action", "Heartening Breath"]],
+	features: [{
+		name : "Cloudstep",
+		source : [["RGttYR", 141]],
+	 	usages: "1",
+	  	recovery: "long rest",	
+	},{
+		name : "Heartening Breath",
+		source : [["RGttYR", 141]],
+	 	usages: "Prof Bonus per ",
+		usagescalc: "event.value = How('Proficiency Bonus');",
+	  	recovery: "long rest",
+	}],
+	spellcastingAbility: 4,
+	spellcastingBonus: [{
+		name: "Silver Ryujin Innate Magic",
+		"class": "wizard",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
+		"\n \u2022 Amphibious. I can breathe in both air and water." +
+		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
+		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (Silver-Wizard). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Intelligence)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
+};
+
+RaceList["white ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*white).*$/i,
+	name: "White Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, White",
+	source: [["RGttYR", 139]],
+	plural: "White Ryujin Tatsumi",
+	languageProfs: ["Common", 1],
+	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
+	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
+	speed : {
+		walk : { spd : 30, enc : 20 }, swim : {spd : 30, enc : 20 }
+	},
+	size : 3,
+	height: " are about 5-7 feet tall",
+	savetxt: {text: "Gains Advs. whilst in sunlight to end frightened, paralysed, stunned, sleep"},
+	action : [["bonus action", "Cloudstep"], ["action", "Heartening Breath"]],
+	features: [{
+		name : "Cloudstep",
+		source : [["RGttYR", 141]],
+	 	usages: "1",
+	  	recovery: "long rest",	
+	},{
+		name : "Heartening Breath",
+		source : [["RGttYR", 141]],
+	 	usages: "Prof Bonus per ",
+		usagescalc: "event.value = How('Proficiency Bonus');",
+	  	recovery: "long rest",
+	}],
+	spellcastingAbility: 5,
+	spellcastingBonus: [{
+		name: "White Ryujin Innate Magic",
+		"class": "cleric",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
+		"\n \u2022 Amphibious. I can breathe in both air and water." +
+		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
+		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (White-Cleric). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Wisdom)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
+};
+
+RaceList["blue ryujin tatsumi"] = {
+	regExpSearch: /^(?=.*tatsumi)(?=.*ryujin)(?=.*blue).*$/i,
+	name: "Blue Ryujin Tatsumi",
+	sortname: "Tatsumi, Ryujin, Blue",
+	source: [["RGttYR", 139]],
+	plural: "Blue Ryujin Tatsumi",
+	languageProfs: ["Common", 1],
+	scorestxt : "+1 Dexterity, +1 Constitution, +1 Wisdom",
+	age: " mature rapidly, reaching adulthood by the age of 14. They go on to live for about two centuries.",
+	speed : {
+		walk : { spd : 30, enc : 20 }, swim : {spd : 30, enc : 20 }
+	},
+	size : 3,
+	height: " are about 5-7 feet tall",
+	savetxt: {text: "Gains Advs. whilst in sunlight to end frightened, paralysed, stunned, sleep"},
+	action : [["bonus action", "Cloudstep"], ["action", "Heartening Breath"]],
+	features: [{
+		name : "Cloudstep",
+		source : [["RGttYR", 141]],
+	 	usages: "1",
+	  	recovery: "long rest",	
+	},{
+		name : "Heartening Breath",
+		source : [["RGttYR", 141]],
+	 	usages: "Prof Bonus per ",
+		usagescalc: "event.value = How('Proficiency Bonus');",
+	  	recovery: "long rest",
+	}],
+	spellcastingAbility: 6,
+	spellcastingBonus: [{
+		name: "Blue Ryujin Innate Magic",
+		"class": "bard",
+		level: [0, 0],
+		times: 1,
+		firstCol: "atwill",
+	}],
+	trait : "Red Ryujin Tatsumi"+
+		"\n \u2022 Amphibious. I can breathe in both air and water." +
+		"\n \u2022 Cloudstep. As a bonus action, I can conjure a small cloud under my feet. I gain a flying speed equal to half my walking speed for the next 10 minutes. Once I use this trait, I can’t do so again until I finish a long rest." +
+		"\n \u2022 Heartening Breath. I can use my action to exhale a warming, spiralling burst of magical energy in a 30-foot cone. A number of creatures of your choice and me in that area up to my proficiency bonus can add 1d4 to attack rolls, as well as to ability checks and saving throws that use the ability associated with my primary colouration for 1 minute, or until I lose concentration (as if concentrating on a spell). I can use this trait a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest." +
+		"\n \u2022 Innate Magic. I learn one cantrip of my choice from the spell list of the class associated with my primary colouration (Blue-Bard). My spellcasting ability for this cantrip is the ability associated with my primary colouration (Charisma)." +
+		"\n \u2022 Sunblessed. While in sunlight, a warm, bubbling vitality thrums through me, giving me advantage on saving throws I make to avoid or end the frightened, paralysed, or stunned condition on myself, or against being put to sleep.",
+};
+
 
 // Tengu
 RaceList["hanataka tengu"] = {

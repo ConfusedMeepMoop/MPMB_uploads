@@ -2197,7 +2197,7 @@ AddSubClass("cleric", "shrine warden domain", {
 		},
 		"subclassfeature8" : {
 			name : "Divine Strike",
-			source : [["T", 35]],
+			source : [["RGttYR", 175]],
 			minlevel : 8,
 			description : "\n  Once per turn, when I hit a creature with a weapon attack, I can do extra damage",
 			additional : levels.map(function (n) {
@@ -2226,7 +2226,7 @@ AddSubClass("cleric", "shrine warden domain", {
 }});
 
 // Druid Subclasses
-AddSubClass("druid", "circle of yokai", {
+AddSubClass("druid", "circle of the yokai", {
 	regExpSearch : /^(?=.*druid)(?=.*yokai).*$/i,
 	subname : "Circle of the Yokai",
 	source : [["RGttYR", 176]],

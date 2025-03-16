@@ -2771,6 +2771,7 @@ AddSubClass("sorcerer", "spirit caller", {
 	subname : "Spirit Caller",
 	source : [["RGttYR", 188]],
 	spellcastingExtra : ["command", "mage armor", "minor illusion", "aid", "mirror image", "plant growth", "phantom steed", "banishment", "guardian of faith", "reincarnate" , "seeming" , "astral projection"],
+	spellcastingExtraApplyNonconform: true,
 	features : {
 		"subclassfeature1.1" : {
 			name : "Conduit of the Soul",

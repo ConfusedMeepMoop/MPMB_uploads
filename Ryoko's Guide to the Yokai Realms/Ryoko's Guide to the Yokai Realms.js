@@ -2896,7 +2896,7 @@ AddSubClass("sorcerer", "spirit caller", {
 		"subclassfeature18" : {
 			name : "Final Form Manifestation",
 			source : [["RGttYR", 190]],
-			minlevel : 14,
+			minlevel : 18,
 			description : desc([
 				"I no longer need to maintain concentration on my manifested spirit. I can cause it to disappear at any time (no action required). I imbue my spirit with further power. When I manifest my spirit, I can choose one additional boon without spending a sorcery point to gain it. In addition, when summoned, I can choose for my spirit’s base size to be Medium or Large. If manifested as a Large spirit, the reach of its Spirit Grasp attack increases by 5 feet.",
 			]),

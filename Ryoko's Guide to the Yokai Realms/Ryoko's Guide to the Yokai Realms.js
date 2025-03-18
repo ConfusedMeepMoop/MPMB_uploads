@@ -3157,7 +3157,7 @@ WeaponsList["nunchaku"] = {
 	type : "Martial",
 	ability : 1,
 	abilitytodamage : true,
-	damage : [1, 4, "bludgeoning"],
+	damage : [1, 6, "bludgeoning"],
 	range : "Melee",
 	description : "Finesse, versatile (1d8), special: flourish",
 	list : "melee",

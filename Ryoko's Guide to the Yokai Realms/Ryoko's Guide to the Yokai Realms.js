@@ -6553,7 +6553,7 @@ MagicItemsList["reaper’s kama"] = {
 MagicItemsList["ryuto nunchaku"] = {
 	name : "Ryuto Nunchaku",
 	source : [["RGttYR", 264]],
-	type : "weapon (nanchaku)",
+	type : "weapon (nunchaku)",
 	description : "This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the first target it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip.",
 	choices : ["uncommon", "rare", "very rare"],
 	"uncommon" : {
@@ -6568,8 +6568,8 @@ MagicItemsList["ryuto nunchaku"] = {
 		weaponOptions : {
 			name : "Uncommon Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
-			regExpSearch : /^(?=.*ryuto)(?=.*nanchaku).*$/i,
-			baseWeapon : "nanchaku",
+			regExpSearch : /^(?=.*ryuto)(?=.*nunchaku).*$/i,
+			baseWeapon : "nunchaku",
 			selectNow : true,
 		},
 		calcChanges : {
@@ -6610,8 +6610,8 @@ MagicItemsList["ryuto nunchaku"] = {
 		weaponOptions : {
 			name : "Rare Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
-			regExpSearch : /^(?=.*ryuto)(?=.*nanchaku).*$/i,
-			baseWeapon : "nanchaku",
+			regExpSearch : /^(?=.*ryuto)(?=.*nunchaku).*$/i,
+			baseWeapon : "nunchaku",
 			selectNow : true,
 		},
 		calcChanges : {
@@ -6652,8 +6652,8 @@ MagicItemsList["ryuto nunchaku"] = {
 		weaponOptions : {
 			name : "Very Rare Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
-			regExpSearch : /^(?=.*ryuto)(?=.*nanchaku).*$/i,
-			baseWeapon : "nanchaku",
+			regExpSearch : /^(?=.*ryuto)(?=.*nunchaku).*$/i,
+			baseWeapon : "nunchaku",
 			selectNow : true,
 		},
 		calcChanges : {
@@ -8475,7 +8475,7 @@ FeatsList["fearsome flourisher"] = {
 	name : "Fearsome Flourisher",
 	source : [["RGttYR", 218]],
 	descriptionFull : "I speed with nunchaku can strike fear into my foes: \n \u2022 When I take the Attack action and attack with a nunchaku, I can use a bonus action to make one additional nunchaku attack. This attack uses the same ability modifier as the primary attack and the weapon’s damage die for this attack is a d4. \n \u2022 When I take the Flourish special action with nunchaku, I can use a bonus action to make it especially intimidating towards one creature within my reach. If I don’t fail on my Dexterity check to flourish the weapon, my target must succeed on a Wisdom saving throw or become frightened of me until the start of my next turn. The DC for the saving throw equals 8 + my Dexterity modifier. If I am proficient in the Intimidation skill, I can add my proficiency bonus to the DC.",
-	description : "As a bonus action when I do the Attack action with a nunchaku that deals d4 dmg. When I take the Flourish special action with nanchaku, I can use a bonus action to frighten one creaturee within reach.",
+	description : "As a bonus action when I do the Attack action with a nunchaku that deals d4 dmg. When I take the Flourish special action with nunchaku, I can use a bonus action to frighten one creaturee within reach.",
 	weaponOptions : [{
 		regExpSearch : /^(?=.*nunchaku)(?=.*extra).*$/i,
 		name : "Nunchaku Extra Attack",
@@ -8500,7 +8500,7 @@ FeatsList["fearsome flourisher"] = {
 	}],
 	prerequisite : "Proficiency with nunchaku",
 	prereqeval : function(v) {
-		return v.martialWeaponsProf || (/nanchaku/i).test(v.otherWeaponsProf);
+		return v.martialWeaponsProf || (/nunchaku/i).test(v.otherWeaponsProf);
 	},
 };
 

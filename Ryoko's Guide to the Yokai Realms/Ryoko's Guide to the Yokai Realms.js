@@ -3591,6 +3591,18 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
 		},
+		calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
+						v.theWea.isMagicWeapon = true;
+						fields.Damage_Type = "Bludgeoning";
+					}
+				},
+				'It deals bludgeoning damage instead of its normal damage type.',
+				1
+			],
+		},
 		action : [["action","Gale"]],
 	},
 	"rare" : {
@@ -3628,6 +3640,18 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
 		},
+		calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
+						v.theWea.isMagicWeapon = true;
+						fields.Damage_Type = "Bludgeoning";
+					}
+				},
+				'It deals bludgeoning damage instead of its normal damage type.',
+				1
+			],
+		},
 		action : [["bonus action", "Gust Rider (1 charge)"],["action","Gale"]],
 	},
 	"very rare" : {
@@ -3664,6 +3688,18 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 			var testRegex = /sword|scimitar|rapier/i;
 			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
+		},
+		calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
+						v.theWea.isMagicWeapon = true;
+						fields.Damage_Type = "Bludgeoning";
+					}
+				},
+				'It deals bludgeoning damage instead of its normal damage type.',
+				1
+			],
 		},
 		action : [["bonus action","Gust Rider (1 charge)"],["action","Gale"]],
 	},
@@ -3704,6 +3740,18 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 			var testRegex = /sword|scimitar|rapier/i;
 			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
+		},
+		calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
+						v.theWea.isMagicWeapon = true;
+						fields.Damage_Type = "Bludgeoning";
+					}
+				},
+				'It deals bludgeoning damage instead of its normal damage type.',
+				1
+			],
 		},
 		action : [["bonus action","Gust Rider (1 charge)"],["action","Gale"]],
 		languageProfs : ["Auran"],

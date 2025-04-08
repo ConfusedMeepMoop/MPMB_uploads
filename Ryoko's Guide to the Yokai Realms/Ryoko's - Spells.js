@@ -627,7 +627,7 @@ SpellsList["lion’s roar"] = {
 		"I conjure a roaring lion’s head made of writhing flame that moves with me, wielding it like an extension of my body for the duration. When Iconjure the lion and as a bonus action on my subsequent turns, I can cause one of the following effects with it."  + 
 		"\n   " + toUni("Fiery Maw") + ": The lion bites a creature or object within 30 feet of me. Make a melee spell attack against the target. On a hit, it takes 4d6 fire damage." + 
 		"\n   " + toUni("Flaming Mane") + ": The lion’s head encases my own until the start of my next turn. When a creature within 10 feet of me hits me with a melee attack, the lion bites the attacker, dealing 3d6 fire damage to it." + 
-		"\n   " + toUni("Roar of the Pride") + ": The flames roar. Each creature within 20 feet of me must succeed on a Wisdom saving throw or be frightened of me until the spell ends. A frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on this saving throw is immune to this effect until the spell ends." + 
+		"\n   " + toUni("Roar of the Pride") + ": The flames roar. Each creature of my choice within 20 feet of me must succeed on a WIS save or be frightened of me until the spell ends. A frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on this saving throw is immune to this effect until the spell ends." + 
 		AtHigherLevels + "When I cast this spell using a spell slot of 5th level or higher, the damage from the Fiery Maw and Flaming Mane options each increase by 1d6 for each slot level above 4th.",
 };
 
@@ -1041,10 +1041,10 @@ SpellsList["steelskin"] = {
 	components : "V,S,M",	
 	compMaterial : "A steel figurine",	
 	duration : "10 mins",
-	description : "willing crea AC 19, gains 2d6 THP at start of its turn",
-	descriptionShorter : "willing crea AC 19, gains 2d6 THP at start of its turn",
+	description : "Willing crea AC 19, gains 2d6 THP at start of its turn. When the spell ends, the target loses any remaining THP granted by this spell.",
+	descriptionShorter : "willing crea AC 19, gains 2d6 THP at start of its turn. When the spell ends, the target loses any remaining THP granted by this spell.",
 	descriptionFull : 
-		"I reinforce a willing creature’s skin with the tenacity and strength of steel. For the spell’s duration, the target’s AC can’t be lower than 19, and, at the start of each of the target’s turns, it gains 2d6 temporary hit points." + AtHigherLevels + "When I cast this spell using a spell slot of 5th level or higher, the temporary hit points increase by 1d6 for each slot level above 4th.",
+		"I reinforce a willing creature’s skin with the tenacity and strength of steel. For the spell’s duration, the target’s AC can’t be lower than 19, and, at the start of each of the target’s turns, it gains 2d6 temporary hit points. When the spell ends, the target loses any remaining THP granted by this spell." + AtHigherLevels + "When I cast this spell using a spell slot of 5th level or higher, the temporary hit points increase by 1d6 for each slot level above 4th.",
 };
 
 SpellsList["sundering sky"] = {
@@ -1079,10 +1079,10 @@ SpellsList["switcheroo"] = {
 	components : "V,S",	
 	duration : "Instantaneous",
 	save : "Cha",
-	description : "switch places with Large or smaller target, crea auto succeeds if there's no space to teleport",
-	descriptionShorter : "switch places with Large or smaller target, crea auto succeeds if there's no space to teleport",
+	description : "switch places with Large or smaller target, spell fails if there's no space to teleport",
+	descriptionShorter : "switch places with Large or smaller target, spell fails if there's no space to teleport",
 	descriptionFull :
-		"I attempt to switch places with a Large or smaller target within range that I can see. The target must succeed on a Charisma saving throw or instantly teleport to my space whilst I teleport to the one it previously occupied. A creature automatically succeeds on this saving throw if there is not enough space to accommodate either of the teleporting creatures. A willing creature can choose to fail the saving throw." + AtHigherLevels + "When I cast this spell using a spell slot of 4th level or higher, the range of this spell increases by 30 feet for each slot level above 3rd. The maximum size of creature I can target increases to Huge when cast at 6th level or higher, and to Gargantuan when cast at 9th level.",
+		"I attempt to switch places with a Large or smaller target within range that I can see. The target must succeed on a Charisma saving throw or instantly teleport to my space whilst I teleport to the one it previously occupied. The spell fails if there is not enough space to accommodate either of the teleporting creatures. A willing creature can choose to fail the saving throw. A willing creature can choose to fail the saving throw." + AtHigherLevels + "When I cast this spell using a spell slot of 4th level or higher, the range of this spell increases by 30 feet for each slot level above 3rd. The maximum size of creature I can target increases to Huge when cast at 6th level or higher, and to Gargantuan when cast at 9th level.",
 };
 
 SpellsList["tempestuous transformation"] = {
@@ -1163,7 +1163,7 @@ SpellsList["water whip"] = {
 	descriptionShorter : "Req source of water, Melee spell attack against crea w/in 30 ft, 1d6 Slashing dmg; see B",
 	descriptionCantripDie : "1 creature that I can see save or `CD`d6 Slashing dmg; req water source",
 	descriptionFull : 
-		"Choose a source of water that I can see within range that has a volume of at least 4 pints. Make a melee spell attack against a creature within 30 feet of the source of water. On a hit, the target takes 1d6 slashing damage and, if the creature is Large or smaller, I can force it to make a Strength saving throw, pulling it up to 10 feet towards the source of water on a failure."+
+		"Choose a source of water that I can see within range that has a volume of at least 4 pints. Make a melee spell attack against a creature within 30 feet of the source of water. On a hit, the target takes 1d6 slashing damage and, if the creature is Large or smaller, I can force it to make a Strength saving throw, pulling it up to 10 feet towards a point on the surface of the source of water on a failure."+
 		"The spell’s damage increases by 1d6 and the distance it can pull a target increases by 5 feet when I reach 5th level (2d6 and 15 feet), 11th level (3d6 and 20 feet), and 17th level (4d6 and 25 feet).",
 };
 

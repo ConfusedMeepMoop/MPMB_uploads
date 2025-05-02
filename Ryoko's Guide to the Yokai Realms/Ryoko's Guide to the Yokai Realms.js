@@ -9289,5 +9289,5 @@ FeatsList["springtail agility"] = {
 		" \u2022 As a bonus action, I can leap a number of feet equal to five times my proficiency bonus. This leap doesn’t cost me any movement but my speed must be greater than 0 feet, and it does not provoke opportunity attacks. I can use this benefit a number of times equal to my proficiency bonus, and I regain all expended uses when I finish a long rest.",
 		],
 	}],
-};
+}; 
 

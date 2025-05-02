@@ -941,7 +941,7 @@ SpellsList["slatestorm"] = {
 	compMaterial : "A thin piece of slate",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "5 ft/enter area, 3d8 Slashing dmg, subsequent action shoot 15 ft cone, Dex save 3d8 Slashing dmg;saves half",
+	description : "5 ft/enter area, 3d8 Slash dmg, subsequent action shoot 15 ft cone, Dex save 3d8 Slash dmg; saves half",
 	descriptionShorter : "crea within 5 ft/enter area, 3d8 Slashing dmg, subsequent action shoot 15 ft cone, Dex save 3d8 Slashing dmg;saves half",
 	descriptionFull : 
 		"Razor-sharp shards of slate flit about me in a lacerating whirlwind until the spell ends. Each creature that starts its turn within 5 feet of me or enters a space within 5 feet of me for the first time on its turn takes 3d8 slashing damage. When I cast this spell, and as an action on subsequent turns, I can cause slate to fire out from me in a 15-foot cone. Each creature in the area must make a Dexterity saving throw, taking 3d8 slashing damage on a failure, or half as much damage on a success."+
@@ -1041,7 +1041,7 @@ SpellsList["steelskin"] = {
 	components : "V,S,M",	
 	compMaterial : "A steel figurine",	
 	duration : "10 mins",
-	description : "Willing crea AC 19, gains 2d6 THP at start of its turn. When the spell ends, the target loses any remaining THP granted by this spell.",
+	description : "Willing crea AC 19, +2d6 THP at start of its turn. When the spell ends, the target loses THP from spell.",
 	descriptionShorter : "willing crea AC 19, gains 2d6 THP at start of its turn. When the spell ends, the target loses any remaining THP granted by this spell.",
 	descriptionFull : 
 		"I reinforce a willing creature’s skin with the tenacity and strength of steel. For the spell’s duration, the target’s AC can’t be lower than 19, and, at the start of each of the target’s turns, it gains 2d6 temporary hit points. When the spell ends, the target loses any remaining THP granted by this spell." + AtHigherLevels + "When I cast this spell using a spell slot of 5th level or higher, the temporary hit points increase by 1d6 for each slot level above 4th.",

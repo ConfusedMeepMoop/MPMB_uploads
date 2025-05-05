@@ -3414,7 +3414,7 @@ MagicItemsList["armor of the oni king"] = {
 			type : "armor",
 			prefixOrSuffix : "brackets",
 			excludeCheck : function (inObjKey, inObj) {
-				return !(/medium|heavy/i).test(inObj.type) || (/hide/i).test(inObj.name);
+				return !(/medium|heavy/i).test(inObj.type);
 			},
 			descriptionChange : ["replace", "armor"],
 			itemName1stPage : ["between", "+1", "of the Oni King"],
@@ -3441,7 +3441,7 @@ MagicItemsList["armor of the oni king"] = {
 			type : "armor",
 			prefixOrSuffix : "brackets",
 			excludeCheck : function (inObjKey, inObj) {
-				return !(/medium|heavy/i).test(inObj.type) || (/hide/i).test(inObj.name);
+				return !(/medium|heavy/i).test(inObj.type);
 			},
 			descriptionChange : ["replace", "armor"],
 			itemName1stPage : ["between", "+2", "of the Oni King"],

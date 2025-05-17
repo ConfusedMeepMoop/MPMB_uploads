@@ -3413,7 +3413,7 @@ MagicItemsList["armor of the oni king"] = {
 		descriptionFull :
 			"While wearing this armor, I gain the following benefits :"+
 			"\n" + "I have a +2 bonus to AC"+
-			"\n" + toUni("Oni’s Aura.") + " As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 16 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 2d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn."
+			"\n" + toUni("Oni’s Aura.") + " As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 16 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 2d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn.",
 		chooseGear : {
 			type : "armor",
 			prefixOrSuffix : "brackets",
@@ -5884,8 +5884,8 @@ MagicItemsList["wanyudo’s burden"] = {
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
 			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
-			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 13 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+			"\n \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 13 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,
 		recovery : "dawn",
@@ -5903,8 +5903,8 @@ MagicItemsList["wanyudo’s burden"] = {
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
 			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
-			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
 			"\n" + toUni("Flaming Trail.") + " After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 15). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,
@@ -5923,8 +5923,8 @@ MagicItemsList["wanyudo’s burden"] = {
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
 			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
-			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 16 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 16 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
 			"\n" + toUni("Flaming Trail.") + " After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 16). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,

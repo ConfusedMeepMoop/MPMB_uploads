@@ -3303,22 +3303,18 @@ MagicItemsList["all-terrain leg"] = {
 	type : "prosthesis",
  	attunement : true,
 	description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike. As a bonus action, I can change the leg shape to gain a benefit.",
-	descriptionFull : 
-		"Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike." +
-		"\n" +
-		"Modular Limb. As a bonus action while wearing this prosthesis, I can change it into one of the following forms, each of which grants a different benefit, or back into a regular leg shape:" +
-		"\n" +
-		"\u2022	Blade. My walking speed increases by 5 feet." +
-		"\n" +
-		"\u2022	Claw. I gain a climbing speed equal to my walking speed." +
-		"\n" +
-		"\u2022 Fin. I gain a swimming speed equal to my walking speed.",
 	action : [["bonus action", "Modular Limb"]],
 	choices : ["uncommon", "rare", "very rare"],
 	"uncommon" : {
 		name : "Uncommon All-Terrain Leg",
 		rarity : "uncommon",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike. As a bonus action, I can change the leg shape to gain a benefit.",
+		descriptionFull :
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike." +
+			"\n" + toUni("Modular Limb.") + " As a bonus action while wearing this prosthesis, I can change it into one of the following forms, each of which grants a different benefit, or back into a regular leg shape:" +
+			"\n \u2022" + toUni("Blade.") + " My walking speed increases by 5 feet." +
+			"\n \u2022" + toUni("Claw.") + " I gain a climbing speed equal to my walking speed." +
+			"\n \u2022" + toUni("Fin.") + " I gain a swimming speed equal to my walking speed.",
 		weaponOptions : {
 			name : "Uncommon All-Terrain Leg",
 			source : [["RGttYR", 243]],
@@ -3330,22 +3326,18 @@ MagicItemsList["all-terrain leg"] = {
 			range : "Melee",
 			description : "Finesse, hamstring superior strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike. As a bonus action, I can change the leg shape to gain one of the following benefits:",
-			"\u2022 Blade. My walking speed increases by 5 feet.",
-			"\u2022	Claw. I gain a climbing speed equal to my walking speed.",
-			"\u2022 Fin. I gain a swimming speed equal to my walking speed.",
-			],
-		}],		
+		},	
 	},
 	"rare" : {
 		name : "Rare All-Terrain Leg",
 		rarity : "rare",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property, the Hamstring Superior Strike, and gives a +1 bonus to attacks and damage made with it. As a bonus action, I can change the leg shape to gain a benefit.",
+		descriptionFull :
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike." +
+			"\n" + toUni("Modular Limb.") + " As a bonus action while wearing this prosthesis, I can change it into one of the following forms, each of which grants a different benefit, or back into a regular leg shape:" +
+			"\n \u2022" + toUni("Blade.") + " My walking speed increases by 5 feet." +
+			"\n \u2022" + toUni("Claw.") + " I gain a climbing speed equal to my walking speed." +
+			"\n \u2022" + toUni("Fin.") + " I gain a swimming speed equal to my walking speed.",
 		weaponOptions : {
 			name : "Rare All-Terrain Leg, +1",
 			source : [["RGttYR", 243]],
@@ -3357,22 +3349,18 @@ MagicItemsList["all-terrain leg"] = {
 			range : "Melee",
 			description : "Finesse, hamstring superior strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike. As a bonus action, I can change the leg shape to gain one of the following benefits:",
-			"\u2022 Blade. My walking speed increases by 5 feet.",
-			"\u2022 Claw. I gain a climbing speed equal to my walking speed.",
-			"\u2022 Fin. I gain a swimming speed equal to my walking speed.",
-			],
-		}],	
+		},	
 	},
 	"very rare" : {
 		name : "Very Rare All-Terrain Leg",
 		rarity : "very rare",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property, the Hamstring Superior Strike, and gives a +1 bonus to attacks and damage made with it. As a bonus action, I can change the leg shape to gain a benefit, this variant gets additional benefits",
+		descriptionFull :
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike." +
+			"\n" + toUni("Modular Limb.") + " As a bonus action while wearing this prosthesis, I can change it into one of the following forms, each of which grants a different benefit, or back into a regular leg shape:" +
+			"\n \u2022" + toUni("Blade.") + " My walking speed increases by 5 feet, and attacks made with the prosthesis deal an extra 1d4 slashing damage on a hit." +
+			"\n \u2022" + toUni("Claw.") + " I gain a climbing speed equal to my walking speed and advantage on saving throws to resist being moved against my will while standing or climbing a surface." +
+			"\n \u2022" + toUni("Fin.") + " I gain a swimming speed equal to my walking speed, and can dash as a bonus action underwater.",
 		weaponOptions : {
 			name : "Very Rare All-Terrain Leg, +1",
 			source : [["RGttYR", 243]],
@@ -3385,16 +3373,6 @@ MagicItemsList["all-terrain leg"] = {
 			description : "Finesse, hamstring superior strike, (blade, +1d4 slashing)",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance a leg. It has the Melee (1d6 slashing, Finesse) property and the Hamstring Superior Strike. As a bonus action, I can change the leg shape to gain one of the following benefits:",
-			"\u2022 Blade. My walking speed increases by 5 feet, and attacks made with the prosthesis deal an extra 1d4 slashing damage on a hit.",
-			"\u2022 Claw. I gain a climbing speed equal to my walking speed and advantage on saving throws to resist being moved against my will while standing or climbing a surface.",
-			"\u2022 Fin. I gain a swimming speed equal to my walking speed, and can dash as a bonus action underwater.",
-			],
-		}],
 	},
 };
 
@@ -3404,12 +3382,17 @@ MagicItemsList["armor of the oni king"] = {
 	source : [["RGttYR", 244]],
 	type : "armor (medium or heavy)",
 	attunement : true,
-	description : "I gain a buff to AC and access to Oni's Aura",
+	description : "",
+	action : [["action", "Oni's Aura"]],
 	choices : ["rare", "very rare"],
 	"rare" : {
 		name : "Rare Armor of the Oni King",
 		rarity : "rare",
 		description : "I have +1 to AC while wearing this. Once per dawn, as an action while wearing this, each creature of my choice within 20 ft of me makes a DC 15 WIS save or be frightened of me for 1 min. If a creature fails the save by 5 or more, and isn't immune to frightened, it is paralysed until the start of their next turn. Repeat the save at the end of their turn, taking 1d6 psychic damage on a fail, or ending the effect on a success.",
+		descriptionFull :
+			"While wearing this armor, I gain the following benefits :"+
+			"\n" + "I have a +1 bonus to AC"+
+			"\n" + toUni("Oni’s Aura.") + " As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 15 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 1d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn.",
 		chooseGear : {
 			type : "armor",
 			prefixOrSuffix : "brackets",
@@ -3419,24 +3402,18 @@ MagicItemsList["armor of the oni king"] = {
 			descriptionChange : ["replace", "armor"],
 			itemName1stPage : ["between", "+1", "of the Oni King"],
 		},
-		action : [["action", "Oni's Aura (DC 15)"]],
 		usages : 1,
 		recovery : "dawn",
 		limfeaname : "Oni's Aura (DC 15)",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wearing this armor, I gain the following benefits :",
-			"\u2022 I have a +1 bonus to AC",
-			"\u2022 Oni’s Aura. As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 15 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 1d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn."
-		],
-		}],
 	},	
 	"very rare" : {
 		name : "Very Rare Armor of the Oni King",
 		rarity : "very rare",
 		description : "I have +2 to AC while wearing this. Once per dawn, as an action while wearing this, each creature of my choice within 20 ft of me makes a DC 16 WIS save or be frightened of me for 1 min. If a creature fails the save by 5 or more, and isn't immune to frightened, it is paralysed until the start of their next turn. Repeat the save at the end of their turn, taking 2d6 psychic damage on a fail, or ending the effect on a success.",
+		descriptionFull :
+			"While wearing this armor, I gain the following benefits :"+
+			"\n" + "I have a +2 bonus to AC"+
+			"\n" + toUni("Oni’s Aura.") + " As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 16 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 2d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn."
 		chooseGear : {
 			type : "armor",
 			prefixOrSuffix : "brackets",
@@ -3446,19 +3423,9 @@ MagicItemsList["armor of the oni king"] = {
 			descriptionChange : ["replace", "armor"],
 			itemName1stPage : ["between", "+2", "of the Oni King"],
 		},
-		action : [["action", "Oni's Aura (DC 16)"]],
 		usages : 1,
 		recovery : "dawn",
 		limfeaname : "Oni's Aura (DC 16)",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wearing this armor, I gain the following benefits :",
-			"\u2022 I have a +2 bonus to AC",
-			"\u2022 Oni’s Aura. As an action, I can release a wave of menacing lethal intent powerful enough to make other creatures tremble with fear. Each creature of my choice within 20 feet of me must make a DC 16 WIS save or be frightened of me for 1 minute. If a creature fails the saving throw by 5 or more and isn’t immune to being frightened, it sees the ghostly image of an enormous oni materialising behind me and is also paralysed until the end of its next turn. A creature frightened in this way must repeat the saving throw at the end of each of its turns, taking 2d6 psychic damage on a failure, or ending the effect on itself on a success. Once this property of the item has been used, it can’t be used again until the next dawn."
-		],
-		}],
 	},
 };
 
@@ -3482,25 +3449,12 @@ MagicItemsList["blo staff"] = {
 		description : "This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 4 charges and regains 1d4 expended charges daily at dawn.",
 		descriptionFull : 
 			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 4 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"Blow Dart. When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
-			"\n" +
-			"\u2022	Amani Tox. On a hit, a creature must make a DC 13 CON save. It takes 3d6 poison damage on a failure, or half as much damage on a success." +
-			"\n" +
-			"\u2022	Bo Tox. On a hit, a creature must succeed on a DC 13 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is halved.",	
+			"\n" + toUni("Blow Dart.") + " When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
+			"\n \u2022" + toUni("Amani Tox.") + " On a hit, a creature must make a DC 13 CON save. It takes 3d6 poison damage on a failure, or half as much damage on a success." +
+			"\n \u2022" + toUni("Bo Tox.") + " On a hit, a creature must succeed on a DC 13 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is halved.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"Blow Dart. When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:",
-			"\u2022 Amani Tox. On a hit, a creature must make a DC 13 CON save. It takes 3d6 poison damage on a failure, or half as much damage on a success.",
-			"\u2022 Bo Tox. On a hit, a creature must succeed on a DC 13 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is halved."
-		],
-		}],
 	},
 	"rare" : {
 		name : "Rare Blo Staff",
@@ -3508,25 +3462,12 @@ MagicItemsList["blo staff"] = {
 		description : "This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 6 charges and regains 1d4 + 2 expended charges daily at dawn.",
 		descriptionFull : 
 			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 6 charges and regains 1d4 + 2 expended charges daily at dawn." +
-			"\n" +
-			"Blow Dart. When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
-			"\n" +
-			"\u2022	Amani Tox. On a hit, a creature must make a DC 15 CON save. It takes 4d6 poison damage on a failure, or half as much damage on a success." +
-			"\n" +
-			"\u2022	Bo Tox. On a hit, a creature must succeed on a DC 15 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0.",	
+			"\n" + toUni("Blow Dart.") + " When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
+			"\n \u2022" + toUni("Amani Tox.") + " On a hit, a creature must make a DC 15 CON save. It takes 4d6 poison damage on a failure, or half as much damage on a success." +
+			"\n \u2022" + toUni("Bo Tox.") + " On a hit, a creature must succeed on a DC 15 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0.",	
 		usages : 6,
 		recovery : "dawn",
 		additional : "regains 1d4+2",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"Blow Dart. When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:",
-			"\u2022	Amani Tox. On a hit, a creature must make a DC 15 CON save. It takes 4d6 poison damage on a failure, or half as much damage on a success.",
-			"\u2022 Bo Tox. On a hit, a creature must succeed on a DC 15 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0."
-		],
-		}],
 	},	
 	"very rare" : {
 		name : "Very Rare Blo Staff",
@@ -3534,25 +3475,12 @@ MagicItemsList["blo staff"] = {
 		description : "This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 8 charges and regains 1d6 + 2 expended charges daily at dawn.",
 		descriptionFull : 
 			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 8 charges and regains 1d6 + 2 expended charges daily at dawn." +
-			"\n" +
-			"Blow Dart. When my make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
-			"\n" +
-			"\u2022	Amani Tox. On a hit, a creature must make a DC 16 CON save. It takes 5d6 poison damage on a failure, or half as much damage on a success." +
-			"\n" +
-			"\u2022	Bo Tox. On a hit, a creature must succeed on a DC 16 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0. If I crit on this attack roll and the creature fails the save, they are paralysed while poisoned this way.",	
+			"\n" + toUni("Blow Dart.") + " When my make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:" +
+			"\n \u2022" + toUni("Amani Tox.") + " On a hit, a creature must make a DC 16 CON save. It takes 5d6 poison damage on a failure, or half as much damage on a success." +
+			"\n \u2022" + toUni("Bo Tox.") + " On a hit, a creature must succeed on a DC 16 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0. If I crit on this attack roll and the creature fails the save, they are paralysed while poisoned this way.",	
 		usages : 8,
 		recovery : "dawn",
 		additional : "regains 1d6+2",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This quarterstaff can also be used as a blowgun that lacks the Loading property. It has 8 charges and regains 1d6 + 2 expended charges daily at dawn.",
-			"Blow Dart. When I make a ranged attack using this weapon as a blowgun, I can expend 1 charge to shoot a needle loaded with one of the following poisons of my choice:",
-			"\u2022	Amani Tox. On a hit, a creature must make a DC 16 CON save. It takes 5d6 poison damage on a failure, or half as much damage on a success.",
-			"\u2022 Bo Tox. On a hit, a creature must succeed on a DC 16 CON save or be poisoned until the end of my next turn. While poisoned in this way, its speed is 0. If I crit on this attack roll and the creature fails the save, they are paralysed while poisoned this way.",
-		],
-		}],
 	},		
 };
 
@@ -3562,100 +3490,62 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 	source : [["RGttYR", 245]],
 	type : "weapon (any sword)",	
 	attunement : true,
-	description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
+	description : "",
+	calcChanges : {
+		atkAdd : [
+			function (fields, v) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
+					v.theWea.isMagicWeapon = true;
+					fields.Damage_Type = "Bludgeoning";
+				}
+			},
+			'If I include the word "Bonze’s Bokken, Wind Ripper" in the name of an axe, it will be treated as the magic weapon Bonze’s Bokken, Wind Ripper. It deals bludgeoning damage instead of its normal damage type.',
+			1
+		],
+	},
 	choices : ["uncommon", "rare", "very rare", "legendary"],
 	"uncommon" : {
-		name : "Uncommon Bonze’s Bokken, Wind Ripper",
 		rarity : "uncommon",
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type." +
-			"\n" +
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
-			"\n" +
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d8 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
+			"\n" + toUni("Gale.") + " While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
+			"\n" + toUni("Wind Rip.") + " With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d8 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me.",
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d8 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
-			],
-		}],
 		chooseGear : {
-		type : "weapon",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "sword"],
-		itemName1stPage : ["brackets ", "Bonze’s Bokken, Wind Ripper"],
-		excludeCheck : function (inObjKey, inObj) {
-			var testRegex = /sword|scimitar|rapier/i;
-			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+			type : "weapon",
+			prefixOrSuffix : "brackets",
+			descriptionChange : ["replace", "sword"],
+			itemName1stPage : ["brackets ", "Bonze’s Bokken, Wind Ripper"],
+			excludeCheck : function (inObjKey, inObj) {
+				var testRegex = /sword|scimitar|rapier/i;
+				return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
-		},
-		calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Damage_Type = "Bludgeoning";
-					}
-				},
-				'It deals bludgeoning damage instead of its normal damage type.',
-				1
-			],
 		},
 		action : [["action","Gale"]],
 	},
 	"rare" : {
-		name : "Rare Bonze’s Bokken, Wind Ripper",
 		rarity : "rare",
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type." +
-			"\n" +
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
-			"\n" +
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d10 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
-			"\n" +
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 40 feet until the end of my turn.",	
+			"\n" + toUni("Gale.") + " While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
+			"\n" + toUni("Wind Rip.") + " With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d10 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
+			"\n" + toUni("Gust Rider.") + " As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 40 feet until the end of my turn.",	
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me.",
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d10 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 40 feet until the end of my turn.",	
-		],
-		}],
 		chooseGear : {
-		type : "weapon",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "sword"],
-		itemName1stPage : ["brackets ", "Bonze’s Bokken, Wind Ripper"],
-		excludeCheck : function (inObjKey, inObj) {
-			var testRegex = /sword|scimitar|rapier/i;
-			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+			type : "weapon",
+			prefixOrSuffix : "brackets",
+			descriptionChange : ["replace", "sword"],
+			itemName1stPage : ["brackets ", "Bonze’s Bokken, Wind Ripper"],
+			excludeCheck : function (inObjKey, inObj) {
+				var testRegex = /sword|scimitar|rapier/i;
+				return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
-		},
-		calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Damage_Type = "Bludgeoning";
-					}
-				},
-				'It deals bludgeoning damage instead of its normal damage type.',
-				1
-			],
 		},
 		action : [["bonus action", "Gust Rider (1 charge)"],["action","Gale"]],
 	},
@@ -3665,46 +3555,21 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type." +
-			"\n" +
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
-			"\n" +
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d12 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
-			"\n" +
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 50 feet until the end of my turn.",	
+			"\n" + toUni("Gale.") + " While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
+			"\n" + toUni("Wind Rip.") + " With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d12 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
+			"\n" + toUni("Gust Rider.") + " As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 50 feet until the end of my turn.",	
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me.",
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d10 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 40 feet until the end of my turn.",	
-		],
-		}],
 		chooseGear : {
-		type : "weapon",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "sword"],
-		itemName1stPage : ["brackets ", "+1", "Bonze’s Bokken, Wind Ripper"],
-		excludeCheck : function (inObjKey, inObj) {
-			var testRegex = /sword|scimitar|rapier/i;
-			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+			type : "weapon",
+			prefixOrSuffix : "brackets",
+			descriptionChange : ["replace", "sword"],
+			itemName1stPage : ["brackets ", "+1", "Bonze’s Bokken, Wind Ripper"],
+			excludeCheck : function (inObjKey, inObj) {
+				var testRegex = /sword|scimitar|rapier/i;
+				return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
-		},
-		calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Damage_Type = "Bludgeoning";
-					}
-				},
-				'It deals bludgeoning damage instead of its normal damage type.',
-				1
-			],
 		},
 		action : [["bonus action","Gust Rider (1 charge)"],["action","Gale"]],
 	},
@@ -3714,58 +3579,31 @@ MagicItemsList["bonze’s bokken, wind ripper"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type." +
-			"\n" +
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
-			"\n" +
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d12 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
-			"\n" +
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 50 feet until the end of my turn." +
-			"\n" +
-			"\u2022 Fly. While holding the sword, I can expend 2 charges to cast the fly spell on myself.",	
+			"\n" + toUni("Gale.") + " While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me." +
+			"\n" + toUni("Wind Rip.") + " With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 1d12 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn." +
+			"\n" + toUni("Gust Rider.") + " As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 50 feet until the end of my turn." +
+			"\n" + toUni("Fly.") + " While holding the sword, I can expend 2 charges to cast the fly spell on myself.",	
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. It deals bludgeoning damage instead of its normal damage type.",
-			"\u2022 Gale. While holding this sword, I can use an action to cause strong winds to swirl within a cube originating from me up to 15 feet on a side until the end of my next turn, dispersing any gases in the area. The cube does not move with me.",
-			"\u2022 Wind Rip. With a swish, I can send a concussive wave of sound streaking towards a target. When I take the Attack action with this sword, I can replace any number of attacks with ranged spell attacks known as ‘wind rips’. Wind rips have a normal range of 30 feet and a long range of 60 feet, use the same ability modifier as the sword for its attack rolls, deal 2d8 thunder damage on a hit, and can be heard up to 100 feet away. If I score a critical hit against a creature with a wind rip, that creature is deafened until the end of its next turn.",
-			"\u2022 Gust Rider. As a bonus action while holding the sword, I can expend 1 charge, causing a sustained gust to lift me. I gain a flying speed of 60 feet until the end of my turn.",	
-			"\u2022 Fly. While holding the sword, I can expend 2 charges to cast the fly spell on myself.",
-			],
-		}],
 		chooseGear : {
-		type : "weapon",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "sword"],
-		itemName1stPage : ["brackets ", "+2", "Bonze’s Bokken, Wind Ripper"],
-		excludeCheck : function (inObjKey, inObj) {
-			var testRegex = /sword|scimitar|rapier/i;
-			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+			type : "weapon",
+			prefixOrSuffix : "brackets",
+			descriptionChange : ["replace", "sword"],
+			itemName1stPage : ["brackets ", "+2", "Bonze’s Bokken, Wind Ripper"],
+			excludeCheck : function (inObjKey, inObj) {
+				var testRegex = /sword|scimitar|rapier/i;
+				return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 			}
-		},
-		calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && /^(?=.*bonze)(?=.*bokken)(?=.*wind)(?=.*ripper).*$/i.test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Damage_Type = "Bludgeoning";
-					}
-				},
-				'It deals bludgeoning damage instead of its normal damage type.',
-				1
-			],
 		},
 		action : [["bonus action","Gust Rider (1 charge)"],["action","Gale"]],
 		languageProfs : ["Auran"],
 		spellFirstColTitle : "Ch",
 		spellcastingBonus: [{
-		name: "2 charge",
-		spells: ["fly"],
-		selection: ["fly"],
-		firstCol: 2,
+			name: "2 charge",
+			spells: ["fly"],
+			selection: ["fly"],
+			firstCol: 2,
 		}],
 	},
 };	
@@ -3776,29 +3614,17 @@ MagicItemsList["courtesan’s war fan"] = {
 	source : [["RGttYR", 246]],
 	type : "weapon (tessen)",
 	description : "I can charm creatures with a beguiling dance. I can also attune to the item for an additional benefit.",
-	choices : ["uncommon (unattuned)", "uncommon (attuned)", "very rare (unattuned)", "very rare (attuned)"],
-	"uncommon (unattuned)" : {
+	choices : ["uncommon", "uncommon (optional attunement)", "very rare", "very rare (optional attunement)"],
+	"uncommon" : {
 		name : "Uncommon Courtesan’s War Fan",
 		rarity : "uncommon",
 		description : "Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
 		descriptionFull : 
 			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash." +
-			"\n" +
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
+			"\n" + toUni("Beguiling Dance.") + " As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
 		usages : 1,
 		recovery : "dawn",
 		limfeaname : "Beguiling Dance",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
-			],
-		}],
 		weaponOptions: {
 			baseWeapon: "tessen",
 			regExpSearch: /^(?=.*courtesan)(?=.*war)(?=.*fan).*$/i,
@@ -3807,29 +3633,18 @@ MagicItemsList["courtesan’s war fan"] = {
 		},
 		action : [["action","Beguiling Dance"]],
 	},
-	"uncommon (attuned)" : {
+	"uncommon (optional attunement)" : {
 		name : "Uncommon Courtesan’s War Fan",
 		rarity : "uncommon",
 		attunement : true,
 		description : "Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
 		descriptionFull : 
 			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash." +
-			"\n" +
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
+			"\n" + toUni("Beguiling Dance.") + " As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Optional Attunement.") + " If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
 		usages : 1,
 		recovery : "dawn",
 		limfeaname : "Beguiling Dance",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each Humanoid of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
-			],
-		}],
 		weaponOptions: {
 			baseWeapon: "tessen",
 			regExpSearch: /^(?=.*courtesan)(?=.*war)(?=.*fan).*$/i,
@@ -3839,28 +3654,16 @@ MagicItemsList["courtesan’s war fan"] = {
 		action : [["action","Beguiling Dance"]],
 		advantages : [["Performance", true]],
 	},
-	"very rare (unattuned)" : {
+	"very rare" : {
 		name : "Very Rare Courtesan’s War Fan",
 		rarity : "very rare",
 		description : "Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
 		descriptionFull : 
 			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash." +
-			"\n" +
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
+			"\n" + toUni("Beguiling Dance.") + " As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
 		usages : 2,
 		recovery : "dawn",
 		limfeaname : "Beguiling Dance",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
-			],
-		}],
 		weaponOptions: {
 			baseWeapon: "tessen",
 			regExpSearch: /^(?=.*courtesan)(?=.*war)(?=.*fan).*$/i,
@@ -3869,29 +3672,18 @@ MagicItemsList["courtesan’s war fan"] = {
 		},
 		action : [["action","Beguiling Dance"]],
 	},
-	"very rare (attuned)" : {
+	"very rare (optional attunement)" : {
 		name : "Very Rare Courtesan’s War Fan",
 		rarity : "very rare",
 		attunement : true,
 		description : "Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
 		descriptionFull : 
 			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash." +
-			"\n" +
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Optional Attunement. If I choose to attune to this item, Ibecome proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
+			"\n" + toUni("Beguiling Dance.") + " As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Optional Attunement.") + " If I choose to attune to this item, Ibecome proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
 		usages : 2,
 		recovery : "dawn",
 		limfeaname : "Beguiling Dance",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Some assassins rely on stealth. Others, like the courtesans of the Courteous Cabal, prefer to hide in plain sight, beguiling their quarry into a stupor before finishing them off with a quick slash.",
-			"\u2022 Beguiling Dance. As an action while holding the fan, I can begin a slow, hypnotic dance, causing the fan to glow with an ephemeral, beguiling light. Each creature of my choice that I can see within 15 feet of me must succeed on a Wisdom saving throw contested by my Charisma (Performance) check or be charmed by me for 10 minutes or until I stop dancing. I must use my bonus action on subsequent turns to keep dancing, otherwise the effect ends at the end of my turn. The effect also ends early for a creature if I am ever more than 15 feet from it, or if me or my companions do anything harmful to it. When the effect ends, the creature knows it was charmed by me. Once this property has been used, it can’t be used again until the next dawn.",
-			"\u2022 Optional Attunement. If I choose to attune to this item, I become proficient with it and I gain advantage on Charisma (Performance) checks I make while holding it.",
-			],
-		}],
 		weaponOptions: {
 			baseWeapon: "tessen",
 			regExpSearch: /^(?=.*courtesan)(?=.*war)(?=.*fan).*$/i,
@@ -3927,19 +3719,8 @@ MagicItemsList["demonhunter kimono"] = {
 		description : "The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
 		descriptionFull : 
 			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour." +
-			"\n" +
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 15 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 30 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 15 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn.",
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 30 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn."
-		],
-		}],
+			"\n" + toUni("Aversion.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 15 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Pursuit.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 30 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 	},
 	"very rare" : {
 		name : "Very Rare Demonhunter Kimono",
@@ -3947,21 +3728,9 @@ MagicItemsList["demonhunter kimono"] = {
 		description : "The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
 		descriptionFull : 
 			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour." +
-			"\n" +
-			"I have a +1 bonus to AC while I wear this kimono and no armour." +
-			"\n" +
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 16 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 45 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 16 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn.",
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 45 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn."
-		],
-		}],
+			"\n" + "I have a +1 bonus to AC while I wear this kimono and no armour." +
+			"\n" + toUni("Aversion.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 16 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Pursuit.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 45 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 		extraAC : [{
 			mod : 1,
 			magic : true,
@@ -3975,21 +3744,9 @@ MagicItemsList["demonhunter kimono"] = {
 		description : "The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
 		descriptionFull : 
 			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour." +
-			"\n" +
-			"I have a +1 bonus to AC while I wear this kimono and no armour." +
-			"\n" +
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 17 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 60 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The Demon Hunter clan guards the fiendish artifact and enchants their silken vestments to aid in this endeavour.",
-			"\u2022 Aversion. While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 17 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn.",
-			"\u2022 Pursuit. While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 60 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn."
-		],
-		}],
+			"\n" + "I have a +1 bonus to AC while I wear this kimono and no armour." +
+			"\n" + toUni("Aversion.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘repel’, causing the printed image on the kimono to mobilise into an illustration of a fiendish soul burning into non-existence. Each creature in a 30-foot cone must succeed on a DC 17 Wisdom saving throw or become frightened of me for 1 minute. Fiends have disadvantage on this saving throw and, while frightened, must take the Dash action and move away from me by the safest available route on each of their turns, unless there is nowhere to move. A Fiend that ends its turn in a location where it doesn’t have line of sight to me can repeat the saving throw, ending the effect on itself on a success. A non-Fiend creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Once this property of the kimono has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Pursuit.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘hunt’, to teleport up to 60 feet to an unoccupied space within 5 feet of a creature that is frightened of me. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 		extraAC : [{
 			mod : 2,
 			magic : true,
@@ -4011,9 +3768,8 @@ MagicItemsList["draakannon"] = {
 		rarity : "common",
 		description : "This prosthesis can replace or enhance an arm. It has the Blast property and the Piercing Shot Superior Strike.",
 		descriptionFull :
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
+			toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Draconic Versatility.") + " As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
 		action : [["action", "Draconic Versatility"]],
 		weaponOptions : {
 			name : "Uncommon Draakannon",
@@ -4026,15 +3782,7 @@ MagicItemsList["draakannon"] = {
 			range : "20 ft",
 			description : "Blast, piercing shot superior strike.",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike.",
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
-			],
-		}],		
+		},		
 	},
 	"uncommon" : {
 		name : "Uncommon Draakannon",
@@ -4042,12 +3790,9 @@ MagicItemsList["draakannon"] = {
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This prosthesis has 4 charges and regains all expended charges daily at dawn." +
-			"\n" +
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
-			"\n" +
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 20 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 13 Dexterity saving throw, taking 1d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Draconic Versatility.") + " As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
+			"\n" + toUni("Blast Zone.") + " When I use the prosthesis’ Blast property to propel myself (up to 20 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 13 Dexterity saving throw, taking 1d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
 		action : [["action", "Draconic Versatility"]],
 		usages : 4,
 		recovery : "dawn",
@@ -4062,17 +3807,7 @@ MagicItemsList["draakannon"] = {
 			range : "20 ft",
 			description : "Blast, piercing shot superior strike.",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 4 charges and regains all expended charges daily at dawn.",
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike.",
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 20 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 13 Dexterity saving throw, taking 1d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
-			],
-		}],		
+		},	
 	},
 	"rare" : {
 		name : "Rare Draakannon",
@@ -4080,12 +3815,9 @@ MagicItemsList["draakannon"] = {
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This prosthesis has 4 charges and regains all expended charges daily at dawn." +
-			"\n" +
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
-			"\n" +
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 30 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 15 Dexterity saving throw, taking 2d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Draconic Versatility.") + " As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
+			"\n" + toUni("Blast Zone.") + " When I use the prosthesis’ Blast property to propel myself (up to 30 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 15 Dexterity saving throw, taking 2d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
 		action : [["action", "Draconic Versatility"]],
 		usages : 4,
 		recovery : "dawn",
@@ -4100,17 +3832,7 @@ MagicItemsList["draakannon"] = {
 			range : "20 ft",
 			description : "Blast, piercing shot superior strike.",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 4 charges and regains all expended charges daily at dawn.",
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike.",
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 30 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 15 Dexterity saving throw, taking 2d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
-			],
-		}],		
+		},		
 	},
 	"very rare" : {
 		name : "Very Rare Draakannon",
@@ -4118,12 +3840,9 @@ MagicItemsList["draakannon"] = {
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This prosthesis has 4 charges and regains all expended charges daily at dawn." +
-			"\n" +
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
-			"\n" +
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 40 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 16 Dexterity saving throw, taking 3d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Draconic Versatility.") + " As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison." +
+			"\n" + toUni("Blast Zone.") + " When I use the prosthesis’ Blast property to propel myself (up to 40 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 16 Dexterity saving throw, taking 3d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
 		action : [["bonus action", "Draconic Versatility"]],
 		usages : 4,
 		recovery : "dawn",
@@ -4138,17 +3857,7 @@ MagicItemsList["draakannon"] = {
 			range : "20 ft",
 			description : "Blast, piercing shot superior strike.",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 4 charges and regains all expended charges daily at dawn.",
-			"Prosthesis Properties. This prosthesis can replace or enhance an arm. It has the Blast (1d6 fire, 20 ft.) property and the Piercing Shot Superior Strike.",
-			"\u2022	Draconic Versatility. As an action while wearing this prosthesis, I can change the damage type it deals with its Blast property to one of the following: acid, cold, fire, lightning, or poison.",
-			"\u2022	Blast Zone. When I use the prosthesis’ Blast property to propel myself (up to 40 ft), I can expend 1 charge to pump extra firepower into the blast. If I do, each creature within 5 feet of me must make a DC 16 Dexterity saving throw, taking 3d6 damage of the Blast property’s type on a failed save, or half as much damage on a successful one.",
-			],
-		}],		
+		},	
 	},
 };
 
@@ -4165,9 +3874,8 @@ MagicItemsList["earthpiercer"] = {
 		rarity : "common",
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Deep Drilling.") + " This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
 		weaponOptions : {
 			name : "Common Earthpiercer",
 			source : [["RGttYR", 247]],
@@ -4179,26 +3887,16 @@ MagicItemsList["earthpiercer"] = {
 			range : "Melee, 20 ft",
 			description : "Hookshot (20 ft), launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact), Piercing Shot Superior Strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike.",
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
-			],
-		}],		
+		},		
 	},
 	"uncommon" : {
 		name : "Uncommon Earthpiercer",
 		rarity : "uncommon",
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage." +
-			"\n" +
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Deep Drilling.") + " This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage." +
+			"\n" + toUni("Tunneler.") + " This prosthesis has the Mobility (burrow 5 ft.) property.",
 		weaponOptions : {
 			name : "Uncommon Earthpiercer",
 			source : [["RGttYR", 247]],
@@ -4213,29 +3911,17 @@ MagicItemsList["earthpiercer"] = {
 		},
 		speed : {
 			burrow : { spd : 5, enc : 0 },
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike.",
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property.",
-			],
-		}],		
+		},	
 	},
 	"rare" : {
 		name : "Rare Earthpiercer",
 		rarity : "rare",
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage." +
-			"\n" +
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property." +
-			"\n" +
-			"\u2022 Emergency Anchor. I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property).",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Deep Drilling.") + " This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage." +
+			"\n" + toUni("Tunneler.") + " This prosthesis has the Mobility (burrow 5 ft.) property." +
+			"\n" + toUni("Emergency Anchor.") + " I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property).",
 		weaponOptions : {
 			name : "Rare Earthpiercer",
 			source : [["RGttYR", 247]],
@@ -4250,32 +3936,18 @@ MagicItemsList["earthpiercer"] = {
 		},
 		speed : {
 			burrow : { spd : 5, enc : 0 },
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike.",
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property.",
-			"\u2022 Emergency Anchor. I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property).",
-			],
-		}],		
+		},		
 	},
 	"very rare" : {
 		name : "Very Rare Earthpiercer",
 		rarity : "very rare",
 		description : "This prosthesis can replace or enhance an arm, has 4 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
-			"\n" +
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d8 piercing damage." +
-			"\n" +
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property." +
-			"\n" +
-			"\u2022 Emergency Anchor. I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property)." +
-			"\n" +
-			"\u2022 Overcharge. I can use an action to overcharge the drill, increasing its penetrative power. For 10 minutes, while using the prosthesis’ Mobility property to burrow, I can burrow through solid rock, leaving a 5-foot diameter tunnel in my wake. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike." +
+			"\n" + toUni("Deep Drilling.") + " This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d6 piercing damage. When the drill is detached from a creature, that creature takes 1d8 piercing damage." +
+			"\n" + toUni("Tunneler.") + " This prosthesis has the Mobility (burrow 5 ft.) property." +
+			"\n" + toUni("Emergency Anchor.") + " I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property)." +
+			"\n" + toUni("Overcharge.") + " I can use an action to overcharge the drill, increasing its penetrative power. For 10 minutes, while using the prosthesis’ Mobility property to burrow, I can burrow through solid rock, leaving a 5-foot diameter tunnel in my wake. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Earthpiercer",
 			source : [["RGttYR", 247]],
@@ -4291,18 +3963,7 @@ MagicItemsList["earthpiercer"] = {
 		speed : {
 			burrow : { spd : 5, enc : 0 },
 		},
-		action : [["action", "Overcharge"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (20 ft.), Launch (1d6 piercing, 20 ft.), and Melee (1d6 piercing, Impact) properties, and the Piercing Shot Superior Strike.",
-			"\u2022	Deep Drilling. This prosthesis uses a drill instead of a hook for its Hookshot property. When I hit with an attack roll made to attach the drill to a creature, the creature takes 1d8 piercing damage. When the drill is detached from a creature, that creature takes 1d6 piercing damage.",
-			"\u2022	Tunneler. This prosthesis has the Mobility (burrow 5 ft.) property.",
-			"\u2022 Emergency Anchor. I can use the prosthesis’ Hookshot property as a reaction when I am moved against my will, instead of only when I am falling. When I do, I choose how far away I can be moved from the point to which the drill is attached (up to the range of the prosthesis’ Hookshot property).",
-			"\u2022 Overcharge. I can use an action to overcharge the drill, increasing its penetrative power. For 10 minutes, while using the prosthesis’ Mobility property to burrow, I can burrow through solid rock, leaving a 5-foot diameter tunnel in my wake. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		action : [["action", "Overcharge"]],	
 	},
 };
 
@@ -4318,9 +3979,8 @@ MagicItemsList["g.r.a.p.p.l.e.r."] = {
 		rarity : "common",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
-			"\n" +
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook.",
 		weaponOptions : {
 			name : "Common G.R.A.P.P.L.E.R.",
 			source : [["RGttYR", 248]],
@@ -4333,27 +3993,16 @@ MagicItemsList["g.r.a.p.p.l.e.r."] = {
 			description : "Uses STR or DEX for attack roll",
 			selectNow : true,
 		},
-		action : [["action", "Improved Hookshot"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook.",
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
-			],
-		}],		
+		action : [["action", "Improved Hookshot"]],		
 	},
 	"uncommon" : {
 		name : "Uncommon G.R.A.P.P.L.E.R.",
 		rarity : "uncommon",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
-			"\n" +
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 13." +
-			"\n" +
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 13." +
+			"\n" + toUni("Hooked In.") + " When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
 		weaponOptions : {
 			name : "Uncommon G.R.A.P.P.L.E.R.",
 			source : [["RGttYR", 248]],
@@ -4366,27 +4015,16 @@ MagicItemsList["g.r.a.p.p.l.e.r."] = {
 			description : "Uses STR or DEX for attack roll",
 			selectNow : true,
 		},
-		action : [["action", "Improved Hookshot"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 13.",
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
-			],
-		}],		
+		action : [["action", "Improved Hookshot"]],		
 	},
 	"rare" : {
 		name : "Rare G.R.A.P.P.L.E.R.",
 		rarity : "rare",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
-			"\n" +
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 15. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook." +
-			"\n" +
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 15. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook." +
+			"\n" + toUni("Hooked In.") + " When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
 		weaponOptions : {
 			name : "Rare G.R.A.P.P.L.E.R.",
 			source : [["RGttYR", 248]],
@@ -4399,27 +4037,16 @@ MagicItemsList["g.r.a.p.p.l.e.r."] = {
 			description : "Uses STR or DEX for attack roll",
 			selectNow : true,
 		},
-		action : [["action", "Improved Hookshot"],["bonus action", "Improved Hookshot"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 15. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook.",
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 1d6 piercing damage. When the hook is detached from a creature, that creature takes 1d6 piercing damage.",
-			],
-		}],		
+		action : [["action", "Improved Hookshot"],["bonus action", "Improved Hookshot"]],	
 	},
 	"very rare" : {
 		name : "Very Rare G.R.A.P.P.L.E.R.",
 		rarity : "very rare",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
 		descriptionFull : 
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
-			"\n" +
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 16. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook." +
-			"\n" +
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 2d6 piercing damage. When the hook is detached from a creature, that creature takes 2d6 piercing damage.",
+			toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 16. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook."+
+			"\n" + toUni("Hooked In.") + " When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 2d6 piercing damage. When the hook is detached from a creature, that creature takes 2d6 piercing damage.",
 		weaponOptions : {
 			name : "Very Rare G.R.A.P.P.L.E.R.",
 			source : [["RGttYR", 248]],
@@ -4432,16 +4059,7 @@ MagicItemsList["g.r.a.p.p.l.e.r."] = {
 			description : "Uses STR or DEX for attack roll",
 			selectNow : true,
 		},
-		action : [["action", "Improved Hookshot"],["bonus action", "Improved Hookshot"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property.",
-			"\u2022	Improved Hookshot. As an action while the prosthesis’ hook is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hook. In addition, the DC of the ability check required to forcefully detach the hook increases to 16. I can use the Improved Hookshot property as a bonus action as well as an action, including as part of the same bonus action used to shoot the hook.",
-			"\u2022	Hooked In. When I hit with an attack roll to attach the prosthesis’ hook to a creature, the creature takes 2d6 piercing damage. When the hook is detached from a creature, that creature takes 2d6 piercing damage.",
-			],
-		}],		
+		action : [["action", "Improved Hookshot"],["bonus action", "Improved Hookshot"]],	
 	},
 };
 
@@ -4463,23 +4081,14 @@ MagicItemsList["glaive of the green tyrant"] = {
 		description : "Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
 		descriptionFull : 
 			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon." +
-			"\n" +
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 13 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d4 bludgeoning damage and 1d4 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 13 Dexterity saving throw or take 1d4 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Summon Storm.") + " With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 13 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d4 bludgeoning damage and 1d4 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 13 Dexterity saving throw or take 1d4 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Uncommon Glaive of the Green Tyrant",
 			source : [["RGttYR", 249]],
 			baseWeapon : "glaive",
 			regExpSearch : /^(?=.*glaive)(?=.*green)(?=.*tyrant).*$/i,
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 13 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d4 bludgeoning damage and 1d4 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 13 Dexterity saving throw or take 1d4 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		},		
 	},
 	"rare" : {
 		name : "Rare Glaive of the Green Tyrant",
@@ -4487,23 +4096,14 @@ MagicItemsList["glaive of the green tyrant"] = {
 		description : "Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
 		descriptionFull : 
 			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon." +
-			"\n" +
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 15 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d8 bludgeoning damage and 1d8 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 15 Dexterity saving throw or take 1d8 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Summon Storm.") + " With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 15 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d8 bludgeoning damage and 1d8 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 15 Dexterity saving throw or take 1d8 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Rare Glaive of the Green Tyrant",
 			source : [["RGttYR", 249]],
 			baseWeapon : "glaive",
 			regExpSearch : /^(?=.*glaive)(?=.*green)(?=.*tyrant).*$/i,
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 15 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d8 bludgeoning damage and 1d8 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 15 Dexterity saving throw or take 1d8 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		},	
 	},
 	"very rare" : {
 		name : "Very Rare Glaive of the Green Tyrant",
@@ -4511,23 +4111,14 @@ MagicItemsList["glaive of the green tyrant"] = {
 		description : "Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
 		descriptionFull : 
 			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon." +
-			"\n" +
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 16 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d10 bludgeoning damage and 1d10 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 16 Dexterity saving throw or take 1d10 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Summon Storm.") + " With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 16 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d10 bludgeoning damage and 1d10 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 16 Dexterity saving throw or take 1d10 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Glaive of the Green Tyrant +1",
 			source : [["RGttYR", 249]],
 			baseWeapon : "glaive",
 			regExpSearch : /^(?=.*glaive)(?=.*green)(?=.*tyrant).*$/i,
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 16 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d10 bludgeoning damage and 1d10 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 16 Dexterity saving throw or take 1d10 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		},		
 	},
 	"legendary" : {
 		name : "Legendary Glaive of the Green Tyrant",
@@ -4535,23 +4126,14 @@ MagicItemsList["glaive of the green tyrant"] = {
 		description : "Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
 		descriptionFull : 
 			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon." +
-			"\n" +
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 17 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d12 bludgeoning damage and 1d12 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 17 Dexterity saving throw or take 1d12 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Summon Storm.") + " With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 17 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d12 bludgeoning damage and 1d12 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 17 Dexterity saving throw or take 1d12 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Legendary Glaive of the Green Tyrant +2",
 			source : [["RGttYR", 249]],
 			baseWeapon : "glaive",
 			regExpSearch : /^(?=.*glaive)(?=.*green)(?=.*tyrant).*$/i,
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Legend tells of a great warrior queen who, having bested a bronze dragon in a game of wits, sought to wield the power of storms. With this power, she laid waste to entire armies, burning them with flashes of incandescent lightning. Some called her a liberator, others a tyrant. Though defeated by the Hero in Red, some of her power still remains in the Green Tyrant’s ancient weapon.",
-			"\u2022	Summon Storm. With a flourish of this weapon, I can expend a bonus action to whip up a tornado in a 5-foot-diameter, 30-foot-high cylinder of rushing air and crackling lightning centred on a point within 60 feet of me. The tornado lasts for 1 minute. Each creature that enters the area for the first time on a turn or starts its turn there must make a DC 17 Strength saving throw. On a failure, the creature is thrown 10 feet in a random direction, landing prone, and takes 1d12 bludgeoning damage and 1d12 lightning damage. As a bonus action on my turn, I can move the tornado up to 20 feet in a straight line. Each creature whose space the tornado moves through must succeed on a DC 17 Dexterity saving throw or take 1d12 lightning damage. A creature can’t take damage from this effect more than once per turn. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		},		
 	}, 
 };
 
@@ -4569,11 +4151,8 @@ MagicItemsList["god speaker kimono"] = {
 		description : "The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
 		descriptionFull : 
 			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon." +
-			"\n" +
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 10 minutes. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it." +
-			"After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
+			"\n" + toUni("Innocence.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 10 minutes. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Blink.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 		action : [["bonus action", "Innocence"],["bonus action", "Blink (recharge on 3-6)"]],
 		extraLimitedFeatures : [{
 			name: "Innocence",
@@ -4584,16 +4163,6 @@ MagicItemsList["god speaker kimono"] = {
 			usages : 1,
 			recovery : "dawn",		
 		}],		
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 10 minutes. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it.",
-			"After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
-		],
-		}],
 	},
 	"very rare" : {
 		name : "Very Rare God Speaker Kimono",
@@ -4601,11 +4170,8 @@ MagicItemsList["god speaker kimono"] = {
 		description : "The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
 		descriptionFull : 
 			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon." +
-			"\n" +
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it." +
-			"After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
+			"\n" + toUni("Innocence.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Blink.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 		action : [["bonus action", "Innocence"],["bonus action", "Blink (recharge on 3-6)"]],
 		extraLimitedFeatures : [{
 			name: "Innocence",
@@ -4615,16 +4181,6 @@ MagicItemsList["god speaker kimono"] = {
 			name: "Blink (recharge on 3-6)",
 			usages : 1,
 			recovery : "dawn",		
-		}],			
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it.",
-			"After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
-		],
 		}],
 		extraAC : [{
 			mod : 1,
@@ -4639,11 +4195,8 @@ MagicItemsList["god speaker kimono"] = {
 		description : "The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
 		descriptionFull : 
 			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon." +
-			"\n" +
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
-			"\n" +
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it." +
-			"After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
+			"\n" + toUni("Innocence.") + " While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn." +
+			"\n" + toUni("Blink.") + " While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it. After this property has been used, roll a d6. On a 1 or 2, it can’t be used again until the next dawn.",
 		action : [["bonus action", "Innocence"],["bonus action", "Blink (recharge on 3-8)"]],
 		extraLimitedFeatures : [{
 			name: "Innocence",
@@ -4654,16 +4207,6 @@ MagicItemsList["god speaker kimono"] = {
 			usages : 1,
 			recovery : "dawn",		
 		}],			
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The counterpart to the Demon Hunter clan, the God Speaker clan, guard the angelic relic that inhibits Celestials’ passage onto the Material Plane. The God Speakers see violence against Celestials as a last resort and instead seek to deceive and manipulate them. Their clothing is made from silk of the ether moth, a creature that blinks into the Material Plane only to lay its eggs, and flits out of the Material Plane the moment it emerges from its cocoon.",
-			"\u2022 Innocence. While wearing this kimono, I can use a bonus action to speak its first command word, ‘pure’. My aura becomes saturated with celestial energy, manifesting as an almost-visible golden nimbus. I gain advantage on Deception checks for 1 hour. For the duration, I am immune to magic and other effects that allow other creatures to read my thoughts or determine whether I am lying. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"\u2022 Blink. While wearing this kimono, I can use a bonus action to speak its second command word, ‘shimmer’. My aura implodes, immediately transporting me to the Ethereal Plane. While on the Ethereal Plane, I can see and hear the plane I originated from, which is cast in shades of grey, and I can’t see anything there more than 60 feet away. I can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive me or interact with me, unless they have the ability to do so. At the start of my next turn, I return to an unoccupied space of my choice that I can see within 10 feet of the space I vanished from. If no unoccupied space is available within that range, I appear in the nearest unoccupied space (chosen at random if more than one space is equally near). This property has no effect if I use it while I am on the Ethereal Plane or a plane that doesn’t border it.",
-			"After this property has been used, roll a d8. On a 1 or 2, it can’t be used again until the next dawn.",
-		],
-		}],
 		extraAC : [{
 			mod : 1,
 			magic : true,
@@ -4688,16 +4231,7 @@ MagicItemsList["gofu hat"] = {
 		description : "Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",		
 		descriptionFull : 
 			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item." +
-			"\n" +
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
-			],
-		}],
+			"\n" + toUni("Protective Talismans.") + " While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
 		usages : "1d4+2",		
 	},
 	"rare" : {
@@ -4706,16 +4240,7 @@ MagicItemsList["gofu hat"] = {
 		description : "Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",		
 		descriptionFull : 
 			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item." +
-			"\n" +
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates. Fey, Fiends, and Undead have disadvantage on attack rolls against a creature under the effect of one of the paper charms.",
-			],
-		}],		
+			"\n" + toUni("Protective Talismans.") + " While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 1d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",	
 		usages : "1d4+2",
 	},		
 	"very rare" : {
@@ -4724,16 +4249,7 @@ MagicItemsList["gofu hat"] = {
 		description : "Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",		
 		descriptionFull : 
 			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item." +
-			"\n" +
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 3d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Ink made with the blood of a Celestial. Paper from trees grown in hallowed ground. Precise calligraphy honed with extensive practice. It’s not easy to make a genuine paper charm, but it’s certainly worth the trouble. There’s a reason why superstitious folk continue to scrawl their own imitations, hoping to achieve just a fraction of their power. When first found or crafted, this hat has 1d4 + 2 paper charms hanging from it, which provide good fortune and ward off evil. Once all the charms have been used, the hat becomes a nonmagical item.",
-			"\u2022	Protective Talismans. While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 3d6 temporary hit points until the start of my next turn, at which point the charm disintegrates. Fey, Fiends, and Undead have disadvantage on attack rolls against a creature under the effect of one of the paper charms.",
-			],
-		}],	
+			"\n" + toUni("Protective Talismans.") + " While wearing the hat, I can use a bonus action to detach a charm and stick it on a willing creature within 5 feet of me, upon which the ink on it begins to glow softly. The creature gains the effects of the bless spell and gains 3d6 temporary hit points until the start of my next turn, at which point the charm disintegrates.",
 		usages : "1d6+2",	
 	},	
 };
@@ -4745,13 +4261,13 @@ MagicItemsList["hakuja-to"] = {
 	type : "weapon (any sword)",
 	description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
 	chooseGear : {
-	type : "weapon",
-	prefixOrSuffix : "brackets",
-	descriptionChange : ["replace", "sword"],
-	itemName1stPage : ["brackets ", "Hakuja-to"],
-	excludeCheck : function (inObjKey, inObj) {
-		var testRegex = /sword|scimitar|rapier/i;
-		return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+		type : "weapon",
+		prefixOrSuffix : "brackets",
+		descriptionChange : ["replace", "sword"],
+		itemName1stPage : ["brackets ", "Hakuja-to"],
+		excludeCheck : function (inObjKey, inObj) {
+			var testRegex = /sword|scimitar|rapier/i;
+			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 		}
 	},
 	choices : ["uncommon", "rare", "very rare"],
@@ -4761,22 +4277,11 @@ MagicItemsList["hakuja-to"] = {
 		description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +1 bonus to attack and damage rolls made with this sword, and it deals an extra 1d6 damage on a hit." +
-			"\n" +
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 3 charges and shed the outer layer of my skin, repeating the saving throw.",
+			"\n" + toUni("Renewal.") + " As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +1 bonus to attack and damage rolls made with this sword, and it deals an extra 1d6 damage on a hit." +
+			"\n" + toUni("Rebirth.") + " If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 3 charges and shed the outer layer of my skin, repeating the saving throw.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +1 bonus to attack and damage rolls made with this sword, and it deals an extra 1d6 damage on a hit.",
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 3 charges and shed the outer layer of my skin, repeating the saving throw.",
-			],
-		}],
 	},
 	"rare" : {
 		name : "Rare Hakuja-to",
@@ -4784,22 +4289,11 @@ MagicItemsList["hakuja-to"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +2 bonus to attack and damage rolls made with this sword, and it deals an extra 2d6 damage on a hit." +
-			"\n" +
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw.",
+			"\n" + toUni("Renewal.") + " As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +2 bonus to attack and damage rolls made with this sword, and it deals an extra 2d6 damage on a hit." +
+			"\n" + toUni("Rebirth.") + " If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw.",
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +2 bonus to attack and damage rolls made with this sword, and it deals an extra 2d6 damage on a hit.",
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw.",
-			],
-		}],
 	},
 	"very rare" : {
 		name : "Very Rare Hakuja-to",
@@ -4807,22 +4301,11 @@ MagicItemsList["hakuja-to"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +3 bonus to attack and damage rolls made with this sword, and it deals an extra 3d6 damage on a hit." +
-			"\n" +
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw with advantage.",
+			"\n" + toUni("Renewal.") + " As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +3 bonus to attack and damage rolls made with this sword, and it deals an extra 3d6 damage on a hit." +
+			"\n" + toUni("Rebirth.") + " If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw with advantage.",
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-			"\u2022 Renewal. As a bonus action, I can expend 1 charge to cause the sword to shed its outer layer, revealing a new, sharp blade underneath. Until the end of my turn, I gain a +3 bonus to attack and damage rolls made with this sword, and it deals an extra 3d6 damage on a hit.",
-			"\u2022 Rebirth. If I am suffering from a condition or effect that allows me to make a saving throw at the start or end of each of my turns to end it, I can use a bonus action to expend 2 charges and shed the outer layer of my skin, repeating the saving throw.",
-			],
-		}],
 	},
 };
 
@@ -4839,11 +4322,10 @@ MagicItemsList["hanabi kicker"] = {
 		name : "Uncommon Hanabi Kicker",
 		rarity : "uncommon",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike.",
-		descriptionFull : "Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
-			"\n" +
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
-			"\n" +
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d4 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns.",
+		descriptionFull : 
+			toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
+			"\n" + toUni("Rocket-Assisted Leap.") + " While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
+			"\n" + toUni("Pyrotechnic Kicks.") + " This prosthesis deals an extra 1d4 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns.",
 		weaponOptions : {
 			name : "Uncommon Hanabi Kicker",
 			source : [["RGttYR", 252]],
@@ -4855,26 +4337,16 @@ MagicItemsList["hanabi kicker"] = {
 			range : "Melee",
 			description : "Pugilist, Reeling Blow Superior Strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike.",
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start.",
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d4 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns.",
-			],
-		}],		
+		},		
 	},
 	"rare" : {
 		name : "Rare Hanabi Kicker",
 		rarity : "rare",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike.",
-		descriptionFull : "Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
-			"\n" +
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
-			"\n" +
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 15 Constitution saving throw or be blinded until the end of its next turn.",
+		descriptionFull : 
+			toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
+			"\n" + toUni("Rocket-Assisted Leap.") + " While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
+			"\n" + toUni("Pyrotechnic Kicks.") + " This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 15 Constitution saving throw or be blinded until the end of its next turn.",
 		weaponOptions : {
 			name : "Rare Hanabi Kicker",
 			source : [["RGttYR", 252]],
@@ -4886,28 +4358,17 @@ MagicItemsList["hanabi kicker"] = {
 			range : "Melee",
 			description : "Pugilist, Reeling Blow Superior Strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike.",
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start.",
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 15 Constitution saving throw or be blinded until the end of its next turn.",
-			],
-		}],		
+		},	
 	},
 	"very rare" : {
 		name : "Very Rare Hanabi Kicker",
 		rarity : "very rare",
 		description : "This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist), Flierwork property, and the Reeling Blow Superior Strike.",
-		descriptionFull : "Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
-			"\n" +
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
-			"\n" +
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 16 Constitution saving throw or be blinded until the end of its next turn." +
-			"\n" +
-			"\u2022 Flierwork. As a bonus action while wearing this prosthesis, I can increase the output of the rocket built into it, gaining a flying speed of 60 feet for 1 minute. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+		descriptionFull : 
+			toUni("Prosthesis Properties.") + " This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike." +
+			"\n" + toUni("Rocket-Assisted Leap.") + " While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start." +
+			"\n" + toUni("Pyrotechnic Kicks.") + " This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 16 Constitution saving throw or be blinded until the end of its next turn." +
+			"\n" + toUni("Flierwork.") + " As a bonus action while wearing this prosthesis, I can increase the output of the rocket built into it, gaining a flying speed of 60 feet for 1 minute. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Hanabi Kicker",
 			source : [["RGttYR", 252]],
@@ -4925,17 +4386,7 @@ MagicItemsList["hanabi kicker"] = {
 			name: "Flierwork",
 			usages : 1,
 			recovery : "dawn",
-		}],	
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Prosthesis Properties. This prosthesis can replace or enhance a leg. It has the Melee (1d6 bludgeoning, Pugilist) property and the Reeling Blow Superior Strike.",
-			"\u2022 Rocket-Assisted Leap. While wearing this prosthesis, my jump distance is doubled, and I can jump up to my maximum distance with or without a running start.",
-			"\u2022 Pyrotechnic Kicks. This prosthesis deals an extra 1d6 fire damage to the first target I hit with an unarmed strike using the prosthesis on each of my turns. If I roll a 6 on the extra damage against a creature, that creature must succeed on a DC 16 Constitution saving throw or be blinded until the end of its next turn.",
-			"\u2022 Flierwork. As a bonus action while wearing this prosthesis, I can increase the output of the rocket built into it, gaining a flying speed of 60 feet for 1 minute. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],		
+		}],			
 	},
 };
 
@@ -4951,23 +4402,11 @@ MagicItemsList["helping hand"] = {
 		name : "Uncommon Helping Hand",
 		rarity : "uncommon",
 		description : "This prosthesis has 4 charges and regains 1d4 expended charges daily at dawn.",
-		descriptionFull : "This prosthesis has 4 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
-			"\n" +
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 13." +
-			"\n" +
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way.",
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 13.",
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",
-			],
-		}],	
+		descriptionFull : 
+			"This prosthesis has 4 charges and regains 1d4 expended charges daily at dawn." +
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 13." +
+			"\n" + toUni("Assistance at a Distance.") + " As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",	
 		action : [["bonus action", "Assistance at a Distance"]],	
 		usages : 4,
 		recovery : "dawn",
@@ -4977,23 +4416,11 @@ MagicItemsList["helping hand"] = {
 		name : "Rare Helping Hand",
 		rarity : "rare",
 		description : "This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-		descriptionFull : "This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
-			"\n" +
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 15." +
-			"\n" +
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way.",
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 15.",
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",
-			],
-		}],	
+		descriptionFull : 
+			"This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn." +
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 15." +
+			"\n" + toUni("Assistance at a Distance.") + " As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me.",		
 		action : [["bonus action", "Assistance at a Distance"]],	
 		usages : 5,
 		recovery : "dawn",
@@ -5003,26 +4430,12 @@ MagicItemsList["helping hand"] = {
 		name : "Very Rare Helping Hand",
 		rarity : "very rare",
 		description : "This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-		descriptionFull : "This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
-			"\n" +
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 16." +
-			"\n" +
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me." +
-			"\n" +		
-			"\u2022 Create Puppets. While wearing this prosthesis, I can cast the animate objects spell. When I do, strings of magic extend from my prosthesis to the objects I animate, which I manipulate like puppets. If one of these objects is ever more than 30 feet away from me, it ceases to be animated by the spell. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn.",
-			"\u2022 Prosthesis Properties. This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows I to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way.",
-			"\u2022 Improved Hookshot. As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 16.",
-			"\u2022 Assistance at a Distance. As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that I can see within 40 feet of me.",
-			"\u2022 Create Puppets. While wearing this prosthesis, I can cast the animate objects spell. When I do, strings of magic extend from my prosthesis to the objects I animate, which I manipulate like puppets. If one of these objects is ever more than 30 feet away from me, it ceases to be animated by the spell. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		descriptionFull : 
+			"This prosthesis has 5 charges and regains 1d4 + 1 expended charges daily at dawn." +
+			"\n" + toUni("Prosthesis Properties.") + " This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.) property. Instead of firing a hook, the prosthesis allows me to manipulate three Tiny mechanical puppets that grab onto the target. Instead of rope, the puppets are connected to the prosthesis by wires of pure magic, which can’t be damaged or destroyed. It otherwise functions in the same way." +
+			"\n" + toUni("Improved Hookshot.") + " As an action while the puppets are attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the puppets. In addition, the DC of the ability check required to forcefully detach the puppets increases to 16." +
+			"\n" + toUni("Assistance at a Distance.") + " As a bonus action, I can expend 1 charge to take the Help action, manipulating the puppets to support my allies. When I do so to aid an ally in attacking a creature, the target of that attack can be up to 40 feet away from me. Alternatively, I can expend 1 charge as a bonus action to have the puppets feed a potion to a willing creature that me can see within 40 feet of me." +
+			"\n" + toUni("Create Puppets.") + " While wearing this prosthesis, I can cast the animate objects spell. When I do, strings of magic extend from my prosthesis to the objects I animate, which I manipulate like puppets. If one of these objects is ever more than 30 feet away from me, it ceases to be animated by the spell. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		action : [["bonus action", "Assistance at a Distance"]],	
 		usages : 5,
 		recovery : "dawn",
@@ -5041,9 +4454,9 @@ MagicItemsList["iron kasa"] = {
 		name : "Common Iron Kasa",
 		rarity : "common",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-		descriptionFull : "This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield.",
+		descriptionFull : 
+			"This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield.",
 		weaponOptions : {
 			name : "Common Iron Kasa",
 			source : [["RGttYR", 254]],
@@ -5055,25 +4468,16 @@ MagicItemsList["iron kasa"] = {
 			range : "15 ft",
 			description : "Hookshot (15 ft.), Integrated (shield)",
 			selectNow : true,
-		},		
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield.",
-			],
-		}],	
+		},
 	},
 	"uncommon" : {
 		name : "Uncommon Iron Kasa",
 		rarity : "uncommon",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-		descriptionFull : "This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 13."+
-			"\n" +
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property.",
+		descriptionFull : 
+			"This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 13."+
+			"\n" + toUni("Saving Throw.") + " As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property.",
 		weaponOptions : {
 			name : "Uncommon Iron Kasa",
 			source : [["RGttYR", 254]],
@@ -5086,28 +4490,17 @@ MagicItemsList["iron kasa"] = {
 			description : "Hookshot (15 ft.), Integrated (shield), Saving Throw",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. It has the Hookshot (15 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 13.",
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property.",
-			],
-		}],	
 		action : [["reaction", "Saving Throw"]],
 	},
 	"rare" : {
 		name : "Rare Iron Kasa",
 		rarity : "rare",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (30 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-		descriptionFull : "This prosthesis can enhance or replace an arm. It has the Hookshot (30 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 15."+
-			"\n" +
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property."+
-			"\n" +
-			"\u2022 Into the Fray. When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+		descriptionFull : 
+			"This prosthesis can enhance or replace an arm. It has the Hookshot (30 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 15."+
+			"\n" + toUni("Saving Throw.") + " As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property."+
+			"\n" + toUni("Into the Fray.") + " When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Rare Iron Kasa",
 			source : [["RGttYR", 254]],
@@ -5120,16 +4513,6 @@ MagicItemsList["iron kasa"] = {
 			description : "Hookshot (15 ft.), Integrated (shield), Saving Throw, Into the Fray",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. It has the Hookshot (30 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 15.",
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property.",
-			"\u2022 Into the Fray. When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
 		action : [["reaction", "Saving Throw"]],
 		limfeaname : "Into the Fray",
 		usages : 1,
@@ -5139,13 +4522,11 @@ MagicItemsList["iron kasa"] = {
 		name : "Very Rare Iron Kasa",
 		rarity : "very rare",
 		description : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-		descriptionFull : "This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 16."+
-			"\n" +
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property."+
-			"\n" +
-			"\u2022 Into the Fray. When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+		descriptionFull : 
+			"This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties."+
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 16."+
+			"\n" + toUni("Saving Throw.") + " As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property."+
+			"\n" + toUni("Into the Fray.") + " When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Iron Kasa",
 			source : [["RGttYR", 254]],
@@ -5157,17 +4538,7 @@ MagicItemsList["iron kasa"] = {
 			range : "15 ft",
 			description : "Hookshot (15 ft.), Integrated (shield), Saving Throw, Into the Fray",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. It has the Hookshot (40 ft.), Integrated (shield), and Launch (1d6 bludgeoning, 15 ft.) properties.",
-			"\u2022 Improved Hookshot. This prosthesis uses a shield instead of a hook for its Hookshot property. As an action while the shield is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the shield. In addition, the DC of the ability check required to forcefully detach the shield increases to 16.",
-			"\u2022 Saving Throw. As a reaction when a creature I can see within the prosthesis’ Hookshot range is hit by an attack, I can launch the shield in front of it, granting it a +2 bonus to AC against the attack and potentially causing it to miss. In order to use this reaction, the integrated shield must be extended and must not be attached to a target as part of the Hookshot property.",
-			"\u2022 Into the Fray. When I cause the Saving Throw property’s triggering attack to miss, I can have the shield attach itself to a surface within 5 feet of the attacked creature and reel myself in as per the Improved Hookshot property as part of the same reaction. When I do, I can make a melee attack against the attacking creature if it’s within my reach. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		},	
 		action : [["reaction", "Saving Throw"]],
 		limfeaname : "Into the Fray",
 		usages : 2,
@@ -5183,13 +4554,13 @@ MagicItemsList["jishin, earth render"] = {
 	description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
 	attunement : true,
 	chooseGear : {
-	type : "weapon",
-	prefixOrSuffix : "brackets",
-	descriptionChange : ["replace", "sword"],
-	itemName1stPage : ["brackets ", "Jishin, Earth Render"],
-	excludeCheck : function (inObjKey, inObj) {
-		var testRegex = /sword|scimitar|rapier/i;
-		return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+		type : "weapon",
+		prefixOrSuffix : "brackets",
+		descriptionChange : ["replace", "sword"],
+		itemName1stPage : ["brackets ", "Jishin, Earth Render"],
+		excludeCheck : function (inObjKey, inObj) {
+			var testRegex = /sword|scimitar|rapier/i;
+			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 		}
 	},
 	choices : ["uncommon", "rare", "very rare"],
@@ -5199,22 +4570,11 @@ MagicItemsList["jishin, earth render"] = {
 		description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 2 charge to cast the heat metal spell (save DC 13). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell."+
-			"\n" +
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 2 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 13 Constitution saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+			"\n" + toUni("Heat Holder.") + " As an action while holding the sword, I can expend 2 charge to cast the heat metal spell (save DC 13). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell."+
+			"\n" + toUni("Lavaburst.") + " As an action while holding the sword, I can expend 2 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 13 Constitution saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 13). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell.",
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 13 Constitution saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
-			],
-		}],
 	},
 	"rare" : {
 		name : "Rare Jishin, Earth Render",
@@ -5222,25 +4582,12 @@ MagicItemsList["jishin, earth render"] = {
 		description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 15). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell."+
-			"\n" +
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 15 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
+			"\n" + toUni("Heat Holder.") + " As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 15). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell."+
+			"\n" + toUni("Lavaburst.") + " As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 15 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Tectonic Shift.") + " As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn.",
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 15). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 1d8 fire damage to each target it hits while affected by the spell.",
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 15 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
-			],
-		}],
 	},
 	"very rare" : {
 		name : "Very Rare Jishin, Earth Render",
@@ -5248,25 +4595,12 @@ MagicItemsList["jishin, earth render"] = {
 		description : "This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 16). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d6 fire damage to each target it hits while affected by the spell."+
-			"\n" +
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 16 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
+			"\n" + toUni("Heat Holder.") + " As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 16). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d6 fire damage to each target it hits while affected by the spell."+
+			"\n" + toUni("Lavaburst.") + " As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 16 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Tectonic Shift.") + " As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4+2",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn.",
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 16). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d6 fire damage to each target it hits while affected by the spell.",
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 16 Constitution saving throw, taking 3d8 fire damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet equal to five times the number of charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed.",
-			],
-		}],
 	},
 	"legendary" : {
 		name : "Legendary Jishin, Earth Render",
@@ -5274,25 +4608,12 @@ MagicItemsList["jishin, earth render"] = {
 		description : "This weapon has 8 charges and regains 1d4 + 4 expended charges daily at dawn.",
 		descriptionFull : 
 			"This weapon has 8 charges and regains 1d4 + 4 expended charges daily at dawn." +
-			"\n" +
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 17). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d8 fire damage to each target it hits while affected by the spell."+
-			"\n" +
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 17 Constitution saving throw, taking 3d10 fire damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet up to 10 ft per charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed. I can expend any number of charges when using the Tectonic Shift property.",
+			"\n" + toUni("Heat Holder.") + " As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 17). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d8 fire damage to each target it hits while affected by the spell."+
+			"\n" + toUni("Lavaburst.") + " As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 17 Constitution saving throw, taking 3d10 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Tectonic Shift.") + " As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet up to 10 ft per charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed. I can expend any number of charges when using the Tectonic Shift property.",
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4+4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 8 charges and regains 1d4 + 4 expended charges daily at dawn.",
-			"\u2022 Heat Holder. As an action while holding the sword, I can expend 1 charge to cast the heat metal spell (save DC 17). When heat metal is cast on this weapon, the heat doesn’t propagate past the guard, and its wielder isn’t subjected to the normal effects of the spell. Instead, the weapon deals an extra 2d8 fire damage to each target it hits while affected by the spell.",
-			"\u2022 Lavaburst. As an action while holding the sword, I can expend 1 charge to cause a 10-foot-diameter circle of earth centred on a point I can see within 60 feet of me to fracture and warp, spurting forth sprays of lava. For 1 minute or until my concentration ends (as if concentrating on a spell), the area is difficult terrain, and each creature that starts its turn in the area or enters the area for the first time on its turn must make a DC 17 Constitution saving throw, taking 3d10 fire damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Tectonic Shift. As an action while holding the sword and standing on earth, I can expend up to 3 charges to cause a nonmagical slab of rock to burst up from the ground at a point I can see within 30 feet of me. The slab is a rectangle 10 feet high, 2 inches thick, and has a length in feet up to 10 ft per charges expended, facing a direction of my choice. The slab is an object made of stone that has AC 15, 60 hit points, and vulnerability to thunder damage. When it is reduced to 0 hit points, it is destroyed. I can expend any number of charges when using the Tectonic Shift property.",
-			],
-		}],
 	},
 };
 
@@ -5309,8 +4630,7 @@ MagicItemsList["kageboshi"] = {
 		description : "This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike.",
 		descriptionFull : 
 			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. ",
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. ",
 		weaponOptions : {
 			name : "Common Kageboshi",
 			source : [["RGttYR", 256]],
@@ -5323,14 +4643,6 @@ MagicItemsList["kageboshi"] = {
 			description : "Hookshot (30 ft.), Battery Strike Superior Strike",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike.",
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star.",
-			],
-		}],	
 	},
 	"uncommon" : {
 		name : "Uncommon Kageboshi",
@@ -5338,10 +4650,8 @@ MagicItemsList["kageboshi"] = {
 		description : "This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike.",
 		descriptionFull : 
 			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 13."+
-			"\n" +
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon, concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 13."+
+			"\n" + toUni("Shadow Trick.") + " When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon, concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Shadow Trick",
 		usages : 1,
 		recovery : "dawn",
@@ -5356,16 +4666,7 @@ MagicItemsList["kageboshi"] = {
 			range : "30 ft",
 			description : "Hookshot (30 ft.), Battery Strike Superior Strike, Shadow Trick",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.) and Launch (1d6 slashing, 30 ft.) properties, and the Battery Strike Superior Strike.",
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 13.",
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon, concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		},	
 	},
 	"rare" : {
 		name : "Rare Kageboshi",
@@ -5373,12 +4674,9 @@ MagicItemsList["kageboshi"] = {
 		description : "This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike.",
 		descriptionFull : 
 			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 15."+
-			"\n" +
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			"\u2022 Instant Transmission. When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 15."+
+			"\n" + toUni("Shadow Trick.") + " When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Instant Transmission.") + " When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
 		extraLimitedFeatures : [{
 			name: "Shadow Trick",
 			usages : 2,
@@ -5400,16 +4698,6 @@ MagicItemsList["kageboshi"] = {
 			description : "Hookshot (30 ft.), Battery Strike Superior Strike, Shadow Trick, Instant Transmission",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike.",
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 15.",
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			"\u2022 Instant Transmission. When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
-			],
-		}],	
 	},
 	"very rare" : {
 		name : "Very Rare Kageboshi",
@@ -5417,12 +4705,9 @@ MagicItemsList["kageboshi"] = {
 		description : "This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike.",
 		descriptionFull : 
 			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike."+
-			"\n" +
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 16."+
-			"\n" +
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			"\u2022 Instant Transmission. When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
+			"\n" + toUni("Improved Hookshot.") + " This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 16."+
+			"\n" + toUni("Shadow Trick.") + " When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Instant Transmission.") + " When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
 		extraLimitedFeatures : [{
 			name: "Shadow Trick",
 			usages : 2,
@@ -5443,17 +4728,7 @@ MagicItemsList["kageboshi"] = {
 			range : "30 ft",
 			description : "Hookshot (30 ft.), Battery Strike Superior Strike, Shadow Trick, Instant Transmission",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace or enhance an arm. It has the Hookshot (30 ft.), Launch (1d6 slashing, 30 ft.), and Instant Transmission properties, and the Battery Strike Superior Strike.",
-			"\u2022 Improved Hookshot. This prosthesis uses an oversized throwing star instead of a hook for its Hookshot property. As an action while the throwing star is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the throwing star. In addition, the DC of the ability check required to forcefully detach the throwing star increases to 16.",
-			"\u2022 Shadow Trick. When I make an attack using the Launch property of the prosthesis, I can unsheathe and throw another weapon (or two weapons with the Light and Thrown properties, making an attack roll against the same target with advantage for each one), concealing it in the throwing star’s shadow. As part of the same action, make another attack against the same target, using a weapon I'm carrying that has both the Light and Thrown properties. I have advantage on the attack roll. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			"\u2022 Instant Transmission. When I hit a creature with an attack using the prosthesis’ Launch property, I can immediately teleport to an unoccupied space of my choice within 5 feet of the target (no action required). Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",		
-			],
-		}],	
+		},	
 	},
 };
 
@@ -5470,10 +4745,8 @@ MagicItemsList["kanaboom stick"] = {
 		description : "The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
 		descriptionFull : 
 			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer."+
-			"\n" +
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
-			"\n" +
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 13 Dexterity saving throw, taking 2d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
+			"\n" + "As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
+			"\n" + toUni("Bigger Booms.") + " While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 13 Dexterity saving throw, taking 2d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
 		weaponOptions : {
 			name : "Uncommon Kanaboom Stick",
 			baseWeapon : "mace",
@@ -5481,16 +4754,7 @@ MagicItemsList["kanaboom stick"] = {
 			regExpSearch : /^(?=.*kanaboom)(?=.*stick).*$/i,
 			description : "First hit, 5 ft DC13 Dex save 2d4 Fire Dmg; saves half",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius.",
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 13 Dexterity saving throw, taking 2d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
-			],
-		}],	
+		},	
 	},
 	"rare" : {
 		name : "Rare Kanaboom Stick",
@@ -5498,27 +4762,16 @@ MagicItemsList["kanaboom stick"] = {
 		description : "The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
 		descriptionFull : 
 			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer."+
-			"\n" +
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
-			"\n" +
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 15 Dexterity saving throw, taking 4d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
+			"\n" + "As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
+			"\n" + toUni("Bigger Booms.") + " While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 15 Dexterity saving throw, taking 4d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
 		weaponOptions : {
-			name : "Uncommon Kanaboom Stick",
+			name : "Rare Kanaboom Stick",
 			baseWeapon : "mace",
 			source : [["RGttYR", 257]],
 			regExpSearch : /^(?=.*kanaboom)(?=.*stick).*$/i,
 			description : "First hit, 5 ft DC15 Dex save 4d4 Fire Dmg; saves half",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius.",
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 15 Dexterity saving throw, taking 4d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
-			],
-		}],	
 	},
 	"very rare" : {
 		name : "Very Rare Kanaboom Stick",
@@ -5526,27 +4779,16 @@ MagicItemsList["kanaboom stick"] = {
 		description : "The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
 		descriptionFull : 
 			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer."+
-			"\n" +
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
-			"\n" +
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 16 Dexterity saving throw, taking 8d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
+			"\n" + "As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius."+
+			"\n" + toUni("Bigger Booms.") + " While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 16 Dexterity saving throw, taking 8d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
 		weaponOptions : {
-			name : "Uncommon Kanaboom Stick",
+			name : "Very Rare Kanaboom Stick",
 			baseWeapon : "mace",
 			source : [["RGttYR", 257]],
 			regExpSearch : /^(?=.*kanaboom)(?=.*stick).*$/i,
 			description : "First hit, 5 ft DC16 Dex save 8d4 Fire Dmg; saves half",
 			selectNow : true,
 		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"The fact that demons are reborn after being killed on the Material Plane leaves them with a laissez-faire attitude towards self-preservation. Taking advantage of their innate resistance to the elements, they can often be found in possession of these crudely enchanted maces that leave a minor path of flaming destruction in their wake. The only limit to this weapon is how much punishment its wielder can suffer.",
-			"As an action, I can stick this magic weapon into an open flame or light it as I would a torch. Either way, the metal glows with incandescent heat as lava-like veins lick up the weapon’s length for 10 minutes, shedding dim light in a 15-foot radius.",
-			"\u2022 Bigger Booms. While this weapon is lit, it creates fiery explosions with each strike. The first time on each of my turns that I hit a target with an attack using it, me, the target, and each creature within 5 feet of the target must make a DC 16 Dexterity saving throw, taking 8d4 fire damage on a failed save, or half as much damage on a successful one. Flammable objects within this area are set alight if not being worn or carried.",
-			],
-		}],	
 	},
 };
 
@@ -5560,15 +4802,9 @@ MagicItemsList["kappa’s aquatic visage"] = {
 	description : "This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled.",
 	descriptionFull : 
 		"This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled."+
-		"\n" +		
-		toUni("Aquatic Predator") +
-		" While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater."+
-		"\n" +
-		toUni("Water Spells") +
-		" While wearing this mask, I can expend 1 or more charges to cast one of the following spells from it (+7 to hit, save DC 15): create or destroy water (1 charge), water breathing (3 charges), or water wyrm (3 charges)."+
-		"\n" +
-		 toUni("Curse") +
-		" This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on challenging strangers to sumo wrestling matches, and all other hobbies seem mundane and joyless in comparison.",
+		"\n" + toUni("Aquatic Predator") + " While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater."+
+		"\n" + toUni("Water Spells") + " While wearing this mask, I can expend 1 or more charges to cast one of the following spells from it (+7 to hit, save DC 15): create or destroy water (1 charge), water breathing (3 charges), or water wyrm (3 charges)."+
+		"\n" + toUni("Curse") + " This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on challenging strangers to sumo wrestling matches, and all other hobbies seem mundane and joyless in comparison.",
 	usages : 7,
 	recovery : "dawn",
 	additional : "regains 1d4+3",
@@ -5590,16 +4826,6 @@ MagicItemsList["kappa’s aquatic visage"] = {
 		spells : ["water wyrm"],
 		selection : ["water wyrm"],
 	firstCol : 3
-	}],
-	toNotesPage: [{
-	name : "Features",
-	page3notes: true,
-     	note : [
-		"This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled.",
-		"Aquatic Predator. While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater.",
-		"Water Spells. While wearing this mask, I can expend 1 or more charges to cast one of the following spells from it (+7 to hit, save DC 15): create or destroy water (1 charge), water breathing (3 charges), or water wyrm* (3 charges).",
-		"Curse. This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on challenging strangers to sumo wrestling matches, and all other hobbies seem mundane and joyless in comparison.",
-		],
 	}],	
 }; 
 	
@@ -5613,15 +4839,9 @@ MagicItemsList["kappa’s consuming visage"] = {
 	description : "This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled.",
 	descriptionFull : 
 		"This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled."+
-		"\n" +		
-		toUni("Aquatic Predator") +
-		" While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater."+
-		"\n" +
-		toUni("Consuming Spells") +
-		" While wearing this mask, I can expend 1 or more charges to cast one of the followings pells from it (+7 to hit, save DC 15): endoleech (2 charges), extract shirikodama (3 charges), or vampiric touch (3 charges)."+
-		"\n" +
-		 toUni("Curse") +
-		" This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on acquiring and eating cucumbers, with all other food tasting bland and boring in comparison.",
+		"\n" + toUni("Aquatic Predator") + " While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater."+
+		"\n" + toUni("Consuming Spells") + " While wearing this mask, I can expend 1 or more charges to cast one of the followings pells from it (+7 to hit, save DC 15): endoleech (2 charges), extract shirikodama (3 charges), or vampiric touch (3 charges)."+
+		"\n" + toUni("Curse") + " This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on acquiring and eating cucumbers, with all other food tasting bland and boring in comparison.",
 	usages : 7,
 	recovery : "dawn",
 	additional : "regains 1d4+3",
@@ -5643,16 +4863,6 @@ MagicItemsList["kappa’s consuming visage"] = {
 		spells : ["vampiric touch"],
 		selection : ["vampiric touch"],
 	firstCol : 3
-	}],
-	toNotesPage: [{
-	name : "Features",
-	page3notes: true,
-     	note : [
-		"This mask has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I am knocked prone against my will while wearing it, I must make a DC 15 Dexterity saving throw. On a failed save, the mask loses 1 charge as some of its water is spilled.",
-		"Aquatic Predator. While wearing this mask, I feel more at ease in the water. I gain a swimming speed of 30 feet, and I have advantage on ability checks made to grapple creatures and avoid or escape being grappled while underwater.",
-		"Consuming Spells. While wearing this mask, I can expend 1 or more charges to cast one of the followings pells from it (+7 to hit, save DC 15): endoleech (2 charges), extract shirikodama (3 charges), or vampiric touch (3 charges).",
-		"Curse. This item is cursed, and attuning to it extends the curse to me. While cursed in this way, I gain a mild fixation on acquiring and eating cucumbers, with all other food tasting bland and boring in comparison.",
-		],
 	}],	
 };
 
@@ -5670,24 +4880,11 @@ MagicItemsList["kitsune mask"] = {
 		description : "This mask has 5 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d4 + 1 expended charges daily at dawn.",
 		descriptionFull : 
 			"This mask has 5 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d4 + 1 expended charges daily at dawn."+
-			"\n" +		
-			toUni("Soul Vortex") +
-			" As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 13 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
-			"\n" +		
-			toUni("Spirit Ray") +
-			" As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+5 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
+			"\n" + toUni("Soul Vortex") + " As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 13 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
+			"\n" + toUni("Spirit Ray") + " As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+5 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
 		usages : 9,
 		recovery : "dawn",
-		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This mask has 5 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d4 + 1 expended charges daily at dawn.",
-			"Soul Vortex. As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 13 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction.",
-			"Spirit Ray. As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+5 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
-			],
-		}],	
+		additional : "regains 1d6+3",	
 	},
 	"rare" : {
 		name : "Rare Kitsune Mask",
@@ -5695,24 +4892,11 @@ MagicItemsList["kitsune mask"] = {
 		description : "This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn.",
 		descriptionFull : 
 			"This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn."+
-			"\n" +		
-			toUni("Soul Vortex") +
-			" As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 15 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
-			"\n" +		
-			toUni("Spirit Ray") +
-			" As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+7 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
+			"\n" + toUni("Soul Vortex") + " As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 15 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
+			"\n" + toUni("Spirit Ray") + " As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+7 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
 		usages : 9,
 		recovery : "dawn",
-		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn.",
-			"Soul Vortex. As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 15 Intelligence saving throw, taking 3d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction.",
-			"Spirit Ray. As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+7 to hit) for each ray, dealing 2d6 psychic damage on a hit.",
-			],
-		}],	
+		additional : "regains 1d6+3",	
 	},
 	"very rare" : {
 		name : "Rare Kitsune Mask",
@@ -5720,24 +4904,11 @@ MagicItemsList["kitsune mask"] = {
 		description : "This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn.",
 		descriptionFull : 
 			"This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn."+
-			"\n" +		
-			toUni("Soul Vortex") +
-			" As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 16 Intelligence saving throw, taking 4d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
-			"\n" +		
-			toUni("Spirit Ray") +
-			" As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+8 to hit) for each ray, dealing 3d6 psychic damage on a hit.",
+			"\n" + toUni("Soul Vortex") + " As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 16 Intelligence saving throw, taking 4d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction."+
+			"\n" + toUni("Spirit Ray") + " As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+8 to hit) for each ray, dealing 3d6 psychic damage on a hit.",
 		usages : 9,
 		recovery : "dawn",
-		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This mask has 9 charges, which manifest as nine incorporeal, fox-like tails. It regains 1d6 + 3 expended charges daily at dawn.",
-			"Soul Vortex. As an action while wearing the mask, I can expend 2 charges to conjure a fierce vortex of ethereal fire in a 5-foot-radius, 40-foot-high cylinder centred on a point within 120 feet of me. The vortex lasts for 1 minute, or until my concentration ends, as if concentrating on a spell. Dim light fills the cylinder. When a creature enters the area for the first time on a turn or starts its turn there, it is engulfed in raging purple flames and must make a DC 16 Intelligence saving throw, taking 4d6 psychic damage on a failed save, or half as much damage on a successful one. On each of my turns, I can use an action to move the vortex up to 60 feet in any direction.",
-			"Spirit Ray. As an action while wearing the mask, I can spend 2 to 5 charges to whip a number of tails into ghostly rays which I hurl at creatures within 120 feet of me. I produce three rays for the first two charges spent, and an additional ray for each charge beyond that. Make a ranged spell attack (+8 to hit) for each ray, dealing 3d6 psychic damage on a hit.",
-			],
-		}],	
+		additional : "regains 1d6+3",	
 	},
 };
 
@@ -5755,27 +4926,12 @@ MagicItemsList["mask of the oni"] = {
 		description : "While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
 		descriptionFull : 
 			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language."+
-			"\n" +		
-			toUni("Demon’s Deceit") +
-			" While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +		
-			toUni("Enhanced Attunement") +
-			" As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
-			"\n" +	
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
+			"\n" + toUni("Demon’s Deceit") + " While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + toUni("Enhanced Attunement") + " As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
+			"\n \u2022" + toUni("EA: Stalker’s Shroud.") + " As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
 		usages : 9,
 		recovery : "dawn",
-		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
-			"Demon’s Deceit. While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
-			"Enhanced Attunement. As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete.",
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
-			],
-		}],	
+		additional : "regains 1d6+3",	
 	},
 	"rare" : {
 		name : "Rare Mask of the Oni",
@@ -5783,27 +4939,12 @@ MagicItemsList["mask of the oni"] = {
 		description : "While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
 		descriptionFull : 
 			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language."+
-			"\n" +		
-			toUni("Demon’s Deceit") +
-			" While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward."+
-			"\n" +		
-			toUni("Enhanced Attunement") +
-			" As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
-			"\n" +	
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
+			"\n" + toUni("Demon’s Deceit") + " While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward."+
+			"\n" + toUni("Enhanced Attunement") + " As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
+			"\n \u2022" + toUni("EA: Stalker’s Shroud.") + " As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
 		usages : 9,
 		recovery : "dawn",
-		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
-			"Demon’s Deceit. While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward.",
-			"Enhanced Attunement. As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete.",
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
-			],
-		}],	
+		additional : "regains 1d6+3",	
 	},
 	"very rare" : {
 		name : "Very Rare Mask of the Oni",
@@ -5811,27 +4952,12 @@ MagicItemsList["mask of the oni"] = {
 		description : "While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
 		descriptionFull : 
 			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language."+
-			"\n" +		
-			toUni("Demon’s Deceit") +
-			" While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward."+
-			"\n" +		
-			toUni("Enhanced Attunement") +
-			" As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
-			"\n" +	
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 1, it can’t be used again until the next dawn.",
+			"\n" + toUni("Demon’s Deceit") + " While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward."+
+			"\n" + toUni("Enhanced Attunement") + " As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete."+
+			"\n \u2022" + toUni("EA: Stalker’s Shroud.") + " As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 1, it can’t be used again until the next dawn.",
 		usages : 9,
 		recovery : "dawn",
 		additional : "regains 1d6+3",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wearing this mask, I have advantage on Intimidation checks and disadvantage on Persuasion checks. I can communicate with Fiends and Giants as if we shared a language.",
-			"Demon’s Deceit. While wearing the mask, I can cast the disguise self spell. When the spell is cast in this way, I can seem up to 3 feet taller. The spell ends early if I remove the mask. I can use the Demon’s Deceit property an unlimited number of times, without needing to roll afterward.",
-			"Enhanced Attunement. As part of an hour-long ritual, I can agree to complete a task set out by the last attuner of this mask, enhancing my attunement to it. When I do so, the mask fuses onto my face, turning my skin red, my teeth gold, and giving my eyes an ethereal, sanguine glow. I can use the Stalker’s Shroud property. I can’t end my attunement to the mask or remove it until I complete the task set out during the ritual. After I complete the task, if I attempt to end my attunement to the mask, I must first set a task for the next enhanced attuner to complete.",
-			" \u2022 EA: Stalker’s Shroud. As a bonus action while wearing the mask, I can become invisible to a creature within 30 feet of me until the start of my next turn. Once this property of the mask has been used, roll a d6. On a 1, it can’t be used again until the next dawn.",
-			],
-		}],	
 	},
 };
 
@@ -5849,22 +4975,9 @@ MagicItemsList["mask of the tengu"] = {
 		description : "When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
 		descriptionFull : 
 			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable."+
-			"\n" +		
-			toUni("Duplicitous Duplication") +
-			" While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +		
-			toUni("Switcheroo") +
-			" While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 13 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once this property has been used, it can’t be used again until the next dawn.",
-		action : [["bonus action", "Duplicitous Duplication"],["reaction", "Switcheroo"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
-			"Duplicitous Duplication. While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn.",
-			"Switcheroo. While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 13 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once this property has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+			"\n" + toUni("Duplicitous Duplication") + " While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + toUni("Switcheroo") + " While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 13 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once this property has been used, it can’t be used again until the next dawn.",
+		action : [["bonus action", "Duplicitous Duplication"],["reaction", "Switcheroo"]],	
 	},
 	"rare" : {
 		name : "Rare Mask of the Tengu",
@@ -5872,14 +4985,9 @@ MagicItemsList["mask of the tengu"] = {
 		description : "When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
 		descriptionFull : 
 			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable."+
-			"\n" +		
-			toUni("Duplicitous Duplication") +
-			" While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +		
-			toUni("Switcheroo") +
-			" While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 15 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +
-			"While wearing this mask, I can cast the disguise self and minor illusion spells (save DC 15). Once disguise self has been cast in this way, it can’t be cast again using the mask until the next dawn.",
+			"\n" + toUni("Duplicitous Duplication") + " While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + toUni("Switcheroo") + " While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 15 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + "While wearing this mask, I can cast the disguise self and minor illusion spells (save DC 15). Once disguise self has been cast in this way, it can’t be cast again using the mask until the next dawn.",
 		action : [["bonus action", "Duplicitous Duplication"],["reaction", "Switcheroo"]],
 		spellcastingBonus : [{
 			name : "Rare Mask of the Tengu",
@@ -5891,16 +4999,6 @@ MagicItemsList["mask of the tengu"] = {
 			spells : ["minor illusion"],
 			selection : ["minor illusion"],
 			firstCol : "oncelr"
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
-			"Duplicitous Duplication. While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
-			"Switcheroo. While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 15 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d4. On a 3 or lower, it can’t be used again until the next dawn.",
-			"While wearing this mask, I can cast the disguise self and minor illusion spells (save DC 15). Once disguise self has been cast in this way, it can’t be cast again using the mask until the next dawn.",
-			],
 		}],	
 	},
 	"very rare" : {
@@ -5909,14 +5007,9 @@ MagicItemsList["mask of the tengu"] = {
 		description : "When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
 		descriptionFull : 
 			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable."+
-			"\n" +		
-			toUni("Duplicitous Duplication") +
-			" While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d8. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +		
-			toUni("Switcheroo") +
-			" While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 16 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
-			"\n" +
-			"While wearing this mask, I can cast the disguise self and minor illusion spells at will (save DC 16).",
+			"\n" + toUni("Duplicitous Duplication") + " While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d8. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + toUni("Switcheroo") + " While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 16 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn."+
+			"\n" + "While wearing this mask, I can cast the disguise self and minor illusion spells at will (save DC 16).",
 		action : [["bonus action", "Duplicitous Duplication"],["reaction", "Switcheroo"]],
 		spellcastingBonus : [{
 			name : "Very Rare Mask of the Tengu",
@@ -5928,16 +5021,6 @@ MagicItemsList["mask of the tengu"] = {
 			spells : ["minor illusion"],
 			selection : ["minor illusion"],
 			firstCol : "atwill",
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"When I don this mask, it shifts to match my features, leaving my nose slightly longer than before, but it is otherwise undetectable.",
-			"Duplicitous Duplication. While wearing this mask, I can use a bonus action to create a perfect illusory image of myself. When I create the duplicate, I can choose to have it step out of my own form into an unoccupied space adjacent to me, or I can have it appear in my space while I move into an unoccupied adjacent space without provoking opportunity attacks. This duplicate lasts for 1 minute, or until I dismiss it as a bonus action. As part of the bonus action used to create the duplicate and as a bonus action on subsequent turns, I can have the illusory duplicate move up to my speed to a space I can see. The illusion is indistinguishable from myself, and creatures can’t tell the difference until they see me physically interact with something (such as hitting a target with an attack) or see the illusion fail to physically interact with something (such as being hit with an attack, which passes right through it). Once this property has been used, roll a d8. On a 3 or lower, it can’t be used again until the next dawn.",
-			"Switcheroo. While wearing this mask, when I am the target of an attack by a creature I can see, but before the creature makes its attack roll, I can use my reaction to try to switch places with a creature no more than one size larger than me that I can see within 30 feet of me. If the creature is unwilling, it must make a DC 16 Charisma saving throw. If the creature is willing or fails the saving throw, we switch places, and the creature becomes the new target of the attack. Alternatively, I can choose to switch places with the illusory duplicate created by the Duplicitous Duplication property. Once the Switcheroo property has been used, roll a d6. On a 3 or lower, it can’t be used again until the next dawn.",
-			"While wearing this mask, I can cast the disguise self and minor illusion spells at will (save DC 16).",
-			],
 		}],	
 	},
 };
@@ -5956,17 +5039,11 @@ MagicItemsList["mindcutter"] = {
 		description : "This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage",
 		descriptionFull : 
 			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage"+
-			"\n" +		
-			toUni("Unseen Slice") +
-			" While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
-			"\n" +		
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
-			"\n" +
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
-			"\n" +
-			" \u2022 The chakram deals an extra 4d6 psychic damage to the first target it hits on this turn."+
-			"\n" +
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Unseen Slice") + " While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
+			"\n" + " \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
+			"\n" + " \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
+			"\n" + " \u2022 The chakram deals an extra 4d6 psychic damage to the first target it hits on this turn."+
+			"\n" + "Once this property of the chakram has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Uncommon Mindcutter",
 			baseWeapon : "chakram",
@@ -5977,19 +5054,7 @@ MagicItemsList["mindcutter"] = {
 		},
 		limfeaname : "Unseen Slice",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage",
-			"Unseen Slice. While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:",
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures.",
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack.",
-			" \u2022 The chakram deals an extra 4d6 psychic damage to the first target it hits on this turn.",
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"rare" : {
 		name : "Rare Mindcutter",
@@ -5997,17 +5062,11 @@ MagicItemsList["mindcutter"] = {
 		description : "This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 1d6 psychic damage to the first target it hits on each of my turns.",
 		descriptionFull : 
 			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 1d6 psychic damage to the first target it hits on each of my turns."+
-			"\n" +		
-			toUni("Unseen Slice") +
-			" While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
-			"\n" +		
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
-			"\n" +
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
-			"\n" +
-			" \u2022 The chakram deals an extra 5d6 psychic damage instead of 1d6 to the first target it hits on this turn."+
-			"\n" +
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Unseen Slice") + " While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
+			"\n" + " \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
+			"\n" + " \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
+			"\n" + " \u2022 The chakram deals an extra 5d6 psychic damage instead of 1d6 to the first target it hits on this turn."+
+			"\n" + "Once this property of the chakram has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Rare Mindcutter",
 			baseWeapon : "chakram",
@@ -6019,19 +5078,7 @@ MagicItemsList["mindcutter"] = {
 		},
 		limfeaname : "Unseen Slice",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 1d6 psychic damage to the first target it hits on each of my turns.",
-			"Unseen Slice. While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:",
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures.",
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack.",
-			" \u2022 The chakram deals an extra 5d6 psychic damage instead of 1d6 to the first target it hits on this turn.",
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"very rare" : {
 		name : "Very Rare Mindcutter",
@@ -6039,17 +5086,11 @@ MagicItemsList["mindcutter"] = {
 		description : "This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 2d6 psychic damage to the first target it hits on each of my turns.",
 		descriptionFull : 
 			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 2d6 psychic damage to the first target it hits on each of my turns."+
-			"\n" +		
-			toUni("Unseen Slice") +
-			" While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
-			"\n" +		
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
-			"\n" +
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
-			"\n" +
-			" \u2022 The chakram deals an extra 6d6 psychic damage instead of 2d6 to the first target it hits on this turn."+
-			"\n" +
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Unseen Slice") + " While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:"+
+			"\n" + " \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures."+
+			"\n" + " \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack."+
+			"\n" + " \u2022 The chakram deals an extra 6d6 psychic damage instead of 2d6 to the first target it hits on this turn."+
+			"\n" + "Once this property of the chakram has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Mindcutter",
 			baseWeapon : "chakram",
@@ -6062,18 +5103,6 @@ MagicItemsList["mindcutter"] = {
 		limfeaname : "Unseen Slice",
 		usages : 1,
 		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon appears to be a metal disk with three prongs. While I wield it, blades of psionic energy form around the prongs, allowing the weapon to be used as a chakram that deals psychic damage instead of slashing damage, and it deals an extra 2d6 psychic damage to the first target it hits on each of my turns.",
-			"Unseen Slice. While holding this weapon, I can use a bonus action to phase the chakram into the realm of thought. Until the end of my turn, I gain the following benefits:",
-			" \u2022 The chakram is invisible to creatures other than me, granting me advantage on attack rolls made with it against such creatures.",
-			" \u2022 Making ranged attacks with the chakram doesn’t reveal my position if I am hidden, and the chakram disappears and reappears in my hand after each attack.",
-			" \u2022 The chakram deals an extra 6d6 psychic damage instead of 2d6 to the first target it hits on this turn.",
-			"Once this property of the chakram has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
 	},
 };
 
@@ -6082,6 +5111,7 @@ MagicItemsList["needlespitter karakasa"] = {
 	name : "Needlespitter Karakasa",
 	source : [["RGttYR", 260]],
 	type : "wondrous item",
+	attunement: true,
 	description : "At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
 	choices : ["uncommon", "rare", "very rare"],
 	"uncommon" : {
@@ -6090,28 +5120,12 @@ MagicItemsList["needlespitter karakasa"] = {
 		description : "At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
 		descriptionFull : 
 			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true."+
-			"\n" +		
-			toUni("Needle Shower") +
-			" As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 13 Dexterity saving throw, taking 3d6 piercing damage and 3d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			toUni("Sentience") +	
-			" The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
-			"\n" +
-			toUni("Personality") +
-			" Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 13 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me.",
+			"\n" + toUni("Needle Shower") + " As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 13 Dexterity saving throw, taking 3d6 piercing damage and 3d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Sentience") + " The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
+			"\n" + toUni("Personality") + " Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 13 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me.",
 		limfeaname : "Needle Shower",
 		usages : 1,
 		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
-			"Needle Shower. As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 13 Dexterity saving throw, taking 3d6 piercing damage and 3d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"Sentience. The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common.",
-			"Personality. Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 13 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me.",
-			],
-		}],	
 	},
 	"rare" : {
 		name : "Rare Needlespitter Karakasa",
@@ -6119,32 +5133,13 @@ MagicItemsList["needlespitter karakasa"] = {
 		description : "At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
 		descriptionFull : 
 			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true."+
-			"\n" +		
-			toUni("Needle Shower") +
-			" As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 15 Dexterity saving throw, taking 4d6 piercing damage and 4d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			toUni("Sentience") +	
-			" The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
-			"\n" +
-			toUni("Personality") +
-			" Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 15 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me."+
-			"\n" +
-			toUni("Safe Descent") +
-			" When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower.",
+			"\n" + toUni("Needle Shower") + " As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 15 Dexterity saving throw, taking 4d6 piercing damage and 4d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Sentience") + " The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
+			"\n" + toUni("Personality") + " Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 15 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me."+
+			"\n" + toUni("Safe Descent") + " When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower.",
 		limfeaname : "Needle Shower",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
-			"Needle Shower. As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 15 Dexterity saving throw, taking 4d6 piercing damage and 4d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"Sentience. The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common.",
-			"Personality. Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 15 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me.",
-			"Safe Descent. When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"very rare" : {
 		name : "Very Rare Needlespitter Karakasa",
@@ -6152,20 +5147,11 @@ MagicItemsList["needlespitter karakasa"] = {
 		description : "At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
 		descriptionFull : 
 			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true."+
-			"\n" +		
-			toUni("Needle Shower") +
-			" As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 16 Dexterity saving throw, taking 5d6 piercing damage and 5d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			toUni("Sentience") +	
-			" The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
-			"\n" +
-			toUni("Personality") +
-			" Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 16 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me."+
-			"\n" +
-			toUni("Safe Descent") +
-			" When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower."+
-			"\n" +
-			"While open, the umbrella can be used as a +1 shield. While closed, it can be used as a +1 spear. I can open or close the umbrella as an action.",
+			"\n" + toUni("Needle Shower") + " As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 16 Dexterity saving throw, taking 5d6 piercing damage and 5d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Sentience") + " The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common."+
+			"\n" + toUni("Personality") + " Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 16 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me."+
+			"\n" + toUni("Safe Descent") + " When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower."+
+			"\n" + "While open, the umbrella can be used as a +1 shield. While closed, it can be used as a +1 spear. I can open or close the umbrella as an action.",
 		weaponOptions : {
 			name : "+1 Very Rare Needlespitter Karakasa",
 			baseWeapon : "spear",
@@ -6176,19 +5162,7 @@ MagicItemsList["needlespitter karakasa"] = {
 		},
 		limfeaname : "Needle Shower",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"At the “Not-A-Mimic Emporium”, renowned salesman Tsuku Mogami prides herself in selling weapons, armour, and assorted adventuring gear, all one-hundred percent guaranteed not to be mimics in disguise. And if something can be said about her claims, it’s that they’re technically true.",
-			"Needle Shower. As an action, I can rapidly spin this umbrella in my hands, causing it to discharge needles in every direction. Each other creature within 15 feet of me must make a DC 16 Dexterity saving throw, taking 5d6 piercing damage and 5d6 psychic damage on a failed save, or half as much damage on a successful one. Once this property of the item has been used, it can’t be used again until the next dawn.",
-			"Sentience. The needlespitter karakasa is a sentient chaotic neutral item with an Intelligence of 8, a Wisdom of 14, and a Charisma of 16. It has hearing and darkvision out to a range of 120 feet. It can speak and understand Abyssal and Common.",
-			"Personality. Most needlespitter karakasa are incorrigible pranksters, taking immense joy in mischief of all sorts. They love to be spun and get bored easily, which leads them to indulge in their favourite pastime: scaring folks. Each time I finish a short rest with it nearby, the karakasa attempts to startle me with a loud noise or sudden movement, and I can make a DC 16 Charisma (Performance) check to appear convincingly frightened. The karakasa may also attempt to scare me at a random point throughout the day (GM’s discretion). On a successful check, the karakasa is so pleased that it regains the use of its Needle Shower property. Once the item has regained a use of a property in this way, it can’t regain a use of that property again until the next dawn, but it will still periodically attempt to scare me.",
-			"Safe Descent. When I fall, I can use my reaction to raise and open the umbrella, slowing my rate of descent to 60 feet per round until I land or stop holding the umbrella. For each foot I fall while under the effects of this property, I can move one foot horizontally. When I land, I take no falling damage. Once this property of the item has been used, it can’t be used again until the next dawn. If I succeed on the check to appear scared by the item, I can choose to regain the use of this property instead of the use of Needle Shower.",
-			"While open, the umbrella can be used as a +1 shield. While closed, it can be used as a +1 spear. I can open or close the umbrella as an action.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 };
 
@@ -6198,22 +5172,14 @@ MagicItemsList["nekomata shamisen"] = {
 	source : [["RGttYR", 261]],
 	type : "wondrous item",
 	description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
-	choices : ["uncommon", "rare", "very rare"],
+	choices : ["uncommon", "uncommon (optional attunement)", "rare", "rare (optional attunement)", "very rare", "very rare (optional attunement)"],
 	"uncommon" : {
 		name : "Uncommon Nekomata Shamisen",
 		rarity : "uncommon",
 		description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
 		descriptionFull : 
 			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir."+
-			"\n" +		
-			toUni("Nekomata’s Call") +
-			" As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. Once this property of the instrument has been used, it can’t be used again until the next dawn."+
-			"\n" +
-			toUni("Optional Attunement") +	
-			" If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it."+
-			"\n" +
-			toUni("OA: Spiritual Bond") +
-			" \u2022 When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
+			"\n" + toUni("Nekomata’s Call") + " As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. Once this property of the instrument has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Nekomata’s Call",
 		usages : 1,
 		recovery : "dawn",
@@ -6224,10 +5190,23 @@ MagicItemsList["nekomata shamisen"] = {
      	  	note : [
 			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
 			"Nekomata’s Call. As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. Once this property of the instrument has been used, it can’t be used again until the next dawn.",
-			"Optional Attunement. If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it.",
-			" \u2022 OA: Spiritual Bond. When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
 			],
 		}],	
+	},
+	"uncommon (optional attunement)" : {
+		name : "Uncommon Nekomata Shamisen (optional attunement)",
+		rarity : "uncommon",
+		attunement: true,
+		description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
+		descriptionFull : 
+			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir."+
+			"\n" + toUni("Nekomata’s Call") + " As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. Once this property of the instrument has been used, it can’t be used again until the next dawn."+
+			"\n" + toUni("Optional Attunement") + " If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it."+
+			"\n" + toUni("OA: Spiritual Bond") + " When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
+		limfeaname : "Nekomata’s Call",
+		usages : 1,
+		recovery : "dawn",
+		action : ["reaction", "Spiritual Bond"],	
 	},
 	"rare" : {
 		name : "Rare Nekomata Shamisen",
@@ -6235,29 +5214,25 @@ MagicItemsList["nekomata shamisen"] = {
 		description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
 		descriptionFull : 
 			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir."+
-			"\n" +		
-			toUni("Nekomata’s Call") +
-			" As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used twice, regaining all expended uses daily at dawn."+
-			"\n" +
-			toUni("Optional Attunement") +	
-			" If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it."+
-			"\n" +
-			toUni("OA: Spiritual Bond") +
-			" \u2022 When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
+			"\n" + toUni("Nekomata’s Call") + " As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used twice, regaining all expended uses daily at dawn.",
+		limfeaname : "Nekomata’s Call",
+		usages : 2,
+		recovery : "dawn",
+		action : ["reaction", "Spiritual Bond"],	
+	},
+	"rare (optional attunement)" : {
+		name : "Rare Nekomata Shamisen",
+		rarity : "rare",
+		description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
+		descriptionFull : 
+			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir."+
+			"\n" + toUni("Nekomata’s Call") + " As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used twice, regaining all expended uses daily at dawn."+
+			"\n" + toUni("Optional Attunement") + " If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it."+
+			"\n" + toUni("OA: Spiritual Bond") + " When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
 		limfeaname : "Nekomata’s Call",
 		usages : 2,
 		recovery : "dawn",
 		action : ["reaction", "Spiritual Bond"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
-			"Nekomata’s Call. As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used twice, regaining all expended uses daily at dawn.",
-			"Optional Attunement. If I choose to attune to this item, I can use the Spiritual Bond property while I remain attuned to it.",
-			" \u2022 OA: Spiritual Bond. When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
-			],
-		}],	
 	},
 	"very rare" : {
 		name : "Very Rare Nekomata Shamisen",
@@ -6265,33 +5240,14 @@ MagicItemsList["nekomata shamisen"] = {
 		description : "Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
 		descriptionFull : 
 			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir."+
-			"\n" +		
-			toUni("Nekomata’s Call") +
-			" As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used three times, regaining all expended uses daily at dawn."+
-			"\n" +
-			toUni("Optional Attunement") +	
-			" If I choose to attune to this item, I can use the Spiritual Bond and Spiritual Burden properties while I remain attuned to it."+
-			"\n" +
-			toUni("OA: Spiritual Bond") +
-			" \u2022 When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction."+
-			"\n" +
-			toUni("OA: Spiritual Bond") +
-			" \u2022 OA: Spiritual Burden. When I take damage, I can use my reaction to share the burden of pain with my choice of one of the specters summoned by the Nekomata’s Call property, as long as it is within 30 feet of me. I take half as much damage instead, and the specter takes the remaining damage.",
+			"\n" + toUni("Nekomata’s Call") + " As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used three times, regaining all expended uses daily at dawn."+
+			"\n" + toUni("Optional Attunement") + " If I choose to attune to this item, I can use the Spiritual Bond and Spiritual Burden properties while I remain attuned to it."+
+			"\n" + toUni("OA: Spiritual Bond") + " When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction."+
+			"\n" + toUni("OA: Spiritual Burden") + " When I take damage, I can use my reaction to share the burden of pain with my choice of one of the specters summoned by the Nekomata’s Call property, as long as it is within 30 feet of me. I take half as much damage instead, and the specter takes the remaining damage.",
 		limfeaname : "Nekomata’s Call",
 		usages : 3,
 		recovery : "dawn",
-		action : [["reaction", "Spiritual Bond"],["reaction","Spiritual Burden"]],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Defying explanation, this instrument lends a haunting and sorrowful quality to any song played on it, regardless of the musician’s intent. Though off-putting to some, it appears to be universally appealing to felines of all types, which are drawn by the sound of the shamisen and sometimes even join in as a mewling choir.",
-			"Nekomata’s Call. As an action while holding this instrument, I can play a haunting tune to raise the spirits of the dead and bend them to my will. I summon three specters, which appear in unoccupied spaces of my choice within 30 feet of me. Each specter disappears after 1 minute, when it drops to 0 hit points, or if I don’t use a bonus action on my subsequent turns to continue playing the shamisen. The specters are allies to me and my companions. In combat, they share my initiative count, but take their turns immediately after mine. They obey my verbal commands (no action required). If I don’t issue any, they take the Dodge action. The Nekomata’s Call property can be used three times, regaining all expended uses daily at dawn.",
-			"Optional Attunement. If I choose to attune to this item, I can use the Spiritual Bond and Spiritual Burden properties while I remain attuned to it.",
-			" \u2022 OA: Spiritual Bond. When a creature’s hit point maximum is reduced by the Life Drain action of one of the specters summoned by the Nekomata’s Call property, I can use my reaction to regain hit points equal to the hit point maximum reduction.",
-			" \u2022 OA: Spiritual Burden. When I take damage, I can use my reaction to share the burden of pain with my choice of one of the specters summoned by the Nekomata’s Call property, as long as it is within 30 feet of me. I take half as much damage instead, and the specter takes the remaining damage.",
-			],
-		}],	
+		action : [["reaction", "Spiritual Bond"],["reaction","Spiritual Burden"]],	
 	},
 };
 
@@ -6303,13 +5259,13 @@ MagicItemsList["onikiri, demon cutter"] = {
 	description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
 	attunement : true,
 	chooseGear : {
-	type : "weapon",
-	prefixOrSuffix : "brackets",
-	descriptionChange : ["replace", "sword"],
-	itemName1stPage : ["brackets ", "Onikiri, Demon Cutter"],
-	excludeCheck : function (inObjKey, inObj) {
-		var testRegex = /sword|scimitar|rapier/i;
-		return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+		type : "weapon",
+		prefixOrSuffix : "brackets",
+		descriptionChange : ["replace", "sword"],
+		itemName1stPage : ["brackets ", "Onikiri, Demon Cutter"],
+		excludeCheck : function (inObjKey, inObj) {
+			var testRegex = /sword|scimitar|rapier/i;
+			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 		}
 	},
 	choices : ["uncommon", "rare", "very rare", "legendary"],
@@ -6319,21 +5275,11 @@ MagicItemsList["onikiri, demon cutter"] = {
 		description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
 		descriptionFull : 
 			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will."+
-			"\n" +
-			toUni("Radiant Wrath") +
-			" As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d4 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 13 Dexterity saving throw or take 2d4 radiant damage as crackling energy arcs out towards it.",
+			"\n" + toUni("Radiant Wrath") + " As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d4 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 13 Dexterity saving throw or take 2d4 radiant damage as crackling energy arcs out towards it.",
 		action : ["bonus action", "Radiant Wrath"],
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
-			"\u2022 Radiant Wrath. As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d4 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 13 Dexterity saving throw or take 2d4 radiant damage as crackling energy arcs out towards it.",
-			],
-		}],
 	},
 	"rare" : {
 		name : "Rare Onikiri, Demon Cutter",
@@ -6341,25 +5287,12 @@ MagicItemsList["onikiri, demon cutter"] = {
 		description : "This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
 		descriptionFull : 
 			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will."+
-			"\n" +
-			toUni("Radiant Wrath") +
-			" As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d6 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 15 Dexterity saving throw or take 2d6 radiant damage as crackling energy arcs out towards it."+
-			"\n" +
-			toUni("Demon Lure") +
-			" As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 15 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
+			"\n" + toUni("Radiant Wrath") + " As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d6 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 15 Dexterity saving throw or take 2d6 radiant damage as crackling energy arcs out towards it."+
+			"\n" + toUni("Demon Lure") + " As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 15 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
 		action : [["bonus action", "Radiant Wrath"], ["bonus action", "Demon Lure"]],
 		usages : 4,
 		recovery : "dawn",
 		additional : "regains 1d4",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 4 charges and regains 1d4 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
-			"\u2022 Radiant Wrath. As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d6 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 15 Dexterity saving throw or take 2d6 radiant damage as crackling energy arcs out towards it.",
-			"\u2022 Demon Lure. As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 15 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
-			],
-		}],
 	},
 	"very rare" : {
 		name : "Very Rare Onikiri, Demon Cutter",
@@ -6367,25 +5300,12 @@ MagicItemsList["onikiri, demon cutter"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will."+
-			"\n" +
-			toUni("Radiant Wrath") +
-			" As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d8 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 16 Dexterity saving throw or take 2d8 radiant damage as crackling energy arcs out towards it."+
-			"\n" +
-			toUni("Demon Lure") +
-			" As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 16 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
+			"\n" + toUni("Radiant Wrath") + " As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d8 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 16 Dexterity saving throw or take 2d8 radiant damage as crackling energy arcs out towards it."+
+			"\n" + toUni("Demon Lure") + " As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 16 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
 		action : [["bonus action", "Radiant Wrath"], ["bonus action", "Demon Lure"]],
 		usages : 5,
 		recovery : "dawn",
 		additional : "regains 1d4+1",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
-			"\u2022 Radiant Wrath. As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d8 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 16 Dexterity saving throw or take 2d8 radiant damage as crackling energy arcs out towards it.",
-			"\u2022 Demon Lure. As a bonus action while holding the sword, I can expend 2 charges to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 16 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
-			],
-		}],
 	},
 	"legendary" : {
 		name : "Legendary Onikiri, Demon Cutter",
@@ -6393,14 +5313,9 @@ MagicItemsList["onikiri, demon cutter"] = {
 		description : "This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
 		descriptionFull : 
 			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will."+
-			"\n" +
-			toUni("Radiant Wrath") +
-			" As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d10 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 17 Dexterity saving throw or take 2d10 radiant damage as crackling energy arcs out towards it."+
-			"\n" +
-			toUni("Demon Lure") +
-			" As a bonus action while holding the sword, I can expend 1 charge to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 17 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me."+
-			"\n" +
-			"While holding this sword, I speak, read, and understand Celestial, and I can expend 1 charge to cast the protection from evil and good spell (no concentration required), protecting the target from Fiends only.",
+			"\n" + toUni("Radiant Wrath") + " As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d10 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 17 Dexterity saving throw or take 2d10 radiant damage as crackling energy arcs out towards it."+
+			"\n" + toUni("Demon Lure") + " As a bonus action while holding the sword, I can expend 1 charge to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 17 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me."+
+			"\n" + "While holding this sword, I speak, read, and understand Celestial, and I can expend 1 charge to cast the protection from evil and good spell (no concentration required), protecting the target from Fiends only.",
 		action : [["bonus action", "Radiant Wrath"], ["bonus action", "Demon Lure"]],
 		usages : 5,
 		recovery : "dawn",
@@ -6412,16 +5327,6 @@ MagicItemsList["onikiri, demon cutter"] = {
 			selection : ["protection from evil and good spell"],
 			firstCol : 1,
 		}],		
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 5 charges and regains 1d4 + 1 expended charges daily at dawn. While holding it, I can cast the light cantrip on the blade at will.",
-			"\u2022 Radiant Wrath. As a bonus action while holding the sword, I can expend 1 charge to imbue it with crackling radiant energy until the end of my next turn. While imbued, this sword deals an extra 1d10 radiant damage to each target it hits. In addition, the first time I hit with an attack using the imbued sword on each of my turns, each Fiend within 10 feet of the target must succeed on a DC 17 Dexterity saving throw or take 2d10 radiant damage as crackling energy arcs out towards it.",
-			"\u2022 Demon Lure. As a bonus action while holding the sword, I can expend 1 charge to draw the attention of one creature I can see within 30 feet of me, forcing it to make a DC 17 Wisdom saving throw. Fiends make this saving throw with disadvantage. On a failure, the creature becomes fixated on me for 1 minute. While fixated, the creature is incapacitated and its speed is reduced to 0 feet. This effect ends if I attack any other creature, if I cast a spell, if I am more than 30 feet away from the fixated creature at any point, or if it takes any damage from me or a creature friendly to me.",
-			"While holding this sword, I speak, read, and understand Celestial, and I can expend 1 charge to cast the protection from evil and good spell (no concentration required), protecting the target from Fiends only.",
-			],
-		}],
 	},
 };
 
@@ -6438,9 +5343,7 @@ MagicItemsList["reaper’s kama"] = {
 		description : "This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties."+
-			"\n" +
-			toUni("Improved Hookshot") +
-			" This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle.",
+			"\n" + toUni("Improved Hookshot") + " This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle.",
 		weaponOptions : [{
 			name : "Common Reaper’s Kama",
 			source : [["RGttYR", 263]],
@@ -6459,14 +5362,6 @@ MagicItemsList["reaper’s kama"] = {
 			description : "Hookshot (30 ft.), Integrated (Kusarigama),",
 			selectNow : true,
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
-			"Improved Hookshot. This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle.",
-			],
-		}],	
 	},
 	"uncommon" : {
 		name : "Uncommon Reaper’s Kama",
@@ -6474,12 +5369,8 @@ MagicItemsList["reaper’s kama"] = {
 		description : "This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties."+
-			"\n" +
-			toUni("Improved Hookshot") +
-			" This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 13."+
-			"\n" +
-			toUni("Slicestorm") +
-			" As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 13 Dexterity saving throw, taking 4d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Improved Hookshot") + " This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 13."+
+			"\n" + toUni("Slicestorm") + " As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 13 Dexterity saving throw, taking 4d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : [{
 			name : "Uncommon Reaper’s Kama",
 			source : [["RGttYR", 263]],
@@ -6501,16 +5392,7 @@ MagicItemsList["reaper’s kama"] = {
 		limfeaname : "Slicestorm",
 		usages : 1,
 		recovery : "dawn",
-		action : ["action", "Slicestorm"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
-			"Improved Hookshot. This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 13.",
-			"Slicestorm. As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 13 Dexterity saving throw, taking 4d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		action : ["action", "Slicestorm"],	
 	},
 	"rare" : {
 		name : "Rare Reaper’s Kama",
@@ -6518,12 +5400,8 @@ MagicItemsList["reaper’s kama"] = {
 		description : "This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties."+
-			"\n" +
-			toUni("Improved Hookshot") +
-			" This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15."+
-			"\n" +
-			toUni("Slicestorm") +
-			" As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 15 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Improved Hookshot") + " This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15."+
+			"\n" + toUni("Slicestorm") + " As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 15 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : [{
 			name : "+1 Rare Reaper’s Kama",
 			source : [["RGttYR", 263]],
@@ -6545,16 +5423,7 @@ MagicItemsList["reaper’s kama"] = {
 		limfeaname : "Slicestorm",
 		usages : 1,
 		recovery : "dawn",
-		action : ["action", "Slicestorm"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
-			"Improved Hookshot. This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15.",
-			"Slicestorm. As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 15 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		action : ["action", "Slicestorm"],	
 	},
 	"very rare" : {
 		name : "Very Rare Reaper’s Kama",
@@ -6562,12 +5431,8 @@ MagicItemsList["reaper’s kama"] = {
 		description : "This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties."+
-			"\n" +
-			toUni("Improved Hookshot") +
-			" This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15."+
-			"\n" +
-			toUni("Slicestorm") +
-			" As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 16 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. The Slicestorm property can be used three times, regaining all expended uses daily at dawn.",
+			"\n" + toUni("Improved Hookshot") + " This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15."+
+			"\n" + toUni("Slicestorm") + " As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 16 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. The Slicestorm property can be used three times, regaining all expended uses daily at dawn.",
 		weaponOptions : [{
 			name : "+1 Very Rare Reaper’s Kama",
 			source : [["RGttYR", 263]],
@@ -6589,16 +5454,7 @@ MagicItemsList["reaper’s kama"] = {
 		limfeaname : "Slicestorm",
 		usages : 3,
 		recovery : "dawn",
-		action : ["action", "Slicestorm"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm. This prosthesis has the Hookshot (30 ft.), Integrated (kusarigama), and Launch (1d6 slashing, 30 ft.) properties.",
-			"Improved Hookshot. This prosthesis uses a sickle instead of a hook for its Hookshot property. As an action while the sickle is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the sickle. In addition, the DC of the ability check required to forcefully detach the sickle increases to 15.",
-			"Slicestorm. As an action while wearing this prosthesis and the sickle isn’t attached to a target as part of the Hookshot property, I can whip the chain around me, slicing at foes with the sickle at its tip in a whirlwind of steel. Each creature within 10 feet of me must make a DC 16 Dexterity saving throw, taking 6d6 slashing damage on a failed save, or half as much damage on a successful one. The Slicestorm property can be used three times, regaining all expended uses daily at dawn.",
-			],
-		}],	
+		action : ["action", "Slicestorm"],	
 	},
 };
 
@@ -6615,9 +5471,7 @@ MagicItemsList["ryuto nunchaku"] = {
 		description : "While wielding it, I can cast the dancing lights cantrip.",
 		descriptionFull : 
 			"While wielding it, I can cast the dancing lights cantrip."+
-			"\n" +
-			toUni("Ghostly Fireworks") +
-			" When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 13, no action required) with a range of 5 feet. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Ghostly Fireworks") + " When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 13, no action required) with a range of 5 feet. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Uncommon Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
@@ -6641,14 +5495,6 @@ MagicItemsList["ryuto nunchaku"] = {
 			spells : ["dancing lights"],
 			selection : ["dancing lights"],
 			firstCol : "atwill",
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"While wielding it, I can cast the dancing lights cantrip.",
-			"Ghostly Fireworks. When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 13, no action required) with a range of 5 feet. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
 		}],	
 	},
 	"rare" : {
@@ -6657,9 +5503,7 @@ MagicItemsList["ryuto nunchaku"] = {
 		description : "This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the first target it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip.",
 		descriptionFull : 
 			"This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the first target it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip."+
-			"\n" +
-			toUni("Ghostly Fireworks") +
-			" When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 15, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d6 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Ghostly Fireworks") + " When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 15, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d6 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Rare Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
@@ -6684,14 +5528,6 @@ MagicItemsList["ryuto nunchaku"] = {
 			selection : ["dancing lights"],
 			firstCol : "atwill",
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the first target it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip.",
-			"Ghostly Fireworks. When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 15, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d6 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
 	},
 	"very rare" : {
 		name : "Very Rare Ryuto Nunchaku",
@@ -6699,9 +5535,7 @@ MagicItemsList["ryuto nunchaku"] = {
 		description : "This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the targets it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip.",
 		descriptionFull : 
 			"This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the targets it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip."+
-			"\n" +
-			toUni("Ghostly Fireworks") +
-			" When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 16, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d10 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Ghostly Fireworks") + " When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 16, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d10 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
 		weaponOptions : {
 			name : "Very Rare Ryuto Nunchaku",
 			source : [["RGttYR", 264]],
@@ -6726,14 +5560,6 @@ MagicItemsList["ryuto nunchaku"] = {
 			selection : ["dancing lights"],
 			firstCol : "atwill",
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon deals an extra 1d4 fire or necrotic damage (my choice) to the targets it hits on each of my turns. While wielding it, I can cast the dancing lights cantrip.",
-			"Ghostly Fireworks. When I successfully perform a flourish with my nunchaku, I can immediately cast the faerie fire spell (save DC 16, no action required) with a range of 5 feet. While under the effects of the spell, a creature takes 1d10 fire or necrotic damage (my choice when I cast the spell) at the end of each of its turns as some of the ghostly fire burns away at it. Once this property of the weapon has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
 	},
 };
 
@@ -6750,9 +5576,7 @@ MagicItemsList["scorpion’s wartail"] = {
 		description : "This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
 		descriptionFull : 
 			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet."+
-			"\n" +
-			toUni("Get Over Here!") +
-			" Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 13 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me.",
+			"\n" + toUni("Get Over Here!") + " Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 13 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me.",
 		weaponOptions : {
 			name : "Uncommon Scorpion’s Wartail",
 			source : [["RGttYR", 264]],
@@ -6764,15 +5588,7 @@ MagicItemsList["scorpion’s wartail"] = {
 			range : "15 ft",
 			description : "Scourge, reach (15ft), skewer superior strike",
 			selectNow : true,
-		},
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
-			"Get Over Here! Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 13 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me.",
-			],
-		}],	
+		},	
 	},
 	"rare" : {
 		name : "Rare Scorpion’s Wartail",
@@ -6780,11 +5596,8 @@ MagicItemsList["scorpion’s wartail"] = {
 		description : "This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
 		descriptionFull : 
 			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet."+
-			"\n" +
-			toUni("Get Over Here!") +
-			" Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 15 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me."+
-			toUni("Venom-Tipped") +
-			" This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 3d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
+			"\n" + toUni("Get Over Here!") + " Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 15 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me."+
+			"\n" + toUni("Venom-Tipped") + " This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 3d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
 		weaponOptions : {
 			name : "Rare Scorpion’s Wartail",
 			source : [["RGttYR", 264]],
@@ -6799,16 +5612,7 @@ MagicItemsList["scorpion’s wartail"] = {
 		},
 		limfeaname : "Venom-Tipped",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
-			"Get Over Here! Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 15 Strength saving throw. On a failed save, the creature is pulled up to 10 feet closer to me.",
-			"Venom-Tipped. This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 3d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"very rare" : {
 		name : "Very Rare Scorpion’s Wartail",
@@ -6816,11 +5620,8 @@ MagicItemsList["scorpion’s wartail"] = {
 		description : "This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
 		descriptionFull : 
 			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet."+
-			"\n" +
-			toUni("Get Over Here!") +
-			" Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 16 Strength saving throw. On a failed save, the creature is pulled up to 15 feet closer to me."+
-			toUni("Venom-Tipped") +
-			" This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 5d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
+			"\n" + toUni("Get Over Here!") + " Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 16 Strength saving throw. On a failed save, the creature is pulled up to 15 feet closer to me."+
+			"\n" +toUni("Venom-Tipped") + " This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 5d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
 		weaponOptions : {
 			name : "Very Rare Scorpion’s Wartail",
 			source : [["RGttYR", 264]],
@@ -6835,16 +5636,7 @@ MagicItemsList["scorpion’s wartail"] = {
 		},
 		limfeaname : "Venom-Tipped",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can replace, simulate, or enhance a tail, and can be worn by a creature even if doing so would put it over its typical number of limbs. It has the Melee (1d6 piercing, Scourge) property and the Skewer Superior Strike. The reach of attacks made with this prosthesis is increased by an additional 5 feet, to a total of 15 feet.",
-			"Get Over Here! Once on each of my turns, when I hit a Medium or smaller creature with an attack using this prosthesis, I can force it to make a DC 16 Strength saving throw. On a failed save, the creature is pulled up to 15 feet closer to me.",
-			"Venom-Tipped. This prosthesis contains a reservoir of powerful venom in its tip. When I hit a creature with an attack using the prosthesis, I can inject the venom into the creature, which must make a DC 15 Constitution saving throw. On a failed save, the creature takes 5d8 poison damage and is poisoned for 1 minute. On a successful save, it takes half as much damage and isn’t poisoned. A creature must repeat the saving throw at the end of each of its turns, ending the effect on a success and taking 3d8 poison damage on a failure. Once this property of the prosthesis has been used, it can’t be used again until the next dawn, when the reservoir magically refills with venom.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 };
 
@@ -6856,13 +5648,13 @@ MagicItemsList["shisui, water slasher"] = {
 	description : "",
 	attunement : true,
 	chooseGear : {
-	type : "weapon",
-	prefixOrSuffix : "brackets",
-	descriptionChange : ["replace", "sword"],
-	itemName1stPage : ["brackets ", "Shisui, Water Slasher"],
-	excludeCheck : function (inObjKey, inObj) {
-		var testRegex = /sword|scimitar|rapier/i;
-		return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
+		type : "weapon",
+		prefixOrSuffix : "brackets",
+		descriptionChange : ["replace", "sword"],
+		itemName1stPage : ["brackets ", "Shisui, Water Slasher"],
+		excludeCheck : function (inObjKey, inObj) {
+			var testRegex = /sword|scimitar|rapier/i;
+			return !testRegex.test(inObjKey) && (!inObj.baseWeapon || !testRegex.test(inObj.baseWeapon));
 		}
 	},
 	choices : ["uncommon", "rare", "very rare", "legendary"],
@@ -6872,15 +5664,9 @@ MagicItemsList["shisui, water slasher"] = {
 		description : "This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
 		descriptionFull : 
 			"This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn."+
-			"\n" +
-			toUni("Aqua Conjuration.") +
-			" As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
-			"\n" +
-			toUni("Jet.") +
-			" As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 13 Dexterity saving throw as high powered jets of water slice into them. A creature takes 3d6 slashing damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Torrent.") +
-			" When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 13 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
+			"\n" + toUni("Aqua Conjuration.") + " As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
+			"\n" + toUni("Jet.") + " As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 13 Dexterity saving throw as high powered jets of water slice into them. A creature takes 3d6 slashing damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Torrent.") + " When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 13 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
 		usages : 6,
 		recovery : "dawn",
 		additional : "regains 1d4+2",
@@ -6892,16 +5678,6 @@ MagicItemsList["shisui, water slasher"] = {
 			selection: ["create or destroy water"],
 			firstCol: 1,
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 6 charges and regains 1d4 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
-			"\u2022 Aqua Conjuration. As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell.",
-			"\u2022 Jet. As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 13 Dexterity saving throw as high powered jets of water slice into them. A creature takes 3d6 slashing damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Torrent.  When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 13 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
-			],
-		}],
 	},
 	"rare" : {
 		name : "Rare Shisui, Water Slasher",
@@ -6909,15 +5685,9 @@ MagicItemsList["shisui, water slasher"] = {
 		description : "This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
 		descriptionFull : 
 			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn."+
-			"\n" +
-			toUni("Aqua Conjuration.") +
-			" As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
-			"\n" +
-			toUni("Jet.") +
-			" As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 15 Dexterity saving throw as high powered jets of water slice into them. A creature takes 4d6 slashing damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Torrent.") +
-			" When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 15 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
+			"\n" + toUni("Aqua Conjuration.") + " As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
+			"\n" + toUni("Jet.") + " As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 15 Dexterity saving throw as high powered jets of water slice into them. A creature takes 4d6 slashing damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Torrent.") + " When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 15 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
 		usages : 8,
 		recovery : "dawn",
 		additional : "regains 1d6+2",
@@ -6928,16 +5698,6 @@ MagicItemsList["shisui, water slasher"] = {
 			spells: ["create or destroy water"],
 			selection: ["create or destroy water"],
 			firstCol: 1,
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
-			"\u2022 Aqua Conjuration. As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell.",
-			"\u2022 Jet. As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 15 Dexterity saving throw as high powered jets of water slice into them. A creature takes 4d6 slashing damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Torrent.  When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 15-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 15 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
-			],
 		}],
 	},
 	"very rare" : {
@@ -6946,15 +5706,9 @@ MagicItemsList["shisui, water slasher"] = {
 		description : "This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
 		descriptionFull : 
 			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn."+
-			"\n" +
-			toUni("Aqua Conjuration.") +
-			" As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
-			"\n" +
-			toUni("Jet.") +
-			" As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 16 Dexterity saving throw as high powered jets of water slice into them. A creature takes 6d6 slashing damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Torrent.") +
-			" When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 20-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 16 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
+			"\n" + toUni("Aqua Conjuration.") + " As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell."+
+			"\n" + toUni("Jet.") + " As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 16 Dexterity saving throw as high powered jets of water slice into them. A creature takes 6d6 slashing damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Torrent.") + " When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 20-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 16 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
 		usages : 8,
 		recovery : "dawn",
 		additional : "regains 1d6+2",
@@ -6966,16 +5720,6 @@ MagicItemsList["shisui, water slasher"] = {
 			selection: ["create or destroy water"],
 			firstCol: 1,
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
-			"\u2022 Aqua Conjuration. As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell.",
-			"\u2022 Jet. As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 16 Dexterity saving throw as high powered jets of water slice into them. A creature takes 6d6 slashing damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Torrent.  When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 20-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 16 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
-			],
-		}],
 	},
 	"legendary" : {
 		name : "Legendary Shisui, Water Slasher",
@@ -6983,15 +5727,9 @@ MagicItemsList["shisui, water slasher"] = {
 		description : "This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
 		descriptionFull : 
 			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn."+
-			"\n" +
-			toUni("Aqua Conjuration.") +
-			" As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell, or expend 3 charges to  cast the control water spell (DC 17)."+
-			"\n" +
-			toUni("Jet.") +
-			" As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 17 Dexterity saving throw as high powered jets of water slice into them. A creature takes 7d6 slashing damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Torrent.") +
-			" When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 30-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 17 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
+			"\n" + toUni("Aqua Conjuration.") + " As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell, or expend 3 charges to  cast the control water spell (DC 17)."+
+			"\n" + toUni("Jet.") + " As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 17 Dexterity saving throw as high powered jets of water slice into them. A creature takes 7d6 slashing damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Torrent.") + " When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 30-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 17 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
 		usages : 8,
 		recovery : "dawn",
 		additional : "regains 1d6+2",
@@ -7010,16 +5748,6 @@ MagicItemsList["shisui, water slasher"] = {
 			firstCol: 3,
 		}],
 		languageProfs : ["Aquan"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This weapon has 8 charges and regains 1d6 + 2 expended charges daily at dawn. If the weapon spends 8 continuous hours fully submerged in running water, it regains all expended charges at the next dawn.",
-			"\u2022 Aqua Conjuration. As an action while holding this weapon, I can expend 1 charge to create water as per the create or destroy water spell.",
-			"\u2022 Jet. As an action, I can expend 2 charges to propel myself forward up to 30 feet in a straight line to an unoccupied space I can see. Each creature in a 10-foot-wide line between my origin and my destination must make a DC 17 Dexterity saving throw as high powered jets of water slice into them. A creature takes 7d6 slashing damage on a failed save, or half as much damage on a successful one.",
-			"\u2022 Torrent.  When I take the Attack action while holding this weapon, I can expend 1 charge to fire a 2-foot-wide, 30-foot-long line of high pressure water from the blade in place of one of the attacks. Each creature in the area must succeed on a DC 17 Strength saving throw or either be pushed back 5 feet or be knocked prone (my choice for all targets).",
-			],
-		}],
 	},
 };
 
@@ -7028,8 +5756,11 @@ MagicItemsList["staff of the jade guardian"] = {
 	name : "Staff of the Jade Guardian",
 	source : [["RGttYR", 266]],
 	type : "rod, staff, wand",
-	description : "This staff has 12 charges and regains 1d8 + 4 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed.",
+	description : "",
 	attunement : true,
+	prerequisite: "Requires attunement by a spellcaster",
+	prereqeval: function (v) { return v.isSpellcaster; },
+	spellcastingAbility: "class",
 	choices : ["rare", "very rare"],
 	"rare" : {
 		name : "Rare Staff of the Jade Guardian",
@@ -7037,12 +5768,8 @@ MagicItemsList["staff of the jade guardian"] = {
 		description : "This staff has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed.",
 		descriptionFull : 
 			"This staff has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed."+
-			"\n" +		
-			toUni("Guardian’s Resolve.") +
-			" While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space."+
-			"\n" +
-			toUni("Spells.") +	
-			" While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 15): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
+			"\n" + toUni("Guardian’s Resolve.") + " While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space."+
+			"\n" + toUni("Spells.") + " While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 15): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
 		limfeaname : "Staff of the Jade Guardian",
 		usages : 7,
 		recovery : "dawn",
@@ -7064,15 +5791,6 @@ MagicItemsList["staff of the jade guardian"] = {
 			spells: ["guardian of faith"],
 			selection: ["guardian of faith"],
 			firstCol: 4,
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This staff has 7 charges and regains 1d4 + 3 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed.",	
-			"Guardian’s Resolve. While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space.",	
-			"Spells. While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 15): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
-			],
 		}],	
 	},
 	"very rare" : {
@@ -7081,12 +5799,8 @@ MagicItemsList["staff of the jade guardian"] = {
 		description : "This staff has 12 charges and regains 1d8 + 4 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed.",
 		descriptionFull : 
 			"This staff has 12 charges and regains 1d8 + 4 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed."+
-			"\n" +		
-			toUni("Guardian’s Resolve.") +
-			" While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space."+
-			"\n" +
-			toUni("Spells.") +	
-			" While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 16): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
+			"\n" + toUni("Guardian’s Resolve.") + " While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space."+
+			"\n" + toUni("Spells.") + " While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 16): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
 		limfeaname : "Staff of the Jade Guardian",
 		usages : 12,
 		recovery : "dawn",
@@ -7108,15 +5822,6 @@ MagicItemsList["staff of the jade guardian"] = {
 			spells: ["guardian of faith"],
 			selection: ["guardian of faith"],
 			firstCol: 4,
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This staff has 12 charges and regains 1d8 + 4 expended charges daily at dawn. If I expend the last charge, roll a d20. On a 1, the staff breaks in two with the sound of a mighty roar and is destroyed.",	
-			"Guardian’s Resolve. While holding this staff, creatures that lack the Swarm trait can’t enter my space if I am unwilling. Swarms have disadvantage on attack rolls while occupying my space.",	
-			"Spells. While holding this staff, I can expend 1 or more of its charges to cast one of the following spells from it (save DC 16): faithful hound (4 charges), guardian of faith (4 charges), or spirit guardians (3 charges, good or neutral only, regardless of my alignment). All spectral entities created by a spell cast in this way take the appearance of mythical lion dogs.",
-			],
 		}],	
 	},
 };
@@ -7127,6 +5832,7 @@ MagicItemsList["tanuki-zake"] = {
 	source : [["RGttYR", 266]],
 	type : "potion",
 	description : "",
+	action : ["action", "Drunken Master"],
 	choices : ["common", "uncommon", "very rare"],
 	"common" : {
 	 	name : "Common Tanuki-Zake",
@@ -7134,24 +5840,9 @@ MagicItemsList["tanuki-zake"] = {
 		description : "Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
 		descriptionFull : 
 			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew."+
-			"\n" +
-			toUni("Drunken Master.") +
-			" When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
-			"\n" +
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
-			"\n" +
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed.",
-		action : ["action", "Drunken Master"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
-			"Drunken Master. When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:",
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition.",
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed.",
-			],
-		}],
+			"\n" + toUni("Drunken Master.") + " When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
+			"\n" + " \u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
+			"\n" + " \u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed.",
 	},
 	"uncommon" : {
 	 	name : "Uncommon Tanuki-Zake",
@@ -7159,30 +5850,11 @@ MagicItemsList["tanuki-zake"] = {
 		description : "Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
 		descriptionFull : 
 			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew."+
-			"\n" +
-			toUni("Drunken Master.") +
-			" When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
-			"\n" +
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
-			"\n" +
-			"\u2022 I gain a +1 bonus to AC."+
-			"\n" +
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed."+
-			"\n" +
-			"\u2022 The first time on each of my turns that I make a melee attack immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
-		action : ["action", "Drunken Master"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
-			"Drunken Master. When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:",
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition.",
-			"\u2022 I gain a +1 bonus to AC.",
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed.",
-			"\u2022 The first time on each of my turns that I make a melee attack immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
-			],
-		}],
+			"\n" + toUni("Drunken Master.") + " When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
+			"\n" + "\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
+			"\n" + "\u2022 I gain a +1 bonus to AC."+
+			"\n" + "\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed."+
+			"\n" + "\u2022 The first time on each of my turns that I make a melee attack immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
 	},
 	"very rare" : {
 	 	name : "Very Rare Tanuki-Zake",
@@ -7190,30 +5862,11 @@ MagicItemsList["tanuki-zake"] = {
 		description : "Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
 		descriptionFull : 
 			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew."+
-			"\n" +
-			toUni("Drunken Master.") +
-			" When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
-			"\n" +
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
-			"\n" +
-			"\u2022 I gain a +1 bonus to AC."+
-			"\n" +
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed."+
-			"\n" +
-			"\u2022 On each of my turns that I make melee attacks immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
-		action : ["action", "Drunken Master"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Among other mischief, tanuki enjoy brewing magical sake, which they trick Humanoids into imbibing, delighting in the drunken antics that unfold. However, they try to ensure their pranks are not overly harmful—the effects of the sake wear out quickly and, should the drinker stumble into a scuffle, they will find themselves strangely empowered by the brew.",
-			"Drunken Master. When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:",
-			"\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition.",
-			"\u2022 I gain a +1 bonus to AC.",
-			"\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed.",
-			"\u2022 On each of my turns that I make melee attacks immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
-			],
-		}],
+			"\n" + toUni("Drunken Master.") + " When I use my action to drink this sake, I become poisoned for 10 minutes. If I have immunity to the poisoned condition, I can choose to be poisoned by the sake regardless. While poisoned in this way, I gain the following benefits:"+
+			"\n" + "\u2022 I don’t have disadvantage on melee attack rolls or ability checks that use Strength or Dexterity as a result of the poisoned condition."+
+			"\n" + "\u2022 I gain a +1 bonus to AC."+
+			"\n" + "\u2022 I can spend 5 feet of my movement to stand up from being prone, instead of half my speed."+
+			"\n" + "\u2022 On each of my turns that I make melee attacks immediately after I stand up from being prone, I have advantage on the attack roll. If the attack is an unarmed strike, it deals an extra 1d6 damage on a hit.",
 	},
 };
 
@@ -7230,13 +5883,9 @@ MagicItemsList["wanyudo’s burden"] = {
 		description : "This amulet has 3 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
-			"\n" +		
-			toUni("Firedrinker.") +
-			" As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" +
-			"\u2022 Consume. I regain hit points equal to half the damage reduced."+
-			"\n" +
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 13 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
+			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
+			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 13 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,
 		recovery : "dawn",
@@ -7245,16 +5894,6 @@ MagicItemsList["wanyudo’s burden"] = {
 			name : "Flaming Trail",
 			usages : 1,
 			recovery : "dawn",
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This amulet has 3 charges and regains all expended charges daily at dawn.",	
-			"Firedrinker. As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:",
-			"\u2022 Consume. I regain hit points equal to half the damage reduced.",
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 13 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",	
-			],
 		}],	
 	},
 	"rare" : {
@@ -7263,16 +5902,10 @@ MagicItemsList["wanyudo’s burden"] = {
 		description : "This amulet has 3 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
-			"\n" +		
-			toUni("Firedrinker.") +
-			" As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" +
-			"\u2022 Consume. I regain hit points equal to half the damage reduced."+
-			"\n" +
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Flaming Trail.") +	
-			" After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 15). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
+			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Flaming Trail.") + " After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 15). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,
 		recovery : "dawn",
@@ -7281,17 +5914,6 @@ MagicItemsList["wanyudo’s burden"] = {
 			name : "Flaming Trail",
 			usages : 1,
 			recovery : "dawn",
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This amulet has 3 charges and regains all expended charges daily at dawn.",	
-			"Firedrinker. As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:",
-			"\u2022 Consume. I regain hit points equal to half the damage reduced.",
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 15 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",	
-			"Flaming Trail. After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 15). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
-			],
 		}],	
 	},
 	"very rare" : {
@@ -7300,16 +5922,10 @@ MagicItemsList["wanyudo’s burden"] = {
 		description : "This amulet has 3 charges and regains all expended charges daily at dawn.",
 		descriptionFull : 
 			"This amulet has 3 charges and regains all expended charges daily at dawn."+
-			"\n" +		
-			toUni("Firedrinker.") +
-			" As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
-			"\n" +
-			"\u2022 Consume. I regain hit points equal to half the damage reduced."+
-			"\n" +
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 16 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
-			"\n" +
-			toUni("Flaming Trail.") +	
-			" After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 16). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Firedrinker.") + " As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:"+
+			"\n" \u2022" + toUni("Consume.") + " I regain hit points equal to half the damage reduced."+
+			"\n" \u2022" + toUni("Exhale.") + " The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 16 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one."+
+			"\n" + toUni("Flaming Trail.") + " After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 16). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
 		limfeaname : "Wanyudo’s Burden",
 		usages : 3,
 		recovery : "dawn",
@@ -7318,17 +5934,6 @@ MagicItemsList["wanyudo’s burden"] = {
 			name : "Flaming Trail",
 			usages : 2,
 			recovery : "dawn",
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This amulet has 3 charges and regains all expended charges daily at dawn.",	
-			"Firedrinker. As a reaction when I take fire damage while wearing this amulet, I can expend 1 charge to reduce that damage by 3d6, as the demonic visage sucks a portion of the flames into its mouth. Then choose one of the following options:",
-			"\u2022 Consume. I regain hit points equal to half the damage reduced.",
-			"\u2022 Exhale. The demonic visage immediately spits out those flames at a creature of my choice within 10 feet of me. The target must make a DC 16 Dexterity saving throw, taking 3d6 fire damage on a failed save, or half as much damage on a successful one.",	
-			"Flaming Trail. After the necklace has drunk enough fire, it unlocks a powerful new ability. While this necklace has 0 charges and I am wearing it, I can cast the wall of fire spell (save DC 16). When cast in this way, the amulet animates, detaches from its string, and spins across the battlefield, leaving a trail of fire in its wake that grows into the wall, which can be in any shape instead of just a circle or a straight line. After the wall is formed, the amulet returns to me and attaches itself to the string once more. While wearing the amulet, I take no damage from the spell cast using it. Once this property of the amulet has been used, it can’t be used again until the next dawn.",
-			],
 		}],	
 	},
 };
@@ -7347,9 +5952,7 @@ MagicItemsList["windweaver"] = {
 		description : "This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties."+
-			"\n" +
-			toUni("Stick the Landing.") +
-			" When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0.",
+			"\n" + toUni("Stick the Landing.") + " When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0.",
 		weaponOptions : [{
 			name : "Uncommon Windweaver (Blast)",
 			source : [["RGttYR", 268]],
@@ -7369,14 +5972,6 @@ MagicItemsList["windweaver"] = {
 			selectNow : true,
 		}],
 		action : ["reaction", "Stick the Landing"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
-			"Stick the Landing. When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0.",
-			],
-		}],	
 	},
 	"rare" : {
 		name : "Rare Windweaver",
@@ -7384,12 +5979,8 @@ MagicItemsList["windweaver"] = {
 		description : "This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties."+
-			"\n" +
-			toUni("Stick the Landing.") +
-			" When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0."+
-			"\n" +
-			toUni("Wind Tunnel.") +
-			" When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 15 Strength saving throw or be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Stick the Landing.") + " When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0."+
+			"\n" + toUni("Wind Tunnel.") + " When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 15 Strength saving throw or be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : [{
 			name : "Rare Windweaver (Blast)",
 			source : [["RGttYR", 268]],
@@ -7412,16 +6003,7 @@ MagicItemsList["windweaver"] = {
 		action : ["reaction", "Stick the Landing"],
 		limfeaname : "Wind Tunnel",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
-			"Stick the Landing. When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0.",
-			"Wind Tunnel. When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 15 Strength saving throw or be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"very rare" : {
 		name : "Very Rare Windweaver",
@@ -7429,12 +6011,8 @@ MagicItemsList["windweaver"] = {
 		description : "This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
 		descriptionFull : 
 			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties."+
-			"\n" +
-			toUni("Stick the Landing.") +
-			" When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0. This feature can also be used on a creature that falls within 15 ft of me."+
-			"\n" +
-			toUni("Wind Tunnel.") +
-			" When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 16 Strength saving throw or take 2d6 bludgeoning damage and be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Stick the Landing.") + " When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0. This feature can also be used on a creature that falls within 15 ft of me."+
+			"\n" + toUni("Wind Tunnel.") + " When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 16 Strength saving throw or take 2d6 bludgeoning damage and be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
 		weaponOptions : [{
 			name : "Very Rare Windweaver (Blast)",
 			source : [["RGttYR", 268]],
@@ -7457,16 +6035,7 @@ MagicItemsList["windweaver"] = {
 		action : ["reaction", "Stick the Landing"],
 		limfeaname : "Wind Tunnel",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis can enhance or replace an arm, and has a built-in war fan that can be used to propel myself with blasts of magical wind. It has the Blast (2d6 bludgeoning, 30 ft.) and Integrated (tessen) properties.",
-			"Stick the Landing. When I fall, I can use my reaction to unleash a blast of wind moments before I hit the ground, cushioning me and reducing the falling damage I take to 0. This feature can also be used on a creature that falls within 15 ft of me.",
-			"Wind Tunnel. When I use the prosthesis’ Blast property to propel myself, I can choose to create an even larger blast of wind. If I do, I can move up to 60 feet instead of 30 feet, and I don’t provoke opportunity attacks while doing so. In addition, when I move within 5 feet of a creature during this movement, it must succeed on a DC 16 Strength saving throw or take 2d6 bludgeoning damage and be knocked prone. A creature can only be forced to make this saving throw once on each turn. Once this property of the prosthesis has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 };
 
@@ -7484,15 +6053,9 @@ MagicItemsList["wraithclaw"] = {
 		description : "This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
 		descriptionFull : 
 			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform."+
-			"\n" +
-			toUni("Ghostly Reach.") +
-			" The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
-			"\n" +
-			toUni("Improved Hookshot.") +
-			" As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 13."+ 
-			"\n" +
-			toUni("Hundred Claws.") +
-			" While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+5 to hit). On a hit, the creature takes 2d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of three attacks with each use of this property. Once the property has been used, it can’t be used again until the next dawn.",
+			"\n" + toUni("Ghostly Reach.") + " The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
+			"\n" + toUni("Improved Hookshot.") + " As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 13."+ 
+			"\n" + toUni("Hundred Claws.") + " While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+5 to hit). On a hit, the creature takes 2d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of three attacks with each use of this property. Once the property has been used, it can’t be used again until the next dawn.",
 		weaponOptions : [{
 			name : "Uncommon Wraithclaw",
 			source : [["RGttYR", 268]],
@@ -7508,17 +6071,7 @@ MagicItemsList["wraithclaw"] = {
 		action : ["action", "Hundred Claws"],
 		limfeaname : "Hundred Claws",
 		usages : 1,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
-			"Ghostly Reach. The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet.",
-			"Improved Hookshot. As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 13.",
-			"Hundred Claws. While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+5 to hit). On a hit, the creature takes 2d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of three attacks with each use of this property. Once the property has been used, it can’t be used again until the next dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"rare" : {
 		name : "Rare Wraithclaw",
@@ -7526,15 +6079,9 @@ MagicItemsList["wraithclaw"] = {
 		description : "This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
 		descriptionFull : 
 			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform."+
-			"\n" +
-			toUni("Ghostly Reach.") +
-			" The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
-			"\n" +
-			toUni("Improved Hookshot.") +
-			" As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 15."+ 
-			"\n" +
-			toUni("Hundred Claws.") +
-			" While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+7 to hit). On a hit, the creature takes 3d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used three times, regaining all expended uses daily at dawn.",
+			"\n" + toUni("Ghostly Reach.") + " The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
+			"\n" + toUni("Improved Hookshot.") + " As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 15."+ 
+			"\n" + toUni("Hundred Claws.") + " While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+7 to hit). On a hit, the creature takes 3d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used three times, regaining all expended uses daily at dawn.",
 		weaponOptions : [{
 			name : "Rare Wraithclaw",
 			source : [["RGttYR", 268]],
@@ -7550,17 +6097,7 @@ MagicItemsList["wraithclaw"] = {
 		action : ["action", "Hundred Claws"],
 		limfeaname : "Hundred Claws",
 		usages : 3,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
-			"Ghostly Reach. The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet.",
-			"Improved Hookshot. As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 15.",
-			"Hundred Claws. While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+7 to hit). On a hit, the creature takes 3d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used three times, regaining all expended uses daily at dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 	"very rare" : {
 		name : "Very Rare Wraithclaw",
@@ -7568,15 +6105,9 @@ MagicItemsList["wraithclaw"] = {
 		description : "This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
 		descriptionFull : 
 			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform."+
-			"\n" +
-			toUni("Ghostly Reach.") +
-			" The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
-			"\n" +
-			toUni("Improved Hookshot.") +
-			" As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 16."+ 
-			"\n" +
-			toUni("Hundred Claws.") +
-			" While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+8 to hit). On a hit, the creature takes 4d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used four times, regaining all expended uses daily at dawn.",
+			"\n" + toUni("Ghostly Reach.") + " The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet."+
+			"\n" + toUni("Improved Hookshot.") + " As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 16."+ 
+			"\n" + toUni("Hundred Claws.") + " While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+8 to hit). On a hit, the creature takes 4d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used four times, regaining all expended uses daily at dawn.",
 		weaponOptions : [{
 			name : "Rare Wraithclaw",
 			source : [["RGttYR", 268]],
@@ -7592,17 +6123,7 @@ MagicItemsList["wraithclaw"] = {
 		action : ["action", "Hundred Claws"],
 		limfeaname : "Hundred Claws",
 		usages : 4,
-		recovery : "dawn",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This prosthesis consists of a ghostly limb, solid to the touch, and can enhance or replace an arm. It has the Hookshot (20 ft.) and Melee (2d6 necrotic, Pugilist) properties, and the Flurry Superior Strike. Instead of firing a hook, the arm stretches and the hand grabs on to the target, but otherwise functions in the same way. While wearing the prosthesis, I can use a bonus action to cause it to dissolve into thin air or to make it reform.",
-			"Ghostly Reach. The reach of weapons I hold using only the prosthesis, as well as unarmed strikes made using the prosthesis, increases by 5 feet.",
-			"Improved Hookshot. As an action while the hand is attached to a target, I can reel myself in. When I do, I move a number of feet up to the item’s Hookshot range in a straight line towards the hand. In addition, the DC of the ability check required to forcefully detach the hook increases to 16.",
-			"Hundred Claws. While wearing the prosthesis, I can use an action to summon a barrage of ghostly hands tha assault a creature within 10 feet of me. Make a melee spell attack against it (+8 to hit). On a hit, the creature takes 4d6 necrotic damage, and I can immediately attack it in this way again as part of the same action. I can make a maximum of four attacks with each use of this property. The Hundred Claws property can be used four times, regaining all expended uses daily at dawn.",
-			],
-		}],	
+		recovery : "dawn",	
 	},
 };
 
@@ -7624,19 +6145,8 @@ MagicItemsList["wyrm’s breath grenade"] = {
 		description : "Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
 		descriptionFull : 
 			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested."+
-			"\n" +		
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
-			"\n" +
-			"A creature must succeed on a DC 15 Strength saving throw or be flung up to 60 feet from the centre of the sphere, landing prone and taking 2d6 bludgeoning damage. If a creature collides with another creature, both creatures take an extra 2d6 bludgeoning damage. If a creature collides with a solid object, it takes 4d6 bludgeoning damage instead. Diamond dust: 400 gp.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust.",
-			"A creature must succeed on a DC 15 Strength saving throw or be flung up to 60 feet from the centre of the sphere, landing prone and taking 2d6 bludgeoning damage. If a creature collides with another creature, both creatures take an extra 2d6 bludgeoning damage. If a creature collides with a solid object, it takes 4d6 bludgeoning damage instead. Diamond dust: 400 gp.",
-			],
-		}],	
+			"\n" + "As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
+			"\n" + "A creature must succeed on a DC 15 Strength saving throw or be flung up to 60 feet from the centre of the sphere, landing prone and taking 2d6 bludgeoning damage. If a creature collides with another creature, both creatures take an extra 2d6 bludgeoning damage. If a creature collides with a solid object, it takes 4d6 bludgeoning damage instead. Diamond dust: 400 gp.",	
 	},
 	"copper, slow; rare" : {
 		name : "Copper, Slow; Rare",
@@ -7644,25 +6154,14 @@ MagicItemsList["wyrm’s breath grenade"] = {
 		description : "Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
 		descriptionFull : 
 			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested."+
-			"\n" +		
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
-			"\n" +
-			"A creature must succeed on a DC 15 Constitution saving throw or suffer the effects of the slow spell until the end of its next turn. Diamond dust: 300 gp.",
+			"\n" + "As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
+			"\n" + "A creature must succeed on a DC 15 Constitution saving throw or suffer the effects of the slow spell until the end of its next turn. Diamond dust: 300 gp.",
 		spellcastingBonus: [{
 			name: "Copper, Slow; Rare",
 			spells: ["slow"],
 			selection: ["slow"],
 			fixedDC : 15,
 		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust.",
-			"A creature must succeed on a DC 15 Constitution saving throw or suffer the effects of the slow spell until the end of its next turn. Diamond dust: 300 gp.",
-			],
-		}],	
 	},
 	"brass, sleep; very rare" : {
 		name : "Brass, Sleep; Very Rare",
@@ -7670,19 +6169,8 @@ MagicItemsList["wyrm’s breath grenade"] = {
 		description : "Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
 		descriptionFull : 
 			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested."+
-			"\n" +		
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
-			"\n" +
-			"A creature must succeed on a DC 16 Constitution saving throw or be affected by a heavy drowsiness that causes it to fall unconscious until the start of its next turn. A creature with 80 or more hit points is immune to this effect. This effect ends for a creature if the creature takes damage, or if another creature uses an action to wake it. Diamond dust: 700 gp.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust.",
-			"A creature must succeed on a DC 16 Constitution saving throw or be affected by a heavy drowsiness that causes it to fall unconscious until the start of its next turn. A creature with 80 or more hit points is immune to this effect. This effect ends for a creature if the creature takes damage, or if another creature uses an action to wake it. Diamond dust: 700 gp.",
-			],
-		}],	
+			"\n" + "As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
+			"\n" + "A creature must succeed on a DC 16 Constitution saving throw or be affected by a heavy drowsiness that causes it to fall unconscious until the start of its next turn. A creature with 80 or more hit points is immune to this effect. This effect ends for a creature if the creature takes damage, or if another creature uses an action to wake it. Diamond dust: 700 gp.",	
 	},
 	"gold, weakening; very rare" : {
 		name : "Gold, Weakening; Very Rare",
@@ -7690,19 +6178,8 @@ MagicItemsList["wyrm’s breath grenade"] = {
 		description : "Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
 		descriptionFull : 
 			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested."+
-			"\n" +		
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
-			"\n" +
-			"A creature must succeed on a DC 16 Constitution saving throw or have disadvantage on all ability checks, attack rolls, and saving throws, and also deal half damage with weapon attacks that use Strength until the end of its next turn. Diamond dust: 1,200 gp.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust.",
-			"A creature must succeed on a DC 16 Constitution saving throw or have disadvantage on all ability checks, attack rolls, and saving throws, and also deal half damage with weapon attacks that use Strength until the end of its next turn. Diamond dust: 1,200 gp.",
-			],
-		}],	
+			"\n" + "As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
+			"\n" + "A creature must succeed on a DC 16 Constitution saving throw or have disadvantage on all ability checks, attack rolls, and saving throws, and also deal half damage with weapon attacks that use Strength until the end of its next turn. Diamond dust: 1,200 gp.",	
 	},
 	"silver, paralysing; legendary" : {
 		name : "Silver, Paralysing; Legendary",
@@ -7710,19 +6187,8 @@ MagicItemsList["wyrm’s breath grenade"] = {
 		description : "Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
 		descriptionFull : 
 			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested."+
-			"\n" +		
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
-			"\n" +
-			"A creature must succeed on a DC 17 Constitution saving throw or be paralysed until the start of its next turn. Diamond dust: 2,400 gp.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"Within a beautifully sculpted exterior is housed a dragon’s biomantically-sustained toxin gland, pungent incense, and crushed diamond. Available in a variety of hues, the metal from which this grenade-like contraption is fashioned always matches the dragon from which the organ was harvested.",
-			"As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust.",
-			"A creature must succeed on a DC 17 Constitution saving throw or be paralysed until the start of its next turn. Diamond dust: 2,400 gp.",
-			],
-		}],	
+			"\n" + "As an action, I can throw this magical device onto a surface I can see within 60 feet of me. Upon impact, the incense ignites, billowing out in a pungent, 15-foot-radius sphere, carrying with it the dragon’s magic. A creature that starts its turn in the area or enters the area for the first time on a turn must make the associated saving throw, suffering the associated effects on a failure. Creatures are affected even if they hold their breath or don’t need to breathe. The cloud lasts for 1 minute or until a strong wind (at least 20 miles per hour) disperses it. Once a grenade has been used, it can’t be used again until the next dawn, and it must be refilled with 100 gp of good-quality incense, as well as a specified value of diamond dust."+
+			"\n" + "A creature must succeed on a DC 17 Constitution saving throw or be paralysed until the start of its next turn. Diamond dust: 2,400 gp.",	
 	},
 };
 
@@ -7739,33 +6205,12 @@ MagicItemsList["xyxlwood bonsai"] = {
 		description : "This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener.",
 		descriptionFull : 
 			"This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener."+
-			"\n" +		
-			toUni("Goodboy Berry.") +
-			" So long as the following conditions were met during the last 24 hours, the bonsai produces 2d4 berries, as per the goodberry spell, each day at dawn:"+
-			"\n" +
-			"\u2022 The bonsai was in bright light for at least 1 hour in total."+
-			"\n" +
-			"\u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather."+
-			"\n" +
-			"\u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 11 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die."+ 
-			"\n" +
-			"The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away."+
-			"\n" +		
-			toUni("Calming Practice.") +
-			" Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 13), centred on itself.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener.",
-			"Goodboy Berry. So long as the following conditions were met during the last 24 hours, the bonsai produces 2d4 berries, as per the goodberry spell, each day at dawn:",
-			"\u2022 The bonsai was in bright light for at least 1 hour in total.",
-			"\u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather.",
-			"\u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 11 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die.",
-			"The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away.",	
-			"Calming Practice. Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 13), centred on itself.",
-			],
-		}],	
+			"\n" + toUni("Goodboy Berry.") + " So long as the following conditions were met during the last 24 hours, the bonsai produces 2d4 berries, as per the goodberry spell, each day at dawn:"+
+			"\n" + " \u2022 The bonsai was in bright light for at least 1 hour in total."+
+			"\n" + " \u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather."+
+			"\n" + " \u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 11 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die."+ 
+			"\n" + "The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away."+
+			"\n" + toUni("Calming Practice.") + " Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 13), centred on itself.",	
 	},
 	"rare" : {
 		name : "Rare Xyxlwood Bonsai",
@@ -7773,37 +6218,13 @@ MagicItemsList["xyxlwood bonsai"] = {
 		description : "This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener.",
 		descriptionFull : 
 			"This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener."+
-			"\n" +		
-			toUni("Goodboy Berry.") +
-			" So long as the following conditions were met during the last 24 hours, the bonsai produces 4d4 berries, as per the goodberry spell, each day at dawn:"+
-			"\n" +
-			"\u2022 The bonsai was in bright light for at least 1 hour in total."+
-			"\n" +
-			"\u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather."+
-			"\n" +
-			"\u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 13 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die."+ 
-			"\n" +
-			"The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away."+
-			"\n" +		
-			toUni("Calming Practice.") +
-			" Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 15), centred on itself."+
-			"\n" +		
-			toUni("Serene Mind.") +
-			" Once while suffused with a sense of calm as per the Calming Practice property, a creature can use an action to gain resistance to psychic damage for 1 hour.",
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This exceptionally fast-growing, animated Xyxlwood tree writhes its roots in delight whenever I sprinkle it with fresh water. Measuring 6 inches cubed, this magical plant needs almost constant care lest it become an unkempt shrubbery. Each day, the bonsai bonds with the creature that tends to it best, also known as its gardener.",
-			"Goodboy Berry. So long as the following conditions were met during the last 24 hours, the bonsai produces 4d4 berries, as per the goodberry spell, each day at dawn:",
-			"\u2022 The bonsai was in bright light for at least 1 hour in total.",
-			"\u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather.",
-			"\u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 13 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die.",
-			"The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away.",	
-			"Calming Practice. Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 15), centred on itself.",
-			"Serene Mind. Once while suffused with a sense of calm as per the Calming Practice property, a creature can use an action to gain resistance to psychic damage for 1 hour.",
-			],
-		}],	
+			"\n" + toUni("Goodboy Berry.") + " So long as the following conditions were met during the last 24 hours, the bonsai produces 4d4 berries, as per the goodberry spell, each day at dawn:"+
+			"\n" + " \u2022 The bonsai was in bright light for at least 1 hour in total."+
+			"\n" + " \u2022 The bonsai received more than a quarter of a gallon of fresh water but no more than half a gallon, or twice as much water during hot weather."+
+			"\n" + " \u2022 A creature spent at least 10 minutes pruning and tending to the bonsai. When a creature prunes the bonsai, it must make a DC 13 Dexterity (Nature) check. On a failed check, the number of berries produced at the next dawn is reduced by one die."+ 
+			"\n" + "The berries produced by the bonsai remain for 24 hours. At the end of this time, their potency dissipates and they rot away."+
+			"\n" + toUni("Calming Practice.") + " Each day at dawn, if the bonsai produces at least one berry, the last creature to successfully prune and tend to it is suffused with a sense of calm until the next dawn. Once during that time, the creature can cast the calm emotions spell (save DC 15), centred on itself."+
+			"\n" + toUni("Serene Mind.") + " Once while suffused with a sense of calm as per the Calming Practice property, a creature can use an action to gain resistance to psychic damage for 1 hour.",
 	},
 };
 
@@ -7821,26 +6242,13 @@ MagicItemsList["yukimono"] = {
 		description : "This kimono has 3 charges, represented by the same number of blue wisps floating around it, and regains 1d3 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
 		descriptionFull : 
 			"This kimono has 3 charges, represented by the same number of blue wisps floating around it, and regains 1d3 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again."+
-			"\n" +		
-			toUni("Immaterial Step.") +
-			" While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
-			"\n" +	
-			toUni("Minor Possession.") +
-			" As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 13 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead.",
+			"\n" + toUni("Immaterial Step.") + " While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
+			"\n" + toUni("Minor Possession.") + " As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 13 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead.",
 		limfeaname : "Yukimono",
 		usages : 3,
 		recovery : "dawn",
 		additional : "regains 1d3",
-		action : ["bonus action", "Minor Possession"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This kimono has 3 charges, represented by the same number of blue wisps floating around it, and regains 1d3 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
-			"Immaterial Step. While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space.",
-			"Minor Possession. As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 13 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead.",
-			],
-		}],	
+		action : ["bonus action", "Minor Possession"],	
 	},
 	"rare" : {
 		name : "Rare Yukimono",
@@ -7848,15 +6256,9 @@ MagicItemsList["yukimono"] = {
 		description : "This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
 		descriptionFull : 
 			"This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again."+
-			"\n" +		
-			toUni("Immaterial Step.") +
-			" While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
-			"\n" +	
-			toUni("Minor Possession.") +
-			" As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 15 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead."+
-			"\n" +	
-			toUni("Major Possession.") +
-			" While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 15).",
+			"\n" + toUni("Immaterial Step.") + " While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
+			"\n" + toUni("Minor Possession.") + " As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 15 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead."+
+			"\n" + toUni("Major Possession.") + " While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 15).",
 		limfeaname : "Yukimono",
 		usages : 6,
 		recovery : "dawn",
@@ -7869,16 +6271,6 @@ MagicItemsList["yukimono"] = {
 			selection: ["dominate person"],
 			fixedDC : 15,	
 			firstCol: 4,
-		}],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
-			"Immaterial Step. While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space.",
-			"Minor Possession. As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 15 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead.",
-			"Major Possession. While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 15).",
-			],
 		}],	
 	},
 	"very rare" : {
@@ -7887,15 +6279,9 @@ MagicItemsList["yukimono"] = {
 		description : "This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
 		descriptionFull : 
 			"This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again."+
-			"\n" +		
-			toUni("Immaterial Step.") +
-			" While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
-			"\n" +	
-			toUni("Minor Possession.") +
-			" As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 16 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead."+
-			"\n" +	
-			toUni("Major Possession.") +
-			" While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 16).",
+			"\n" + toUni("Immaterial Step.") + " While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space."+
+			"\n" + toUni("Minor Possession.") + " As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 16 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead."+
+			"\n" + toUni("Major Possession.") + " While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 16).",
 		limfeaname : "Yukimono",
 		usages : 6,
 		recovery : "dawn",
@@ -7910,16 +6296,6 @@ MagicItemsList["yukimono"] = {
 			firstCol: 4,
 		}],
 		dmgres : ["Cold"],
-		toNotesPage: [{
-		name : "Features",
-		page3notes: true,
-     	  	note : [
-			"This kimono has 6 charges, represented by the same number of blue wisps floating around it, and regains 1d4 + 2 expended charges daily at dawn. As a bonus action, I can make the wisps invisible or visible again.",
-			"Immaterial Step. While wearing this kimono, other creatures’ spaces aren’t considered difficult terrain forme, and I can move through a hostile creature’s space regardless of its size. When I move into a creature’s space using this property, I take 1d4 force damage, which can’t be reduced or prevented in any way. I can’t willingly end my turn in another creature’s space.",
-			"Minor Possession. As a bonus action while wearing this kimono, I can expend 1 charge to speak its command word, instructing one of the blue wisps to possess a creature I can see within 30 feet of me. The creature must succeed on a DC 16 Charisma saving throw or the wisp enters the creature and can exert limited control over its body for 1 minute, disrupting its movements. For the duration, the creature’s speed is halved, and it has disadvantage on the first attack roll it makes on each of its turns. The creature can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property has no effect on Constructs and Undead.",
-			"Major Possession. While wearing this kimono, I can use an action to force several of the blue wisps into a creature at the same time, expending 4 charges to cast the dominate person spell (save DC 16).",
-			],
-		}],	
 	},
 };
 

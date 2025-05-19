@@ -1,8 +1,5 @@
-if (sheetVersion < 13001012) {
-  throw "This script was made for a newer version of the sheet (v13.1.14). Please use the latest version and try again.\nYou can get the latest version at www.flapkan.com.";
-}
 var iFileName = "Helianas Guide Spells.js";
-RequiredSheetVersion("13.1.12");
+RequiredSheetVersion("13.1.14");
 
 SourceList["HGtMH"] = {
    name: "Heliana's Guide to Monster Hunting",

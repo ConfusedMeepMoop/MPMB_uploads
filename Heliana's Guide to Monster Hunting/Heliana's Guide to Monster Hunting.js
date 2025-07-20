@@ -28,7 +28,9 @@ RaceList["nematocyst cnidaran"] = {
 	scores : [0, 1, 2, 0, 0, 0],
 	age: "A cnidaran medusozoa reaches maturity at around 20 years of age and can live up to 200 years.",
 	dmgres : ["Poison"],
-	savetxt: "Adv. against Poisoned.",
+	savetxt : {
+		adv_vs : ["Poisoned"]
+	},
 	weaponOptions: [{
 		name: "Nematocyst",
 		source : [["HGtMH", 156]],
@@ -447,7 +449,9 @@ RaceList["ombrask cnidaran"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -502,7 +506,9 @@ RaceList["ombrask cyclopian"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -557,7 +563,9 @@ RaceList["ombrask dwarf"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -612,7 +620,9 @@ RaceList["ombrask elf"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -667,7 +677,9 @@ RaceList["ombrask dragonborn"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -722,7 +734,9 @@ RaceList["ombrask gnome"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -777,7 +791,9 @@ RaceList["ombrask gobboc"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -832,7 +848,9 @@ RaceList["ombrask golynn"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -887,7 +905,9 @@ RaceList["ombrask half-elf"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -942,7 +962,9 @@ RaceList["ombrask half-orc"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -997,7 +1019,9 @@ RaceList["ombrask halfling"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1052,7 +1076,9 @@ RaceList["ombrask human"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1107,7 +1133,9 @@ RaceList["ombrask oozekin"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1162,7 +1190,9 @@ RaceList["ombrask opteran"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1217,7 +1247,9 @@ RaceList["ombrask rakin"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1272,7 +1304,9 @@ RaceList["ombrask tiefling"] = {
 	age: "Ombrasks live as long as the race from which they originated.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Radiant"],
-	savetxt: "Adv. against Blinded.",
+	savetxt : {
+		adv_vs : ["Blinded"]
+	},
 	skills : ["Stealth"],
 	features : {
 		"fade away" : {
@@ -1383,7 +1417,9 @@ RaceList["larval opteran"] = {
 	scorestxt : "+2 Charisma only",
 	age: "Opterans age based on their environment. They can live for centuries in their larval forms, but under great stress, they pupate and hatch into their adult forms. Tragically, they only live for 2 to 3 years after emerging as adults.",
 	vision : [["Darkvision", 60]],
-	savetxt: "Adv. against Prone.",
+	savetxt : {
+		adv_vs : ["Prone"]
+	},
 	features : {
 		"string shot" : {
 			name : "String Shot",
@@ -1497,7 +1533,9 @@ RaceList["posskin rakin"] = {
 	age: "Rakin age slightly quicker than humans, reaching adulthood by 14. They live to be around 70 years old.",
 	vision : [["Darkvision", 60]],
 	dmgres : ["Poison"],
-	savetxt: "Adv. against Poison & Disease.",
+	savetxt : {
+		adv_vs : ["Poison", "Disease"]
+	},
 	weaponOptions: [{
 		name: "Bite",
 		source : [["HGtMH", 176]],

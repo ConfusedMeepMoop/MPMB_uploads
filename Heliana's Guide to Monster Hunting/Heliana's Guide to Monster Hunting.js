@@ -2442,8 +2442,8 @@ AddSubClass("warlock", "the parasite", {
 						};
 					},
 					"Magical Weapons. Starting at 6th level, my attacks with my parasitic weapon count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
-				]
-			}
+				],
+			},
 		},
 		"subclassfeature10.1" : {
 			name : "Transmit Parasite",
@@ -2494,6 +2494,71 @@ AddWarlockInvocation("Parasitic Leech (prereq: Parasite patron)", {
 		"When I score a critical hit with my parasitic weapon or reduce a creature to 0 HP with it, I gain a number of THP equal to the number rolled on the weapon’s damage dice. If I later gain the Pact of the Blade feature, I gain this benefit to critical hits scored with my pact weapon."
 	]),
 	prereqeval : function(v) { return (/parasite/).test(classes.known.warlock.subclass); },
+});
+
+AddWarlockInvocation("Agonizing Blast [Parasite Patron, Optional] (2+)", {
+	name : "Agonizing Blast [Parasite Patron]",
+	source : [["HGtMH", 219]],
+	submenu : "[prereq: Parasite patron]",
+	description : desc([
+		"I add my Charisma modifier to the damage of my parasitic weapon."
+	]),
+	calcChanges: {
+		atkCalc: [
+			function (fields, v, output) {
+				if ((/^(?=.*parasitic)(?=.*weapon).*$/i).test(v.WeaponTextName)) output.extraDmg += What('Cha Mod');
+			},
+		"I add my Charisma modifier to the damage of my parasitic weapon."
+		],
+	},
+	prereqeval : function(v) { 
+		return classes.known.warlock.level >= 2 && (/parasite/).test(classes.known.warlock.subclass); 
+	},
+});
+
+AddWarlockInvocation("Eldritch Spear [Parasite Patron, Optional] (2+)", {
+	name : "Eldritch Spear [Parasite Patron]",
+	source : [["HGtMH", 219]],
+	submenu : "[prereq: Parasite patron]",
+	description : desc([
+		"I add my Charisma modifier to the damage of my parasitic weapon."
+	]),
+	calcChanges: {
+		atkAdd: [
+			function (fields, v) {
+				if ((/^(?=.*parasitic)(?=.*weapon).*$/i).test(v.WeaponTextName) && classes.known.warlock && classes.known.warlock.level) {
+					fields.Range = (classes.known.warlock.level < 5 ? 25 : classes.known.warlock.level < 9 ? 37 : classes.known.warlock.level < 13 ? 50 : classes.known.warlock.level < 17 ? 62 : 75) + "ft";
+				};
+			},
+			5
+		],
+	},
+	prereqeval : function(v) { 
+		return classes.known.warlock.level >= 2 && (/parasite/).test(classes.known.warlock.subclass); 
+	},
+});
+
+AddWarlockInvocation("Repelling Blast [Parasite Patron, Optional] (2+)", {
+	name : "Repelling Blast [Parasite Patron]",
+	source : [["HGtMH", 219]],
+	submenu : "[prereq: Parasite patron]",
+	description : desc([
+		"I add my Charisma modifier to the damage of my parasitic weapon."
+	]),
+	calcChanges: {
+		atkAdd: [
+			function (fields, v) {
+				if ((/^(?=.*parasitic)(?=.*weapon).*$/i).test(v.WeaponTextName) && classes.known.warlock && classes.known.warlock.level) {
+					fields.Description += '; Target pushed back 10 ft';
+				};
+			},
+			"When I hit a Large or smaller creature with Eldritch Blast, I can push the creature up to 10 feet straight away from me.",
+			51,
+		],
+	},
+	prereqeval : function(v) { 
+		return classes.known.warlock.level >= 2 && (/parasite/).test(classes.known.warlock.subclass); 
+	},
 });
 
 // Wizard Subclasses
